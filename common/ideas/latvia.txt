@@ -206,7 +206,7 @@ political_advisor = {
 
 		LAT_Kornelijs_Veidnieks = {
 			cost = 10
-			picture = generic_political_advisor_europe_1
+		
 			
 			allowed = {
 				original_tag = LAT
@@ -217,7 +217,7 @@ political_advisor = {
 
 		LAT_Janis_Kaminskis = {
 			cost = 10
-			picture = generic_political_advisor_europe_2
+			
 				
 			allowed = {
 				original_tag = LAT
@@ -228,7 +228,7 @@ political_advisor = {
 
 		LAT_Vilhelms_Munters = {
 			cost = 10
-			picture = generic_political_advisor_europe_3
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -243,7 +243,7 @@ theorist = {
 
 		LAT_Ludvigs_Bolsteins = {
 			cost = 10		
-			picture = generic_army_europe_1
+			
 
 			allowed = {
 				original_tag = LAT
@@ -258,7 +258,7 @@ theorist = {
 
 		LAT_Eduards_Pulpe = {
 			cost = 10		
-			picture = generic_air_europe_1
+			
 				
 			allowed = {
 				original_tag = LAT
@@ -273,7 +273,7 @@ theorist = {
 		
 		LAT_Karlis_Irbitis = {
 			cost = 10		
-			picture = generic_air_europe_1
+			
 				
 			allowed = {
 				original_tag = LAT
@@ -286,7 +286,7 @@ theorist = {
 		
 		LAT_Eizens_Arins = {
 			cost = 10		
-			picture = generic_air_europe_1
+			
 				
 			allowed = {
 				original_tag = LAT
@@ -297,7 +297,7 @@ theorist = {
 		
 		LAT_Ludvigs_Jansons = {
 			cost = 10		
-			picture = generic_air_europe_1
+			
 				
 			allowed = {
 				original_tag = LAT
@@ -314,7 +314,7 @@ army_chief = {
 
 		LAT_Fricis_Celmins = {
 		cost = 10
-			picture = generic_army_europe_1
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -331,7 +331,7 @@ army_chief = {
 
 		LAT_Janis_Balodis = {
 		cost = 10
-			picture = generic_army_europe_1
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -348,7 +348,7 @@ army_chief = {
 
 		LAT_Arturs_Silgailis = {
 		cost = 10
-			picture = generic_army_europe_2
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -369,7 +369,7 @@ air_chief = {
 
 		LAT_Peteris_Tompsons = {
 		cost = 10
-			picture = generic_air_europe_1
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -386,7 +386,7 @@ air_chief = {
 
 		LAT_Alfreds_Valeika = {
 		cost = 10
-			picture = generic_air_europe_1
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -407,7 +407,7 @@ navy_chief = {
 
 		LAT_Teodors_Spade = {
 		cost = 10
-			picture = generic_navy_europe_2
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -424,7 +424,7 @@ navy_chief = {
 
 		LAT_Archibalds_Keizerlings = {
 		cost = 10
-			picture = generic_navy_europe_2
+		
 			
 			allowed = {
 				original_tag = LAT
@@ -442,10 +442,39 @@ navy_chief = {
 	
 #Military High Command
 high_command = {
-
+		LAT_Janis_Kurelis	= {
+			cost = 10
+			
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		LAT_Janis_Lavenieks = {
+			cost = 10
+			
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { fortification_engineer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
 		LAT_Olgierds_Teteris = {
 			cost = 10
-			picture = generic_army_europe_1
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -458,39 +487,25 @@ high_command = {
 			}
 		}
 		
-		LAT_Janis_Kurelis = {
+		LAT_Toms_Gaillitis = {
 			cost = 10
-			picture = generic_army_europe_1
+			
 			
 			allowed = {
 				original_tag = LAT
 			}
 			
-			traits = { army_commando_2 }
+			traits = { assault_avaition }
 			
 			ai_will_do = {
 				factor = 1
 			}
 		}
-
-		LAT_Janis_Lavenieks = {
-			cost = 10
-			picture = generic_navy_europe_1
-			
-			allowed = {
-				original_tag = LAT
-			}
-			
-			traits = { fortification_engineer }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
+		
 
 		LAT_Rudolfs_Bangerskis = {
 			cost = 10
-			picture = generic_army_europe_3
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -505,7 +520,7 @@ high_command = {
 		
 		LAT_Ernests_Gothards = {
 			cost = 10
-			picture = generic_army_europe_3
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -520,7 +535,7 @@ high_command = {
 		
 		LAT_Ernests_Barotajs = {
 			cost = 10
-			picture = generic_navy_europe_3
+			
 			
 			allowed = {
 				original_tag = LAT
@@ -535,7 +550,7 @@ high_command = {
 		
 		LAT_Adolfs_Kalns = {
 			cost = 10
-			picture = generic_navy_europe_3
+			
 			
 			allowed = {
 				original_tag = LAT
