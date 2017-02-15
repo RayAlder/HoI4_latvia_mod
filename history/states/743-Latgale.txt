@@ -1,0 +1,43 @@
+
+state={
+	id=743
+	name="Latgale"
+	manpower = 1000000
+	
+	state_category = metropolis
+	resources={
+	
+		steel=8
+		chromium=0
+		tungsten=0
+		oil=0
+		rubber=0
+		aluminium=0
+	}
+	history={
+		owner = LAT
+		victory_points = {
+			310 5 
+		}
+		victory_points = {
+			341 1 
+		}
+		victory_points = {
+			7482 1 
+		}
+		buildings = {
+			infrastructure = 5
+			radar_station = 0
+			arms_factory = 2
+			industrial_complex = 6
+			anti_air_building = 0
+			air_base = 5
+		
+		}
+		add_core_of = LAT
+	}
+
+	provinces={
+		7482 222 310 6459 341 319 9275
+	}
+}

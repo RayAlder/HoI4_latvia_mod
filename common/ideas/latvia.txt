@@ -1,0 +1,847 @@
+ideas = {
+
+country {
+		reforma = {
+		allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.25
+				
+				
+			}
+		}
+		
+		balodis = 
+		{
+		sprite = 13
+		
+				
+			removal_cost = -1
+			modifier = {
+				enemy_partisan_effect = -0.1
+				experience_gain_army = 0.05
+				army_defence_factor = 0.15
+				
+				
+			}		
+			traits = { popular_figurehead }
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		
+		LAT_fortification = {
+				picture = generic_production_bonus	
+			allowed = {
+				original_tag = LAT
+				always = no
+			}
+
+			removal_cost = -1	
+		picture = generic_production_bonus
+			modifier = {
+				production_speed_bunker_factor = 0.10
+				
+			}
+		}
+		LAT_fortification2 = {
+				picture = generic_production_bonus
+			allowed = {
+				original_tag = LAT
+				always = no
+			}
+			removal_cost = -1	
+			
+		
+			modifier = {
+				production_speed_bunker_factor = 0.20
+				
+			}
+		}
+		
+		LAT_sea_fort = {
+				picture = generic_production_bonus
+			allowed = {
+				original_tag = LAT
+				always = no
+			}
+			removal_cost = -1	
+			
+		
+			modifier = {
+				
+				production_speed_coastal_bunker_factor = 0.1
+			}
+		}
+		
+		LAT_sea_fort2 = {
+				picture = generic_production_bonus
+			allowed = {
+				original_tag = LAT
+				always = no
+			}
+			removal_cost = -1	
+			
+		
+			modifier = {
+			production_speed_coastal_bunker_factor = 0.15
+			}
+		}
+		
+		LAT_rocketry_idea
+		{
+			
+			
+			allowed = {
+				always = no
+				original_tag = LAT
+			}
+
+			
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_rocket_site_factor = 0.15
+			}
+			research_bonus = {
+				rocketry = 0.10
+			}
+		}
+		
+		
+		LAT_air_innovations_2_idea = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+		
+			research_bonus = {
+				battlefield_support_tree = 0.10
+				jet_technology = 0.10
+			}
+
+		}	
+		LAT_electronics_idea = {
+			removal_cost = -1
+			allowed = {
+				always = no # Unlocked via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_research_bonus
+		
+			research_bonus = {
+				electronics = 0.25
+				
+			}
+			traits = {computing}
+		}
+		
+		LAT_wartime = {
+		
+		picture = generic_volunteer_expedition_bonus
+			allowed = { always = no	}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {	
+				conversion_cost_civ_to_mil_factor= -0.2			
+				justify_war_goal_time = -0.25
+			}	
+				
+		}
+		
+		patriotisms = 
+		{
+	
+					
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.25
+				fascism_drift = 0.2
+			}			
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		
+		
+		
+		doktrinas = {				
+			allowed = {
+				always = no
+			}
+			removal_cost = -1			
+			research_bonus = {
+				land_doctrine = 0.2
+				naval_doctrine = 0.05
+				air_doctrine = 0.05
+			}
+			modifier = {
+				army_org_factor = 0.25
+			}
+		}
+	}
+	
+#Political Advisors	
+political_advisor = {
+
+		LAT_Kornelijs_Veidnieks = {
+			cost = 10
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { interior_advisor }
+		}
+
+		LAT_Janis_Kaminskis = {
+			cost = 10
+			picture = generic_political_advisor_europe_2
+				
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { finance_advisor }
+		}
+
+		LAT_Vilhelms_Munters = {
+			cost = 10
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { foreign_advisor }
+		}
+	}
+	
+#Theorists
+theorist = {
+
+		LAT_Ludvigs_Bolsteins = {
+			cost = 10		
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.25
+			}
+			
+			traits = { military_theorist }
+		}
+
+		LAT_Eduards_Pulpe = {
+			cost = 10		
+			picture = generic_air_europe_1
+				
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.15
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		LAT_Karlis_Irbitis = {
+			cost = 10		
+			picture = generic_air_europe_1
+				
+			allowed = {
+				original_tag = LAT
+			}
+			
+			
+			
+			traits = { superior_speed }
+		}
+		
+		LAT_Eizens_Arins = {
+			cost = 10		
+			picture = generic_air_europe_1
+				
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { electric_scientist }
+		}
+		
+		LAT_Ludvigs_Jansons = {
+			cost = 10		
+			picture = generic_air_europe_1
+				
+			allowed = {
+				original_tag = LAT
+			}
+			
+			
+			traits = { physics_scientist }
+		}
+		
+	}
+
+# MILITARY
+army_chief = {
+
+		LAT_Fricis_Celmins = {
+		cost = 10
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		LAT_Janis_Balodis = {
+		cost = 10
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+
+			
+			traits = { army_chief_defensive_4 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		LAT_Arturs_Silgailis = {
+		cost = 10
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+
+			
+			traits = { army_chief_drill_3 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+#Air Chief
+air_chief = {
+
+		LAT_Peteris_Tompsons = {
+		cost = 10
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+
+			
+			traits = { air_chief_tompsons }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		LAT_Alfreds_Valeika = {
+		cost = 10
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+#Navy chief
+navy_chief = {
+
+		LAT_Teodors_Spade = {
+		cost = 10
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+
+			
+			traits = { navy_anti_submarine_3  }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		LAT_Archibalds_Keizerlings = {
+		cost = 10
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+#Military High Command
+high_command = {
+
+		LAT_Olgierds_Teteris = {
+			cost = 10
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		LAT_Janis_Kurelis = {
+			cost = 10
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		LAT_Janis_Lavenieks = {
+			cost = 10
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { fortification_engineer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		LAT_Rudolfs_Bangerskis = {
+			cost = 10
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { blitzkrieg_theorist }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		LAT_Ernests_Gothards = {
+			cost = 10
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { mobile_warfare_expert }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		LAT_Ernests_Barotajs = {
+			cost = 10
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { destroyer_expert }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		LAT_Adolfs_Kalns = {
+			cost = 10
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { sub_expert }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+	
+#Tanks
+tank_manufacturer = {
+
+		designer = yes
+rvr = {
+			picture = GFX_idea_rvr
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+			armor = 0.25
+			
+			}
+			
+			traits = { light_tank_manufacturer }
+			
+			equipment_bonus = {
+			
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+vairogs = {
+			picture = GFX_idea_vairogs
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+			armor = 0.15
+				
+			}
+			
+			traits = { vairogs_tank }
+			
+			equipment_bonus = {
+				# 
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+}
+
+raf = {
+			picture = GFX_raf
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+			armor = 0.10	
+			
+			}
+			
+			traits = { raf_tank_manufacturer }
+			
+			equipment_bonus = {
+				# 
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+}
+}	
+#Aircraft
+aircraft_manufacturer = {
+			
+		designer = yes
+		
+		
+		
+		vef = {
+			picture = GFX_idea_vef
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { vef_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# made light bombers, fighters and trainers
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+#Naval
+naval_manufacturer = {
+		
+		designer = yes
+		
+		rkb = {
+			picture = GFX_idea_rkb
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.25
+			}
+			
+			equipment_bonus = {
+				# mer research
+			}
+			
+			traits = { dockyard_builder }
+			
+			modifier = {
+			}
+		}
+		
+	}
+	
+#Materiel	
+materiel_manufacturer = {
+			
+		designer = yes
+		
+		lkr = {
+		picture = GFX_idea_lkr
+		cost = 10	
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				
+
+			}
+			
+			traits = { constructor }
+
+		}
+		
+		dsr = {
+		picture = GFX_idea_dsr
+		cost = 10					
+			allowed = {
+				original_tag = LAT
+			}
+						
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			equipment_bonus = {
+			
+				infantry ={
+				max_strength = 0.10
+				supply_consumption = 0.05
+				}
+			}
+			traits = {  }
+		}
+	
+		venn = {
+			picture = GFX_idea_venn
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			
+			research_bonus = {
+				synth_resources = 0.25
+			}
+			
+			
+			
+			traits = { synthetic_speed }
+			
+			modifier = {
+			}
+		}
+		
+		
+	}
+	
+#Industrial
+industrial_concern = {	
+		
+		lmet = {
+		picture = GFX_idea_lmet
+		cost = 10		
+			allowed = {
+				original_tag = LAT
+			}
+						
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industry_speed }
+		}
+		
+		rrr = {
+			picture = GFX_idea_rrr
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+			electronics = 0.15
+			radar_tech = 0.15	
+			}
+			
+			
+			traits = {  }
+			
+			equipment_bonus = {
+				# made light bombers, fighters and trainers
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ldz = {
+			picture = GFX_idea_ldz
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				
+			}
+			
+			traits = { infrastructure_speed }
+			
+			equipment_bonus = {
+				# made light bombers, fighters and trainers
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		minox = {
+			picture = GFX_idea_minox
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				
+			}
+			modifier = {
+			decryption = 1
+			}
+			traits = {  }
+			
+			equipment_bonus = {
+				# made light bombers, fighters and trainers
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		
+		
+	}	
+}

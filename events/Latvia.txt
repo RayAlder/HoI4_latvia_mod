@@ -1,0 +1,256 @@
+﻿# Russia fort
+add_namespace = latvia
+country_event = {
+
+	id = latvia.1
+	title = latvia.1.t
+	desc = latvia.1.d
+	picture = GFX_report_event_bunker_01
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.1.a
+		12= { 
+		#Vidzeme
+		custom_effect_tooltip = latvia.1.t
+			hidden_effect = {
+			add_building_construction = {
+				type = bunker
+				province = 3298
+				level = 2
+				instant_build = yes
+			}
+		}
+		}
+		if = {
+				limit = { 743 = { is_demilitarized_zone = yes } }
+				custom_effect_tooltip = latvia.1.t
+							}	
+		743 ={
+		custom_effect_tooltip = latvia.1.t
+		#Latgale
+		hidden_effect = {
+			add_building_construction = {
+				type = bunker
+				province = 222
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 310
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 319
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6459
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9275
+				level = 2
+				instant_build = yes
+			}
+			}
+		}
+		
+		if = {
+				limit = { 744 = { is_demilitarized_zone = yes } }
+				custom_effect_tooltip = latvia.1.t
+				
+			}
+		744 = 
+		{
+			custom_effect_tooltip = latvia.1.t
+			hidden_effect = 
+			{
+			#Zemgale
+			add_building_construction = 
+				{
+				type = bunker
+				province = 11358
+				level = 2
+				instant_build = yes
+				}
+			}
+		}
+		
+	
+}}
+# Strelnieki
+country_event = {
+	id = latvia.2
+	title = latvia.2.t
+	desc = latvia.2.d
+	picture = GFX_report_event_strelnieki
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.2.a
+		hidden_effect = {
+			load_oob = "Strelnieki"
+		}
+		custom_effect_tooltip = latvia.2.t
+			set_technology = { support_weapons = 1}
+			set_technology = { night_vision = 1}
+			set_technology = { tech_recon = 1}
+			set_technology = { tech_engineers = 1}
+			set_technology = { infantry_weapons2 = 1}
+		
+	}
+}
+# SS divisions
+country_event = {
+	id = latvia.3
+	title = latvia.3.t
+	desc = latvia.3.d
+	picture = GFX_report_event_strelnieki
+	
+	is_triggered_only = yes
+	
+	option = {
+	hidden_effect = {
+			load_oob = "SS"
+		}
+		name = latvia.3.a
+			custom_effect_tooltip = latvia.3.t
+			set_technology = { mechanised_infantry = 1}
+			
+		
+	}
+}	
+		
+country_event = {
+	id = latvia.4
+	title = latvia.4.t
+	desc = latvia.4.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.4.a		#join
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = SOV
+					value < -10
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = LAT
+					value < -10
+				}
+			}
+		}
+		set_country_flag = anti_comintern_member
+		LAT = { add_opinion_modifier = { target = ROOT modifier = anti_comintern_pact_opinion } }
+		add_opinion_modifier = { target = LAT modifier = anti_comintern_pact_opinion }
+		SOV  = { add_opinion_modifier = { target = ROOT modifier = pact_against_us } }
+	}
+	
+	option = {
+		name = latvia.4.b		#refuse
+		ai_chance = { factor = 25 }
+		LAT =  { add_opinion_modifier = { target = ROOT modifier = refused_anti_comintern_pact_opinion } }
+	}
+
+}
+country_event = {
+	id = latvia.5
+	title = latvia.5.t
+	desc = latvia.5.d
+	picture = GFX_report_event_soviet_tanks
+
+	is_triggered_only = yes
+	
+	#immediate = {
+	#	remove_ideas = anti_soviet_pact
+	#}
+	
+	option = {
+		name = latvia.5.a
+		ai_chance = {
+			factor = 10
+		}
+		add_to_war = {
+			targeted_alliance = FROM
+			enemy = SOV
+		}
+	}
+
+	option = {
+		name = latvia.5.b
+		ai_chance = {
+			factor = 0
+		}
+		remove_ideas = anti_soviet_pact
+		FROM = { add_opinion_modifier = { target = ROOT modifier = anti_soviet_pact_call_refused } }
+		SOV = { remove_opinion_modifier = { target = SOV modifier = worse_pact_against_us } }
+		add_timed_idea = {
+			idea = anti_soviet_pact_refused_call
+			days = 365 
+		}
+		custom_effect_tooltip = latvia.5_tt
+		hidden_effect = {
+			country_event = { id = latvia.6 days = 3 } 
+		}
+	}
+}			
+country_event = {
+	id = latvia.6
+	
+	is_triggered_only = yes
+
+	hidden = yes
+	
+	immediate = {
+		every_other_country = {
+			limit = { has_idea = anti_soviet_pact }
+			add_opinion_modifier = { target = FROM modifier = anti_soviet_pact_call_refused }
+		}
+	}
+}
+# Anti-Soviet Pact
+country_event = {
+	id = latvia.7
+	title = latvia.7.t
+	desc = latvia.7.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 10
+		}
+		name = latvia.7.a		#join
+		add_ideas = anti_soviet_pact
+		SOV = {
+			remove_opinion_modifier = { target = ROOT modifier = pact_against_us }
+			add_opinion_modifier = { target = ROOT modifier = worse_pact_against_us }
+		}
+	}
+	
+	option = {
+		name = latvia.7.b		#refuse
+		ai_chance = {
+			factor = 2
+		}
+	}
+}

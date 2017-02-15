@@ -1,0 +1,203 @@
+﻿capital = 12
+
+oob = "LAT_1936"
+
+add_ideas = {
+	extensive_conscription
+	free_trade
+	reforma
+	balodis
+}
+
+set_technology = {
+		tech_support = 1	
+		infantry_weapons = 1
+		infantry_weapons1 = 1
+			
+		
+		gw_artillery = 1
+		interwar_artillery = 1
+		interwar_antiair = 1
+		
+		basic_light_tank = 1
+
+		#doctrines
+		#air_superiority = 1
+		#grand_battle_plan = 1
+		trench_warfare = 1
+		#fleet_in_being = 1
+		
+		#battlefleet_concentration = 1
+		convoy_sailing = 1
+		
+		#flote
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		#basic_light_cruiser = 1
+		#early_heavy_cruiser = 1
+		
+		#air
+		early_fighter = 1
+		#fighter1 = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		#advanced_machine_tools = 1
+		construction1 = 1
+		#construction2 = 1
+	
+}
+
+set_research_slots = 4
+
+set_convoys = 50
+
+create_import = {
+		resource = tungsten
+		factories = 1
+		exporter = SWE
+}
+create_import = {
+		resource = oil
+		factories = 2
+		exporter = ROM
+}
+create_import = {
+		resource = steel
+		factories = 1
+		exporter = SWE
+}
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 50
+		}
+
+		fascism = {
+			popularity = 40
+		}
+		
+		communism = {
+			popularity = 10
+		}
+		
+		
+	}
+	
+	ruling_party = democratic
+	last_election = "1931.10.3"
+	election_frequency = 108
+	elections_allowed = no
+}
+
+
+
+create_country_leader = {
+	name = "Kārlis Ulmanis"
+	desc = "POLITICS_KARLIS_ULMANIS_DESC"
+	picture = "gfx/leaders/LAT/Karlis_Ulmanis.tga"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		 political_dancer
+	}
+}
+
+create_country_leader = {
+	name = "Gustavs Celmiņš"
+	desc = ""
+	picture = "gfx/leaders/LAT/Gustavs Celmins.tga"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		dictator quartermaster_general 
+	}
+	
+}
+
+create_country_leader = {
+	name = "Augusts Kirhenšteins"
+	desc = ""
+	picture = "gfx/leaders/LAT/Augusts Kirhensteins.tga"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+	}
+}
+
+create_field_marshal = {
+	name = "Ernests Gothards"
+	desc = "Fascist Field Marchal"
+		picture = "Ernests Gothards.tga"
+	traits = {   }
+	skill = 2
+	
+}
+
+create_corps_commander = {
+	name = "Rūdolfs Bangerskis"
+	desc = "Fascist Army General"
+		picture = "Rudolfs Bangerskis.tga"
+	traits = { panzer_leader }
+	skill = 1
+	
+}
+
+create_corps_commander = {
+	name = "Fricis Celmiņš"
+	desc = "Field Marchal"
+			picture = "Fricis_Celmins.tga"
+	traits = { winter_specialist panzer_leader  }
+	skill = 1
+
+}
+
+create_corps_commander = {
+	name = "Artūrs Sīlgailis"
+	desc = "Army General"
+			picture = "Arturs_Silgailis.tga"
+	traits = {  trickster commando }
+	skill = 2
+	
+}
+create_corps_commander = {
+	name = "Jānis Kurelis"
+	desc = "Army General"
+			picture = "Janis_Kurelis.tga"
+	traits = {  trickster commando }
+	skill = 2
+	
+}
+create_corps_commander = {
+	name = "Jānis Balodis"
+	desc = "Army General"
+			picture = "Balodis.tga"
+	traits = {   panzer_leader trickster commando }
+	skill = 3
+	
+}
+create_corps_commander = {
+	name = "Jānis Lavenieks"
+	desc = "Army General"
+		picture = "Janis Lavenieks.tga"
+	traits = {  winter_specialist fortress_buster  }
+	skill = 1
+	
+}
+create_navy_leader = {
+	name = "Teodors Spāde"
+		picture = "Teodors Spade.tga"
+	traits = { seawolf superior_tactician }
+	skill = 4
+}
+
+create_navy_leader = {
+	name = "Arčibalds P.T. Keizerlings"
+		picture = "Keizerlings.tga"
+	traits = { superior_tactician }
+	skill = 1
+}

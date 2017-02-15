@@ -1,0 +1,150 @@
+﻿division_template = {
+	name = "Kājinieku Divizīja"		# Infantry Division
+	# Note: Divisions were nowhere near full strength until mobilized
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		
+	}
+		
+}
+
+units = {
+	######## LAND OOB ########
+	##### Latvijas Augstas Komandu #####
+	division = {
+		name = "1. Kurzemes Divizīja"
+		location = 3296
+		division_template = "Kājinieku Divizīja"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "2. Kurzemes Divizīja"
+		location = 3296
+		division_template = "Kājinieku Divizīja"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+
+	}
+	
+
+	
+	division = {
+		name = "1. Veterānu divīzija"
+		location = 9340
+		division_template = "Kājinieku Divizīja"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "LAT" } }
+		start_experience_factor = 1
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "2. Veterānu divīzija"
+		location = 9340
+		division_template = "Kājinieku Divizīja"
+		force_equipment_variants = { infantry_equipment_2 = { owner = "LAT" } }
+		start_experience_factor = 1
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "1. Zemgales Divizīja"
+		location = 6342
+		division_template = "Kājinieku Divizīja"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+
+	}
+	
+	division = {
+		name = "1. Latgales Divizīja"
+		location = 310
+		division_template = "Kājinieku Divizīja"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		name = "2. Latgales Divizīja"
+		location = 310
+		division_template = "Kājinieku Divizīja"
+		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.5
+
+	}
+		
+
+
+
+	##### NAVAL UNITS #####
+	navy = {					
+		name = "Latvijas Flote"				
+		base = 9262
+		location =  9262 # Liepaja
+		ship = { name = "Ronis" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LAT } } }
+		ship = { name = "Spīdola" definition = submarine equipment = { submarine_1 = { amount = 1 owner = LAT } } }
+		ship = { name = "Varonis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT } } }
+		ship = { name = "Virsaitis" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = LAT } } }
+		
+		
+		
+	}					
+
+}
+air_wings = {
+	### Latvijas Gaisa Speki
+	12 = {
+		# Aviacijas Pulka -- Bristol Bulldogs
+		name = "Latvijas Gaisa Speki - Bristoles Buldogi"
+			early_fighter_equipment_1 =  {
+			owner = "LAT" 
+			amount = 12
+		}
+	}
+}
+
+
+### Starting Production ###
+instant_effect = {
+
+	
+	
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "LAT"
+		}
+		requested_factories = 5
+		progress = 0.9
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "LAT"
+		}
+		requested_factories = 1
+		progress = 0.35
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "LAT" 
+		}
+		requested_factories = 2
+		progress = 0.2
+		amount = 8
+	}
+}

@@ -1,0 +1,55 @@
+
+state={
+	id=12
+	name="STATE_12"
+	manpower = 1500000
+	
+	resources={
+	
+		steel=5
+		oil=0
+		tungsten=0
+		chromium=0
+		rubber=0
+		aluminium=0
+	}
+	
+	state_category = metropolis
+	
+	history={
+		owner = LAT
+		victory_points = {
+			9340 5 
+		}
+		victory_points = {
+			310 4 
+		}
+		victory_points = {
+			10493 2 
+		}
+		victory_points = {
+			6222 3 
+		}
+		buildings = {
+			infrastructure = 5
+			radar_station = 0
+			arms_factory = 2
+			industrial_complex = 3
+			anti_air_building = 1
+			dockyard =1
+			air_base = 4
+			
+			9340 = {
+				naval_base = 2
+			}
+			9317 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = LAT
+	}
+
+	provinces={
+		3298 3388 6222 9240 9317 9340 9501 10323 10493 11222 11302 
+	}
+}

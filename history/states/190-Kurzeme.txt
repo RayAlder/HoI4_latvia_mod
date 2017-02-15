@@ -1,0 +1,51 @@
+
+state={
+	id=190
+	name="STATE_190"
+	manpower = 1000000
+	
+	state_category = metropolis
+	resources={
+	
+		steel=5
+		chromium=0
+		tungsten=0
+		oil=0
+		rubber=0
+		aluminium=0
+	}
+	history={
+		owner = LAT
+		victory_points = {
+			3296 2 
+		}
+		victory_points = {
+			9262 4 
+		}
+		victory_points = {
+			3194 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			radar_station = 0
+			arms_factory = 2
+			dockyard = 4
+			anti_air_building = 1
+			
+			9262 = {
+				naval_base = 5
+			}
+			3296 = {
+				naval_base = 4
+			}
+		
+			
+		}
+		add_core_of = LAT
+	}
+
+	provinces={
+		3194 3296 3319 6322 9262 11246 
+	}
+}
