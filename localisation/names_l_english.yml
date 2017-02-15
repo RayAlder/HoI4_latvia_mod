@@ -27,7 +27,8 @@ LAT_industry_effort2:0 "Industrijas attīstība LVL2"
 LAT_naval:"Kuģu būves attīstība"
 LAT_Oil:"Nafta Baltijas jūrā"
 LAT_anti_soviet_pact:0"Pret-Padomju Pakts"
-LAT_anti_comitern_pact:0"Cīņa ar Komunismu"
+LAT_anti_comitern_pact:0"Cīņa pret Komunismu"
+
 LAT_ussr_war_goal:0 "Abrenes Ultimāts"
 LAT_Annex:0"Baltijas Republika"
 
