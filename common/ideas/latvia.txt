@@ -169,9 +169,26 @@ country {
 				
 		}
 		
-		patriotisms = 
-		{
-	
+		LAT_joint_research = {				
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			picture = generic_research_bonus
+			removal_cost = -1
+			
+			modifier = {
+				research_time_factor = -0.05
+			}
+		}
+		
+		patriotisms = {
 					
 			removal_cost = -1
 			modifier = {

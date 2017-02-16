@@ -1046,38 +1046,6 @@ focus = {
 			
 		}
 }
-	
-focus = {
-		id = LAT_china_friend
-		icon = GFX_goal_generic_build_airforce
-		prerequisite = {  }
-		mutually_exclusive = {  }
-		available = {
-			OR = {
-				country_exists = CHI
-				CHI = { is_puppet = no }
-				NOT = { has_war_with = CHI }
-				CHI = {
-					custom_trigger_tooltip = {
-						tooltip = LAT_alone_or_peace_faction_tt
-						
-					}
-				}
-			}
-		}
-		x = 16
-		y = 0
-		cost = 10
-		ai_will_do = {
-			factor = 0.25
-		}	
-		completion_reward = {
-			CHI = {
-				
-			}
-			
-		}
-}
 
 #Soviet
 focus = {
@@ -1192,6 +1160,135 @@ focus = {
 			create_wargoal = {
 				type = annex_everything
 				target = SOV
+			}
+		}
+}
+
+#Root of Baltic alliance tree	
+focus = {
+		id = LAT_baltic_cooperation
+		icon = GFX_goal_generic_improve_relations
+		available = {
+			NOT = { has_war_with = EST }
+			NOT = { has_war_with = LIT }
+		}
+		
+		x = 18
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		
+		completion_reward = {
+			EST = { 
+					add_opinion_modifier = { target = LAT modifier = democratic_leanings_good }
+					add_ideas = democratic_influence
+					country_event = { id = generic.1 }
+			}
+			LIT = { 
+					add_opinion_modifier = { target = LAT modifier = democratic_leanings_good }
+					add_ideas = democratic_influence
+					country_event = { id = generic.1 }
+			}
+		}
+}
+
+focus = {
+		id = LAT_baltic_joint_research
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = LAT_baltic_cooperation }
+		x = 17
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_ideas = { LAT_joint_research }
+		}
+}
+
+focus = {
+		id = LAT_baltic_way
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = LAT_baltic_cooperation }
+		mutually_exclusive = {  }
+		available = {	}
+		x = 19
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			#For Estonia
+			13 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			
+			}			
+			
+			191 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		
+			#For Latvia
+			12 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_1IC
+			}			
+			
+			744 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_1IC
+			}
+			
+			#For Lithuania
+			11 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			
+			}			
+			
+			189 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
 			}
 		}
 }
