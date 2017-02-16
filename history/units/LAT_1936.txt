@@ -21,7 +21,7 @@ units = {
 		location = 3296
 		division_template = "Kājinieku Divizīja"
 		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
-		start_experience_factor = 0.5
+		start_experience_factor = 0.25
 		start_equipment_factor = 0.5
 
 	}
@@ -30,7 +30,7 @@ units = {
 		location = 3296
 		division_template = "Kājinieku Divizīja"
 		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
-		start_experience_factor = 0.5
+		start_experience_factor = 0.25
 		start_equipment_factor = 0.5
 
 	}
@@ -60,7 +60,7 @@ units = {
 		location = 6342
 		division_template = "Kājinieku Divizīja"
 		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
-		start_experience_factor = 0.5
+		start_experience_factor = 0.25
 		start_equipment_factor = 0.5
 
 	}
@@ -70,7 +70,7 @@ units = {
 		location = 310
 		division_template = "Kājinieku Divizīja"
 		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
-		start_experience_factor = 0.5
+		start_experience_factor = 0.25
 		start_equipment_factor = 0.5
 
 	}
@@ -79,7 +79,7 @@ units = {
 		location = 310
 		division_template = "Kājinieku Divizīja"
 		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
-		start_experience_factor = 0.5
+		start_experience_factor = 0.25
 		start_equipment_factor = 0.5
 
 	}
@@ -102,17 +102,7 @@ units = {
 	}					
 
 }
-air_wings = {
-	### Latvijas Gaisa Speki
-	12 = {
-		# Aviacijas Pulka -- Bristol Bulldogs
-		name = "Latvijas Gaisa Speki - Bristoles Buldogi"
-			early_fighter_equipment_1 =  {
-			owner = "LAT" 
-			amount = 12
-		}
-	}
-}
+
 
 
 ### Starting Production ###

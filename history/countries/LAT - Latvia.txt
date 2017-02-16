@@ -133,7 +133,7 @@ create_field_marshal = {
 	name = "Ernests Gothards"
 	desc = "Fascist Field Marchal"
 		picture = "Ernests Gothards.tga"
-	traits = {   }
+	traits = { logistics_wizard  }
 	skill = 2
 	
 }
@@ -142,7 +142,7 @@ create_corps_commander = {
 	name = "Rūdolfs Bangerskis"
 	desc = "Fascist Army General"
 		picture = "Rudolfs Bangerskis.tga"
-	traits = { panzer_leader }
+	traits = { naval_invader }
 	skill = 1
 	
 }
@@ -151,7 +151,7 @@ create_corps_commander = {
 	name = "Fricis Celmiņš"
 	desc = "Field Marchal"
 			picture = "Fricis_Celmins.tga"
-	traits = { winter_specialist panzer_leader  }
+	traits = { winter_specialist   }
 	skill = 1
 
 }
@@ -160,7 +160,7 @@ create_corps_commander = {
 	name = "Artūrs Sīlgailis"
 	desc = "Army General"
 			picture = "Arturs_Silgailis.tga"
-	traits = {  trickster commando }
+	traits = {  ranger commando }
 	skill = 2
 	
 }
@@ -168,7 +168,7 @@ create_corps_commander = {
 	name = "Jānis Kurelis"
 	desc = "Army General"
 			picture = "Janis_Kurelis.tga"
-	traits = {  trickster commando }
+	traits = {  trickster fortress_buster }
 	skill = 2
 	
 }
@@ -176,7 +176,7 @@ create_corps_commander = {
 	name = "Jānis Balodis"
 	desc = "Army General"
 			picture = "Balodis.tga"
-	traits = {   panzer_leader trickster commando }
+	traits = { hill_fighter commando }
 	skill = 3
 	
 }
@@ -184,8 +184,8 @@ create_corps_commander = {
 	name = "Jānis Lavenieks"
 	desc = "Army General"
 		picture = "Janis Lavenieks.tga"
-	traits = {  winter_specialist fortress_buster  }
-	skill = 1
+	traits = {  winter_specialist urban_assault_specialist  }
+	skill = 2
 	
 }
 create_navy_leader = {

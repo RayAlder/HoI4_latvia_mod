@@ -2893,6 +2893,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_rkb.tga"
 	}
 	spriteType = {
+		name = "GFX_idea_lkb"
+		texturefile = "gfx/interface/ideas/idea_lkb.tga"
+	}
+	spriteType = {
 		name = "GFX_idea_rrr"
 		texturefile = "gfx/interface/ideas/idea_rrr.dds"
 	}
@@ -2906,7 +2910,11 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_vef"
-		texturefile = "gfx/interface/ideas/idea_vef.tga"
+		texturefile = "gfx/interface/ideas/idea_vef.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_vef2"
+		texturefile = "gfx/interface/ideas/idea_vef2.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_venn"
@@ -3056,4 +3064,21 @@ spriteTypes = {
 		name = "GFX_idea_LAT_Toms_Gaillitis"
 		texturefile = "gfx/interface/ideas/idea_gaillitis.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_LAT_Vilis_Lacis"
+		texturefile = "gfx/interface/ideas/idea_vilis_lacis.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Vilis_Gulbis"
+		texturefile = "gfx/interface/ideas/idea_vilis_gulbis.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Herberts_Cukurs"
+		texturefile = "gfx/interface/ideas/idea_herberts_cukurs.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_LAT_Krisjanis_Berkis"
+		texturefile = "gfx/interface/ideas/idea_berkis.dds"
+	}
+
 }

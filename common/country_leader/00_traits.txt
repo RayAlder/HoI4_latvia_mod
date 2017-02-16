@@ -285,7 +285,7 @@ leader_traits = {
 	}
 	
 	fortification_engineer = {
-		sprite = 10
+		sprite = 9
 		random = yes
 		production_speed_bunker_factor = 0.2
 		production_speed_coastal_bunker_factor = 0.2
@@ -378,7 +378,7 @@ leader_traits = {
 	}
 	
 	military_theorist = {
-		sprite = 14
+		sprite = 5
 		experience_gain_army = 0.05
 		
 		ai_will_do = {
@@ -425,7 +425,7 @@ leader_traits = {
 	}
 	
 	air_warfare_theorist = {
-		sprite = 14
+		sprite = 1
 		experience_gain_air = 0.05
 		
 		ai_will_do = {
@@ -467,7 +467,7 @@ leader_traits = {
 	}
 	
 	assault_avaition = {
-		sprite = 14
+		sprite = 1
 		experience_gain_air = 0.05
 		
 		ai_will_do = {
@@ -2107,10 +2107,11 @@ leader_traits = {
 			factor = 3
 		}
 	}
+	
 #Lat manufactuers
 infrastructure_speed = {
 		sprite = 10
-		random = yes
+		
 		production_speed_infrastructure_factor = 0.25
 				
 		ai_will_do = {
@@ -2120,7 +2121,7 @@ infrastructure_speed = {
 	
 industry_speed = {
 		sprite = 10
-		random = yes
+		
 		
 		local_resources_factor = 0.20
 		ai_will_do = {
@@ -2130,7 +2131,7 @@ industry_speed = {
 
 synthetic_speed = {
 		sprite = 10
-		random = yes
+		
 		production_speed_synthetic_refinery_factor = 0.25
 		
 		ai_will_do = {
@@ -2140,11 +2141,11 @@ synthetic_speed = {
 
 light_tank_manufacturer = {
 		sprite = 10
-		random = yes
+		
 		equipment_bonus = {
-			armor = {
+			light_tank_equipment = {
 				reliability = 0.15 
-				soft_attack = 0.02
+				soft_attack = 0.2
 				build_cost_ic = -0.1 instant = yes
 			}
 		}
@@ -2156,12 +2157,12 @@ light_tank_manufacturer = {
 
 vairogs_tank = {
 		sprite = 10
-		random = yes
+		
 		equipment_bonus = {
 			mechanized_equipment = {
 				hardness = 0.2
 				reliability = 0.10 
-				soft_attack = 0.02
+				ap_attack = 0.1
 				build_cost_ic = -0.15 instant = yes
 				
 			}
@@ -2173,10 +2174,12 @@ vairogs_tank = {
 }
 
 raf_tank_manufacturer = {
-		random = no
+		
 		equipment_bonus = {
-			armor = {
-				armor_value = 0.2 
+			heavy_tank_equipment = {
+				hard_attack = 0.1
+				maximum_speed = 0.15	
+				defense = 0.15				
 				build_cost_ic = -0.1 instant = yes
 			}
 		}
@@ -2188,7 +2191,7 @@ raf_tank_manufacturer = {
 	
 constructor = {
 		sprite = 10
-		random = yes
+		
 		production_speed_buildings_factor = 0.15
 		
 		ai_will_do = {
@@ -2198,7 +2201,7 @@ constructor = {
 
 computing = {
 		sprite = 10
-		random = yes
+	
 		research_time_factor = -0.1
 		
 		ai_will_do = {
@@ -2208,7 +2211,7 @@ computing = {
 
 dockyard_builder = {
 		sprite = 10
-		random = yes
+		
 		
 		production_speed_dockyard_factor = 0.15
 		ai_will_do = {
@@ -2216,14 +2219,39 @@ dockyard_builder = {
 		}
 }
 
+naval_builder = {
+		sprite = 10
+		
+		
+		production_speed_naval_base_factor = 0.2
+		ai_will_do = {
+			factor = 1
+		}
+}
+
 vef_aircraft_manufacturer = {
-		random = no
+		
 		equipment_bonus = {
+			
 			fighter_equipment = {
-				air_agility = 0.2 maximum_speed = 0.1
+					instant = yes
+					maximum_speed = 0.2
+					air_agility = 0.2					
 			}
-			cv_fighter_equipment = {
-				air_agility = 0.2 maximum_speed = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+vef_cas_manufacturer = {
+		
+		equipment_bonus = {
+			CAS_equipment = {
+					instant = yes
+					maximum_speed = 0.15
+					air_agility = 0.15					
 			}
 		}
 		
@@ -2233,33 +2261,35 @@ vef_aircraft_manufacturer = {
 	}
 	
 interior_advisor = {
-		sprite = 14
+		sprite = 13
 		drift_defence_factor = 0.25
 		political_power_factor = 0.15
 		production_speed_arms_factory_factor = 0.15
 		subversive_activites_upkeep = -0.5
-		ai_will_do = {
-			factor = 500
-		}
+		
+	}
+	
+cukurs = {
+		sprite = 13
+		fascism_drift = 0.2
+		enemy_partisan_effect = -0.05
+		experience_gain_air_factor = 0.05
+		
 	}
 	
 finance_advisor = {
-		sprite = 14
+		sprite = 13
 		trade_opinion_factor = 0.25
 		
-		ai_will_do = {
-			factor = 500
-		}
+		
 	}
 	
 foreign_advisor = {
-		sprite = 14
+		sprite = 13
 		unity_factor = 0.05
 		opinion_gain_monthly_factor = 0.15
 		political_power_factor = 0.25
-		ai_will_do = {
-			factor = 500
-		}
+		
 	}
 	
 electric_scientist =	{
@@ -2297,69 +2327,29 @@ army_chief_defensive_4 = { # +15 Defensive efficiency
 
 air_chief_tompsons = { 
 		sprite = 1
-		experience_gain_air_factor = 0.1
+		experience_gain_air_factor = 0.05
 		air_night_penalty = -0.15
-		
+		enemy_army_bonus_air_superiority_factor = -0.1
 		ai_will_do = {
 			factor = 3
 		}
 	}
-
-superior_speed = {
-		sprite = 14
-		equipment_bonus = {
-			CAS_equipment = {
-					instant = yes
-					maximum_speed = 0.15
-					air_agility = 0.1					
-			}
-		}
-		
-		
-		ai_will_do = {
-			factor = 100
-		}
+	
+air_engineer = {
+sprite = 1
+experience_gain_air_factor = 0.2
+air_accidents_factor = -0.15
 }
-
-superior_speed = {
-		sprite = 14
-		equipment_bonus = {
-			CAS_equipment = {
-					instant = yes
-					maximum_speed = 0.15
-					air_agility = 0.1					
-			}
-		}
-		
-		
-		ai_will_do = {
-			factor = 100
-		}
-}
-
 sub_expert = {
-sprite = 14
+sprite = 4
 		experience_gain_navy = 0.05
-		equipment_bonus = {
-				submarine = {
-				sub_visibility = -0.1
-				surface_visibility = -0.1
-				naval_speed = 0.1
-			}
-		}
+		navy_submarine_defence_factor = 0.1
 }
 
 destroyer_expert = {
-sprite = 14
+sprite = 3
 		experience_gain_navy = 0.05
-		equipment_bonus = {
-				destroyer = {
-				attack = 0.1
-				sub_attack = 0.1
-				evasion = 0.2
-				naval_speed = 0.1
-			}
-		}
+		convoy_raiding_efficiency_factor = 0.2
 }
 
 }

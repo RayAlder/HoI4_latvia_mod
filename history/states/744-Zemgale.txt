@@ -2,7 +2,7 @@
 state={
 	id=744
 	name="Zemgale"
-	manpower = 1000000
+	manpower = 500000
 	
 	state_category = metropolis
 	resources={
@@ -26,9 +26,9 @@ state={
 			265 1 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			radar_station = 0
-			industrial_complex = 3
+			industrial_complex = 6
 			arms_factory = 0
 			anti_air_building = 0
 			air_base = 2		

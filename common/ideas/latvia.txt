@@ -93,6 +93,7 @@ country {
 			}
 		}
 		
+#Not used yet		
 		LAT_rocketry_idea
 		{
 			
@@ -114,7 +115,7 @@ country {
 			}
 		}
 		
-		
+#Not used yet			
 		LAT_air_innovations_2_idea = {
 			removal_cost = -1
 			allowed = {
@@ -133,6 +134,7 @@ country {
 			}
 
 		}	
+		
 		LAT_electronics_idea = {
 			removal_cost = -1
 			allowed = {
@@ -151,6 +153,7 @@ country {
 			}
 			traits = {computing}
 		}
+
 		
 		LAT_wartime = {
 		
@@ -253,6 +256,43 @@ political_advisor = {
 			
 			traits = { foreign_advisor }
 		}
+		
+		LAT_Herberts_Cukurs = {
+			cost = 10
+			
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { cukurs }
+		}
+		
+		LAT_Vilis_Gulbis = {
+			cost = 10
+			
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { democratic_reformer }
+		}
+		
+		LAT_Vilis_Lacis = {
+			cost = 10
+			
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			traits = { communist_revolutionary }
+		}
+	
+	
+	
+	
 	}
 	
 #Theorists
@@ -298,7 +338,7 @@ theorist = {
 			
 			
 			
-			traits = { superior_speed }
+			traits = { air_engineer }
 		}
 		
 		LAT_Eizens_Arins = {
@@ -346,14 +386,16 @@ army_chief = {
 			}
 		}
 
-		LAT_Janis_Balodis = {
+		LAT_Krisjanis_Berkis = {
 		cost = 10
 			
 			
 			allowed = {
 				original_tag = LAT
 			}
-			
+			available = {
+					has_completed_focus = LAT_SS_division
+				}
 
 			
 			traits = { army_chief_defensive_4 }
@@ -687,6 +729,29 @@ aircraft_manufacturer = {
 				factor = 1
 			}
 		}
+		
+		vef2 = {
+			picture = GFX_idea_vef2
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				air_equipment = 0.2
+			}
+			
+			traits = { vef_cas_manufacturer }
+			
+			equipment_bonus = {
+				# made light bombers, fighters and trainers
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
 	}
 	
 #Naval
@@ -707,10 +772,53 @@ naval_manufacturer = {
 			}
 			
 			equipment_bonus = {
-				# mer research
+				
+				destroyer = 
+				{
+				attack = 0.1
+				sub_attack = 0.1
+				evasion = 0.1
+				naval_speed = 0.1
+				}
+				
+				screen_ship = {
+				naval_range = 0.1 
+				sub_detection = 0.1 
+				naval_speed = 0.1 
+				build_cost_ic = 0.1
+				}
 			}
 			
+			
 			traits = { dockyard_builder }
+			
+			modifier = {
+			}
+		}
+		
+		lkb = {
+			picture = GFX_idea_lkb
+			cost = 10
+			
+			allowed = {
+				original_tag = LAT
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.2
+			}
+			
+			equipment_bonus = {
+				submarine = {
+				max_strength = 0.1
+				sub_visibility = -0.2
+				surface_visibility = -0.2
+				naval_speed = 0.2
+			}
+		}
+			
+			
+			traits = { naval_builder }
 			
 			modifier = {
 			}
