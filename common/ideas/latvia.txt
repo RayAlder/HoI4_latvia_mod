@@ -17,7 +17,7 @@ country {
 		
 		balodis = 
 		{
-		sprite = 13
+		
 		
 				
 			removal_cost = -1
@@ -637,14 +637,18 @@ rvr = {
 			}
 			
 			research_bonus = {
-			armor = 0.25
+			armor = 0.15
 			
 			}
 			
 			traits = { light_tank_manufacturer }
 			
 			equipment_bonus = {
-			
+			light_tank_equipment = {
+				reliability = 0.15 
+				soft_attack = 0.2
+				build_cost_ic = -0.1 instant = yes
+			}
 			}
 			
 			ai_will_do = {
@@ -661,14 +665,20 @@ vairogs = {
 			}
 			
 			research_bonus = {
-			armor = 0.15
+			armor = 0.10
 				
 			}
 			
 			traits = { vairogs_tank }
 			
 			equipment_bonus = {
-				# 
+			mechanized_equipment = {
+				hardness = 0.2
+				reliability = 0.10 
+				ap_attack = 0.1
+				build_cost_ic = -0.15 instant = yes
+				
+			}
 			}
 			
 			ai_will_do = {
@@ -692,7 +702,12 @@ raf = {
 			traits = { raf_tank_manufacturer }
 			
 			equipment_bonus = {
-				# 
+			heavy_tank_equipment = {
+				hard_attack = 0.1
+				maximum_speed = 0.15	
+				defense = 0.15				
+				build_cost_ic = -0.1 instant = yes
+			}
 			}
 			
 			ai_will_do = {
@@ -722,7 +737,12 @@ aircraft_manufacturer = {
 			traits = { vef_aircraft_manufacturer }
 			
 			equipment_bonus = {
-				# made light bombers, fighters and trainers
+			
+			fighter_equipment = {
+					instant = yes
+					maximum_speed = 0.2
+					air_agility = 0.2					
+			}
 			}
 			
 			ai_will_do = {
@@ -745,7 +765,11 @@ aircraft_manufacturer = {
 			traits = { vef_cas_manufacturer }
 			
 			equipment_bonus = {
-				# made light bombers, fighters and trainers
+			CAS_equipment = {
+					instant = yes
+					maximum_speed = 0.15
+					air_agility = 0.15					
+			}
 			}
 			
 			ai_will_do = {
@@ -815,7 +839,7 @@ naval_manufacturer = {
 				surface_visibility = -0.2
 				naval_speed = 0.2
 			}
-		}
+			}
 			
 			
 			traits = { naval_builder }
@@ -861,7 +885,7 @@ materiel_manufacturer = {
 			
 				infantry ={
 				max_strength = 0.10
-				supply_consumption = 0.05
+				soft_attack = 0.1
 				}
 			}
 			traits = {  }
