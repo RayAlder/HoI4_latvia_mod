@@ -2210,7 +2210,14 @@ naval_builder = {
 
 vef_aircraft_manufacturer = {
 		
-		
+		equipment_bonus = {
+			fighter_equipment = {
+				air_agility = 0.2 maximum_speed = 0.2 build_cost_ic = -0.15
+			}
+			cv_fighter_equipment = {
+				air_agility = 0.2 maximum_speed = 0.2 build_cost_ic = -0.15
+			}
+		}
 		
 		ai_will_do = {
 			factor = 1
@@ -2219,7 +2226,14 @@ vef_aircraft_manufacturer = {
 	
 vef_cas_manufacturer = {
 		
-		
+		equipment_bonus = {
+			CAS_equipment = {
+				air_ground_attack = 0.15 reliability = 0.15 build_cost_ic = -0.15
+			}
+			cv_CAS_equipment = {
+				air_ground_attack = 0.15 reliability = 0.15 build_cost_ic = -0.15
+			}		
+		}
 		
 		ai_will_do = {
 			factor = 1
