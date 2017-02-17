@@ -1175,7 +1175,7 @@ focus = {
 		
 		x = 18
 		y = 0
-		cost = 10
+		cost = 0
 		ai_will_do = {
 			factor = 1
 		}	
@@ -1200,7 +1200,7 @@ focus = {
 		prerequisite = { focus = LAT_baltic_cooperation }
 		x = 17
 		y = 1
-		cost = 10
+		cost = 0
 		ai_will_do = {
 			factor = 1
 		}	
@@ -1217,7 +1217,7 @@ focus = {
 		available = {	}
 		x = 19
 		y = 1
-		cost = 10
+		cost = 0
 		ai_will_do = {
 			factor = 1
 		}	
