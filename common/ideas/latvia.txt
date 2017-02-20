@@ -629,7 +629,7 @@ tank_manufacturer = {
 
 		designer = yes
 rvr = {
-			picture = GFX_idea_rvr
+			
 			cost = 10
 			
 			allowed = {
@@ -655,7 +655,7 @@ rvr = {
 		}
 		
 vairogs = {
-			picture = GFX_idea_vairogs
+			
 			cost = 10
 			
 			allowed = {
@@ -683,7 +683,7 @@ vairogs = {
 }
 
 raf = {
-			picture = GFX_raf
+			
 			cost = 10
 			
 			allowed = {
@@ -720,7 +720,7 @@ aircraft_manufacturer = {
 		
 		
 		vef = {
-			picture = GFX_idea_vef
+			
 			cost = 10
 			
 			allowed = {
@@ -743,7 +743,7 @@ aircraft_manufacturer = {
 		}
 		
 		vef2 = {
-			picture = GFX_idea_vef2
+			
 			cost = 10
 			
 			allowed = {
@@ -772,7 +772,7 @@ naval_manufacturer = {
 		designer = yes
 		
 		rkb = {
-			picture = GFX_idea_rkb
+			
 			cost = 10
 			
 			allowed = {
@@ -809,7 +809,7 @@ naval_manufacturer = {
 		}
 		
 		lkb = {
-			picture = GFX_idea_lkb
+			
 			cost = 10
 			
 			allowed = {
@@ -845,7 +845,7 @@ materiel_manufacturer = {
 		designer = yes
 		
 		lkr = {
-		picture = GFX_idea_lkr
+		
 		cost = 10	
 			allowed = {
 				original_tag = LAT
@@ -861,7 +861,7 @@ materiel_manufacturer = {
 		}
 		
 		dsr = {
-		picture = GFX_idea_dsr
+	
 		cost = 10					
 			allowed = {
 				original_tag = LAT
@@ -882,7 +882,7 @@ materiel_manufacturer = {
 		}
 	
 		venn = {
-			picture = GFX_idea_venn
+			
 			cost = 10
 			
 			allowed = {
@@ -909,7 +909,7 @@ materiel_manufacturer = {
 industrial_concern = {	
 		
 		lmet = {
-		picture = GFX_idea_lmet
+		
 		cost = 10		
 			allowed = {
 				original_tag = LAT
@@ -923,7 +923,7 @@ industrial_concern = {
 		}
 		
 		rrr = {
-			picture = GFX_idea_rrr
+			
 			cost = 10
 			
 			allowed = {
@@ -948,7 +948,7 @@ industrial_concern = {
 		}
 		
 		ldz = {
-			picture = GFX_idea_ldz
+			
 			cost = 10
 			
 			allowed = {
@@ -971,7 +971,7 @@ industrial_concern = {
 		}
 		
 		minox = {
-			picture = GFX_idea_minox
+			
 			cost = 10
 			
 			allowed = {
