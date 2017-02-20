@@ -81,7 +81,7 @@ focus = {
 		text = LAT_fortification_focus
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { }
-		mutually_exclusive = { focus = LAT_sea_fortification_focus }
+		
 		x = 4
 		y = 0
 		cost = 10
@@ -127,7 +127,7 @@ focus = {
 		id = LAT_sea_fortification_focus
 		text = LAT_sea_fortification_focus
 		icon = GFX_goal_generic_construct_military
-		mutually_exclusive = { focus = LAT_fortification_focus }
+		
 		x = 6
 		y = 0
 		cost = 10
@@ -849,7 +849,7 @@ focus = {
 		
 focus = {
 		id = LAT_SS_division
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_goal_generic_army_motorized
 		prerequisite = {focus = LAT_Strelnieki}
 		x = 8
 		y = 1
