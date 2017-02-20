@@ -1,0 +1,1301 @@
+focus_tree = {
+	id = latvia_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = LAT
+		}
+		
+		modifier = {
+			add = 10
+			original_tag = LAT
+		}
+	}
+	
+	default = yes
+	
+	focus = {
+		id = LAT_INFRA_
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 1
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {
+			custom_effect_tooltip = LAT_INFRA
+			hidden_effect = {
+				12 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				190 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				743 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				744 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+			}		
+		}
+}
+
+#Robežas ar Krieviju  fortifikācija		
+focus = {      
+		id = LAT_fortification_focus
+		text = LAT_fortification_focus
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { }
+		mutually_exclusive = { focus = LAT_sea_fortification_focus }
+		x = 4
+		y = 0
+		cost = 10
+		available = {
+			743 = { is_controlled_by = LAT }
+			744 = { is_controlled_by = LAT }
+			12 = { is_controlled_by = LAT }
+		}
+		
+		completion_reward = {
+					ROOT = { country_event = { id = latvia.1 } }
+		
+		add_ideas = {LAT_fortification}
+			
+		}
+}
+
+focus = {
+		id = LAT_fortification_focus2
+		icon = GFX_goal_generic_fortify_city
+		text = LAT_fortification_focus2
+		prerequisite = {focus = LAT_fortification_focus }
+		x = 4
+		y = 1
+		cost = 10
+		available = {
+			743 = { is_controlled_by = LAT }
+			744 = { is_controlled_by = LAT }
+			12 = { is_controlled_by = LAT }
+		}
+		
+		completion_reward = {
+					ROOT = { country_event = { id = latvia.1 } }
+		
+		remove_ideas = {LAT_fortification}
+		add_ideas = {LAT_fortification2}
+			
+		}
+}
+	
+#Jūras fortifikācija	
+focus = {
+		id = LAT_sea_fortification_focus
+		text = LAT_sea_fortification_focus
+		icon = GFX_goal_generic_construct_military
+		mutually_exclusive = { focus = LAT_fortification_focus }
+		x = 6
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+
+			12 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9317
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9240
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9340
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 6222
+						instant_build = yes
+					}
+				}
+			}
+
+			190 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 6322
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3296
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3319
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9262
+						instant_build = yes
+					}
+				}
+			}
+
+			744 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3525
+						instant_build = yes
+					}
+				}
+			}
+
+		add_ideas = {LAT_sea_fort}
+			
+		}
+}
+
+focus = {
+		id = LAT_sea_fortification_focus2
+		text = LAT_sea_fortification_focus2
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = LAT_sea_fortification_focus }
+		x = 6
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+
+			12 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9317
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9240
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9340
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 6222
+						instant_build = yes
+					}
+				}
+			}
+
+			190 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 6322
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3296
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3319
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9262
+						instant_build = yes
+					}
+				}
+			}
+
+			744 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3525
+						instant_build = yes
+					}
+				}
+			}
+
+		remove_ideas = {LAT_sea_fort}
+		add_ideas = {LAT_sea_fort2}
+		}
+}
+	
+focus = {
+		id = LAT_naval
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = LAT_sea_fortification_focus2 }
+		x = 6
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = naval_effort_tt
+				NOT = {
+					any_owned_state = {
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			every_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_naval_rearmament_2dockyard
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_naval_rearmament_1dockyard
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_naval_rearmament_1dockyard
+			}
+		}
+}
+
+#Military
+focus = {
+		id = LAT_military_effort
+		text = LAT_military_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LAT_INFRA_}
+		mutually_exclusive = { focus = LAT_industry_effort }
+		x = 0
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 9
+		}
+
+	complete_tooltip = {
+			every_state = {
+				
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+
+		completion_reward = {
+			12 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			190 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			743 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			744 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			
+		}
+}
+
+focus = {
+		id = LAT_military_effort2
+		text = LAT_military_effort2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LAT_military_effort }
+		x = 0
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		complete_tooltip = {
+			every_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+
+		completion_reward = {
+			12 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			190 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			743 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			744 = {
+				
+				add_extra_state_shared_building_slots = 5
+			
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			
+		}
+}
+
+#Industrija
+focus = {
+		id = LAT_industry_effort
+		text = LAT_industry_effort
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = LAT_INFRA_}
+		mutually_exclusive = { focus = LAT_military_effort }
+		x = 2
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 9
+		}
+
+	complete_tooltip = {
+			every_state = {
+				
+				add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+
+		completion_reward = {
+			12 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			190 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			743 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			744 = {
+				
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			
+		}
+}
+
+focus = {
+		id = LAT_industry_effort2
+		text = LAT_industry_effort2
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = LAT_industry_effort }
+		mutually_exclusive = { focus = LAT_industrial_research }
+		x = 2
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		complete_tooltip = {
+			every_state = {
+				
+				add_extra_state_shared_building_slots = 7
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+
+		completion_reward = {
+			12 = {
+				
+				add_extra_state_shared_building_slots = 7
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			190 = {
+				
+				add_extra_state_shared_building_slots = 7
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			743 = {
+				
+				add_extra_state_shared_building_slots = 7
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			744 = {
+				
+				add_extra_state_shared_building_slots = 7
+			
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_2IC
+			}
+			
+		}
+}	
+
+#Resources
+focus = {
+		id = LAT_Oil
+		text= LAT_Oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = LAT_military_effort2 focus = LAT_industry_effort2  }
+		mutually_exclusive = { focus = LAT_Rubber }
+		x = 0
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 20
+				state = 190
+			}
+		}
+}
+
+focus = {
+		id = LAT_Rubber
+		text = LAT_Rubber
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = LAT_military_effort2 focus = LAT_industry_effort2 }
+		mutually_exclusive = { focus = LAT_Oil }
+		
+		x = 2
+		y = 5
+		cost = 10
+		
+		completion_reward = {
+			add_resource = {
+				type = rubber
+				amount = 10
+				state = 744 #Jelgava
+			}
+		}
+}
+
+#Research	
+focus = {
+		id = LAT_industrial_research
+	
+		icon = GFX_goal_generic_production 
+		
+		prerequisite = { focus = LAT_industry_effort}
+		mutually_exclusive = { focus = LAT_industry_effort2 }
+		x = 4
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+		add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = construction_tech
+			}
+		}
+}	
+
+focus = {
+		id = LAT_electronics_research
+	
+		icon = GFX_goal_generic_radar
+		
+		prerequisite = { focus = LAT_industrial_research }
+		x = 4
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+		add_ideas = LAT_electronics_idea
+		add_tech_bonus = {
+				name = radar_tech_bonus
+				bonus = 0.5
+				uses = 1
+				category = radar_tech
+			}
+		}
+}	
+
+focus = {
+		id = LAT_extra_tech_slots
+	
+		icon = GFX_focus_research
+		
+		prerequisite = { focus = LAT_electronics_research focus = LAT_Rubber focus = LAT_Oil }
+		x = 2
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_research_slot = 1
+		}
+}
+
+
+	
+
+###Strelnieki	
+focus = {
+		id = LAT_Strelnieki
+		icon = GFX_goal_generic_allies_build_infantry
+		
+		x = 8
+		y = 0
+		cost = 10
+		
+		completion_reward = 
+		{
+	
+		ROOT = { country_event = { id = latvia.2 } }
+		army_experience = 20
+			
+		}
+			
+}
+		
+focus = {
+		id = LAT_SS_division
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = {focus = LAT_Strelnieki}
+		x = 8
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		ROOT = { country_event = { id = latvia.3 } }
+			army_experience = 20
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			
+				
+			
+			
+		}
+}
+
+#Peterkrusts
+focus = {
+		id = LAT_Peterkrusts
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = {  }
+		
+		x = 11
+		y = 0
+		cost = 10
+		
+		completion_reward = {
+		set_party_name = { ideology = fascism long_name = LAT_fascism_party name = LAT_fascism_party }
+		
+		
+			add_ideas = patriotisms
+			add_ideas = LAT_wartime
+			#if = {
+			#	limit = { has_idea = boot }
+			#	remove_ideas = boot
+			#}
+			
+		}
+}
+
+focus = {
+		id = LAT_Annex
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = LAT_Peterkrusts }
+		
+		x = 11
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		add_political_power = 150
+		}
+}
+	
+focus = {
+		id = LAT_ESTONIA_aneksija
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = LAT_Annex }
+		
+		x = 10
+		y = 2
+		cost = 10
+		
+		completion_reward = {
+			army_experience = 10
+			if = {
+				limit = {
+					country_exists = EST
+					EST = {
+						OR = {
+							owns_state = 13
+							owns_state = 191
+							
+						}
+					}
+				}
+				#EST = {
+				#	country_event = germany.28
+				#}
+				
+			}
+			if = {
+				limit = {
+					13 = {
+						owner = {
+							NOT = {
+								tag = EST
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 13
+			}
+			if = {
+				limit = {
+					191 = {
+						owner = {
+							NOT = {
+								tag = EST
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 191
+			}
+			
+		}
+}
+	
+focus = {
+		id = LAT_LITHUANIA_aneksija
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = LAT_Annex}
+		
+		x = 12
+		y = 2
+		cost = 10
+
+		completion_reward = {
+			army_experience = 10
+			if = {
+				limit = {
+					country_exists = LIT
+					LIT = {
+						OR = {
+							owns_state = 11
+							owns_state = 188
+							owns_state = 189
+							
+						}
+					}
+				}
+				#EST = {
+				#	country_event = germany.28
+				#}
+				
+			}
+			if = {
+				limit = {
+					11 = {
+						owner = {
+							NOT = {
+								tag = LIT
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 11
+			}
+			if = {
+				limit = {
+					188 = {
+						owner = {
+							NOT = {
+								tag = LIT
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 188
+			}
+			if = {
+				limit = {
+					189 = {
+						owner = {
+							NOT = {
+								tag = LIT
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 189
+			}
+			
+		}
+}
+
+#Soviet
+focus = {
+		id = LAT_anti_comitern_pact
+		icon = GFX_goal_anti_comintern_pact
+		prerequisite = {   }
+		x = 14
+		y = 0
+		cost = 10
+		available = {
+			is_puppet = no
+			NOT = { has_government = communism }
+			NOT = { is_in_faction_with = SOV }
+		}
+		
+		completion_reward = {
+			SOV = { add_opinion_modifier = { target = ROOT modifier = pact_against_us } }
+			add_named_threat = { threat = 1 name = LAT_anti_comitern_pact }
+			every_other_country = {
+				limit = {
+					NOT = { tag = LAT }
+					NOT = { has_war_with = LAT }
+					NOT = { is_in_faction_with = SOV }
+					OR = {
+						capital_scope = {
+								is_on_continent = europe
+						}
+						capital_scope = {
+								is_on_continent = asia
+						}
+						num_of_factories > 30
+					}
+					OR = {
+						
+							is_neighbor_of = SOV
+							NOT = { has_government = communism }
+						}
+					}
+				}
+				country_event = latvia.4
+			}
+		}
+	
+focus = {
+		id = LAT_anti_soviet_pact
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = LAT_anti_comitern_pact }
+		
+		available = {
+			is_puppet = no
+			
+			is_neighbor_of = SOV
+		}
+		x = 14
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 2.5	
+		}
+		completion_reward = {
+			hidden_effect = {
+				SOV = { remove_opinion_modifier = { target = ROOT modifier = pact_against_us } }
+			}
+			SOV = { add_opinion_modifier = { target = ROOT modifier = worse_pact_against_us } }
+			add_ideas = anti_soviet_pact
+			custom_effect_tooltip = LAT_anti_soviet_pact_tt
+			custom_effect_tooltip = LAT_anti_soviet_pact_tt_2
+			every_other_country = {
+				limit = {
+					has_opinion_modifier = anti_comintern_pact_opinion
+					OR = {
+						NOT = { is_in_faction = yes }
+						is_in_faction_with = LAT
+					}
+					NOT = { tag = LAT }
+					NOT = { has_war_with = LAT }
+				}
+				country_event = latvia.5
+			}
+			hidden_effect = {
+				news_event = { hours = 12 id = news.215 }
+			}
+		}
+}
+
+focus = {
+		id = LAT_ussr_war_goal
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {focus = LAT_anti_soviet_pact }
+		
+		will_lead_to_war_with = SOV
+
+		cancel = {
+			NOT = { country_exists = SOV }
+		}
+		x = 14
+		y = 2
+		cost = 10
+		historical_ai = {
+			NOT = {
+				any_neighbor_country = {
+					has_war_with = ROOT
+				}		
+			}
+		}
+		bypass = {
+			has_war_with = SOV
+		}
+				completion_reward = {
+				
+			
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+		}
+}
+
+#Root of Baltic alliance tree	
+focus = {
+		id = LAT_baltic_cooperation
+		icon = GFX_goal_generic_improve_relations
+		available = {
+			NOT = { has_war_with = EST }
+			NOT = { has_war_with = LIT }
+		}
+		
+		x = 18
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		
+		completion_reward = {
+			EST = { 
+					add_opinion_modifier = { target = LAT modifier = democratic_leanings_good }
+					add_ideas = democratic_influence
+					country_event = { id = generic.1 }
+			}
+			LIT = { 
+					add_opinion_modifier = { target = LAT modifier = democratic_leanings_good }
+					add_ideas = democratic_influence
+					country_event = { id = generic.1 }
+			}
+		}
+}
+
+focus = {
+		id = LAT_baltic_joint_research
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = LAT_baltic_cooperation }
+		x = 17
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_ideas = { LAT_joint_research }
+		}
+}
+
+focus = {
+		id = LAT_baltic_way
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = LAT_baltic_cooperation }
+		mutually_exclusive = {  }
+		available = {	}
+		x = 19
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			#For Estonia
+			13 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			
+			}			
+			
+			191 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		
+			#For Latvia
+			12 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_1IC
+			}			
+			
+			744 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = LAT_industrial_effort_1IC
+			}
+			
+			#For Lithuania
+			11 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			
+			}			
+			
+			189 = {
+				add_extra_state_shared_building_slots = 2
+				
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+		}
+}
+
+	
+}	
+	
+
+
+
