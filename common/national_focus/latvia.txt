@@ -22,7 +22,7 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		x = 1
 		y = 0
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 12
 		}
@@ -81,10 +81,10 @@ focus = {
 		text = LAT_fortification_focus
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { }
-		mutually_exclusive = { focus = LAT_sea_fortification_focus }
+		
 		x = 4
 		y = 0
-		cost = 0
+		cost = 10
 		available = {
 			743 = { is_controlled_by = LAT }
 			744 = { is_controlled_by = LAT }
@@ -106,7 +106,7 @@ focus = {
 		prerequisite = {focus = LAT_fortification_focus }
 		x = 4
 		y = 1
-		cost = 0
+		cost = 10
 		available = {
 			743 = { is_controlled_by = LAT }
 			744 = { is_controlled_by = LAT }
@@ -127,10 +127,10 @@ focus = {
 		id = LAT_sea_fortification_focus
 		text = LAT_sea_fortification_focus
 		icon = GFX_goal_generic_construct_military
-		mutually_exclusive = { focus = LAT_fortification_focus }
+		
 		x = 6
 		y = 0
-		cost = 0
+		cost = 10
 		
 		ai_will_do = {
 			factor = 1
@@ -221,7 +221,7 @@ focus = {
 		prerequisite = { focus = LAT_sea_fortification_focus }
 		x = 6
 		y = 1
-		cost = 0
+		cost = 10
 		
 		ai_will_do = {
 			factor = 1
@@ -311,7 +311,7 @@ focus = {
 		prerequisite = { focus = LAT_sea_fortification_focus2 }
 		x = 6
 		y = 2
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}
@@ -429,7 +429,7 @@ focus = {
 		mutually_exclusive = { focus = LAT_industry_effort }
 		x = 0
 		y = 2
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 9
 		}
@@ -503,7 +503,7 @@ focus = {
 		prerequisite = { focus = LAT_military_effort }
 		x = 0
 		y = 3
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
@@ -579,7 +579,7 @@ focus = {
 		mutually_exclusive = { focus = LAT_military_effort }
 		x = 2
 		y = 2
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 9
 		}
@@ -651,10 +651,10 @@ focus = {
 		text = LAT_industry_effort2
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = LAT_industry_effort }
-		mutually_exclusive = { focus = LAT_industrial_research }
+		
 		x = 2
 		y = 3
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 5
 		}
@@ -730,7 +730,7 @@ focus = {
 		mutually_exclusive = { focus = LAT_Rubber }
 		x = 0
 		y = 5
-		cost = 0
+		cost = 10
 		
 		completion_reward = {
 			add_resource = {
@@ -750,7 +750,7 @@ focus = {
 		
 		x = 2
 		y = 5
-		cost = 0
+		cost = 10
 		
 		completion_reward = {
 			add_resource = {
@@ -768,10 +768,10 @@ focus = {
 		icon = GFX_goal_generic_production 
 		
 		prerequisite = { focus = LAT_industry_effort}
-		mutually_exclusive = { focus = LAT_industry_effort2 }
+		
 		x = 4
 		y = 3
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	
@@ -793,7 +793,7 @@ focus = {
 		prerequisite = { focus = LAT_industrial_research }
 		x = 4
 		y = 5
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	
@@ -816,7 +816,7 @@ focus = {
 		prerequisite = { focus = LAT_electronics_research focus = LAT_Rubber focus = LAT_Oil }
 		x = 2
 		y = 6
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	
@@ -835,7 +835,7 @@ focus = {
 		
 		x = 8
 		y = 0
-		cost = 0
+		cost = 10
 		
 		completion_reward = 
 		{
@@ -908,12 +908,14 @@ focus = {
 		add_political_power = 150
 		}
 }
-	
+
 focus = {
 		id = LAT_ESTONIA_aneksija
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = LAT_Annex }
-		
+		available = {
+			has_government = fascism
+		}
 		x = 10
 		y = 2
 		cost = 0
@@ -931,9 +933,9 @@ focus = {
 						}
 					}
 				}
-				#EST = {
-				#	country_event = germany.28
-				#}
+				EST = {
+					country_event = latvia.8
+				}
 				
 			}
 			if = {
@@ -974,11 +976,13 @@ focus = {
 		id = LAT_LITHUANIA_aneksija
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = LAT_Annex}
-		
+		available = {
+			has_government = fascism
+		}
 		x = 12
 		y = 2
 		cost = 0
-
+		
 		completion_reward = {
 			army_experience = 10
 			if = {
@@ -993,9 +997,9 @@ focus = {
 						}
 					}
 				}
-				#EST = {
-				#	country_event = germany.28
-				#}
+				LIT = {
+					country_event = latvia.11
+				}
 				
 			}
 			if = {
@@ -1045,7 +1049,9 @@ focus = {
 			}
 			
 		}
-}
+}	
+
+	
 
 #Soviet
 focus = {
@@ -1054,7 +1060,7 @@ focus = {
 		prerequisite = {   }
 		x = 14
 		y = 0
-		cost = 0
+		cost = 10
 		available = {
 			is_puppet = no
 			NOT = { has_government = communism }
@@ -1101,7 +1107,7 @@ focus = {
 		}
 		x = 14
 		y = 1
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 2.5	
 		}
@@ -1143,7 +1149,7 @@ focus = {
 		}
 		x = 14
 		y = 2
-		cost = 0
+		cost = 10
 		historical_ai = {
 			NOT = {
 				any_neighbor_country = {
@@ -1175,7 +1181,7 @@ focus = {
 		
 		x = 18
 		y = 0
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	
@@ -1200,7 +1206,7 @@ focus = {
 		prerequisite = { focus = LAT_baltic_cooperation }
 		x = 17
 		y = 1
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	
@@ -1217,7 +1223,7 @@ focus = {
 		available = {	}
 		x = 19
 		y = 1
-		cost = 0
+		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	

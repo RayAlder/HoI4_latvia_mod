@@ -21,6 +21,22 @@ latvia.5.d:1 "The Anti-Soviet Pact stipulates that all signatories must join in 
 latvia.5.a:2 "[From.GetName] does not stand alone"
 latvia.5.b:0 "This is not our war"
 latvia.5.b_tt:0 "§YThis will be viewed as a betrayal by all countries who honor the pact (§!§R-50§!§Y opinion)§!"
+
+latvia.9.t:0 "Estonia Submits"
+latvia.9.d:0 "Estonia has surrendered to our demands. We have replaced the decadent government in Tallinn with a Thunder Cross ministers, which has unanimously voted to join our mighty empire. After deliberations, the Saiema has decided to accept this request."
+latvia.9.a:0 "Welcome friends!."
+latvia.10.t:0 "Estonia Refuses Our Offer"
+latvia.10.d:0 "Estonia has outrageously decided to refuse our generous offer of a mutual assistance pact! The capitalists and sycophants in Tallinn have further had the gall to issue a statement demanding that we respect the territorial integrity of their nation!"
+latvia.10.a:0 "We must protect the Estonians from themselves."
+
+
+latvia.12.t:0 "Lithuania Submits"
+latvia.12.d:0 "Our request for military bases in Lithuania has been granted, but unfortunately their government has collapsed. We have established a Fascist Goverment to avoid anarchy, and they have unanimously voted to join in our union. This request has been granted."
+latvia.12.a:0 "We will save you from capitalism."
+latvia.13.t:0 "Lithuania Refuses Our Offer"
+latvia.13.d:0 "Lithuania seems bent on self-destruction, and the fools in their government are denying our forces access to their country. Do they think they would be better off under the Germans? Their selfish leaders are committing a crime against the people by denying their citizens true socialism."
+latvia.13.a:0 "The Lithuanian people have suffered enough."
+
  
  germany.4.t:0 "Anschluss"
  germany.4.d:0 "Repeated uprisings in Austria clearly show that the people there long to be united with our Reich. It is now time to take action and allow the will of the people to be made manifest."

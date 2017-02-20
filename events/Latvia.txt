@@ -175,7 +175,7 @@ country_event = {
 	id = latvia.5
 	title = latvia.5.t
 	desc = latvia.5.d
-	picture = GFX_report_event_soviet_tanks
+	picture = GFX_report_event_strelnieki
 
 	is_triggered_only = yes
 	
@@ -254,3 +254,204 @@ country_event = {
 		}
 	}
 }
+#Latvia annex EST and LIT
+# Thunder Cross Empire Ultimatum (Estonia)
+country_event = {
+	id = latvia.8
+	title = latvia.8.t
+	desc = latvia.8.d
+	picture = GFX_report_event_strelnieki
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = latvia.8.a
+		ai_chance = {
+			base = 10
+			modifier = { # Don't accept if in a faction that can protect them
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						is_in_faction_with = EST
+					}
+					LAT = { surrender_progress > 0.5 }
+				}
+			}
+		}
+		LAT = {
+			country_event = { days = 5 id = latvia.9 }
+			
+		}
+		
+	}
+	option = { # Refuse
+		name = latvia.8.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 1
+				OR = {
+					is_historical_focus_on = no
+					any_other_country = {
+						is_major = yes
+						is_in_faction_with = EST
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = EST
+				}
+			}
+		}
+
+		LAT = {
+			country_event = { days = 5 id = latvia.10 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = EST
+				}	
+			}
+		}
+	}
+}
+
+# Estonia Surrenders
+country_event = {
+	id = latvia.9
+	title = latvia.9.t
+	desc = latvia.9.d
+	picture = GFX_report_event_strelnieki
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.9.a
+		annex_country = { target = EST transfer_troops = yes}
+		add_political_power = 75
+		add_named_threat = { threat = 2 name = latvia.9.t }
+		set_country_flag = EST_annexed
+	}
+}
+
+# Estonia Refuses
+country_event = {
+	id = latvia.10
+	title = latvia.10.t
+	desc = latvia.10.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.10.a
+		create_wargoal = {
+			type = annex_everything
+			target = EST
+		}		
+	}
+}
+
+# Thunder Cross Empire Ultimatum (Lithuania)
+country_event = {
+	id = latvia.11
+	title = latvia.11.t
+	desc = latvia.11.d
+	picture = GFX_report_event_strelnieki
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = latvia.11.a
+		ai_chance = {
+			base = 10
+			modifier = { # Don't accept if in a faction that can protect them
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						is_in_faction_with = LIT
+					}
+					LAT = { surrender_progress > 0.5 }
+				}
+			}
+		}
+		LAT = {
+			country_event = { days = 5 id = latvia.12 }
+		}
+		
+	}
+	option = { # Refuse
+		name = latvia.11.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 1
+				OR = {
+					is_historical_focus_on = no
+					any_other_country = {
+						is_major = yes
+						is_in_faction_with = LIT
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = LIT
+				}
+			}
+		}
+
+		LAT = {
+			country_event = { days = 5 id = latvia.12 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = LIT
+				}	
+			}
+		}
+	}
+}
+# Lithuania Surrenders
+country_event = {
+	id = latvia.12
+	title = latvia.12.t
+	desc = latvia.12.d
+	picture = GFX_report_event_strelnieki
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.12.a
+		annex_country = { target = LIT transfer_troops = yes}
+		add_political_power = 75
+		add_named_threat = { threat = 2 name = latvia.12.t }
+		set_country_flag = LIT_annexed
+	}
+}
+
+# Lithuania Refuses
+country_event = {
+	id = latvia.13
+	title = latvia.13.t
+	desc = latvia.13.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.13.a
+		create_wargoal = {
+			type = annex_everything
+			target = LIT
+		}		
+	}
+}
+
