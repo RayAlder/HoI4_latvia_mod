@@ -10877,3 +10877,78 @@ news_event = {
 		}
 	}
 }
+
+#Latvia Seeks Baltic Entente
+news_event = {
+	id = news.287
+	title = news.287.t
+	desc = {
+		text = news.287.d_baltic
+		trigger = {
+			OR = {
+				tag = EST
+				tag = LAT
+				tag = LIT
+			}
+		}
+	}
+	desc = {
+		text = news.287.d_not_baltic
+		trigger = {
+			NOT = {
+				OR = {
+					tag = EST
+					tag = LAT
+					tag = LIT
+				}
+			}
+		}
+	}
+	picture = GFX_news_event_polish_army
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+
+	option = {
+		name = news.287.a
+		trigger = {
+			NOT = {
+				OR = {
+					tag = EST
+					tag = LAT
+					tag = LIT
+					tag = GER
+					tag = SOV
+				}
+			}
+		}
+	}
+
+	option = {
+		name = news.287.b
+		trigger = {
+			tag = SOV
+		}
+	}
+
+	option = {
+		name = news.287.c
+		trigger = {
+			tag = GER
+		}
+	}
+
+	option = {
+		name = news.287.e
+		trigger = {
+			OR = {
+				tag = EST
+				tag = LAT
+				tag = LIT
+			}
+		}
+	}
+}

@@ -455,3 +455,34 @@ country_event = {
 	}
 }
 
+#Estonia or Lithuania accept Entente
+country_event = {
+	id = latvia.14
+	title = latvia.14.t
+	desc = latvia.14.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = latvia.14.a
+	}
+}
+
+#Estonia or Lithuania refuses Entente
+country_event = {
+	id = latvia.15
+	title = latvia.15.t
+	desc = latvia.15.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+
+	option = {
+		name = latvia.15.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}
+	}
+}
