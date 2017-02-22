@@ -876,6 +876,7 @@ focus = {
 		id = LAT_Peterkrusts
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = {  }
+		mutually_exclusive = { focus = LAT_baltic_cooperation }
 		
 		x = 11
 		y = 0
@@ -1057,7 +1058,7 @@ focus = {
 focus = {
 		id = LAT_anti_comitern_pact
 		icon = GFX_goal_anti_comintern_pact
-		prerequisite = {   }
+		prerequisite = { focus = LAT_baltic_cooperation focus = LAT_Peterkrusts }
 		x = 14
 		y = 1
 		cost = 10
@@ -1204,7 +1205,7 @@ focus = {
 		id = LAT_baltic_joint_research
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = LAT_baltic_cooperation }
-		x = 16
+		x = 17
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1219,9 +1220,9 @@ focus = {
 		id = LAT_baltic_way
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = LAT_baltic_cooperation }
-		mutually_exclusive = {  }
+		mutually_exclusive = { focus = LAT_Peterkrusts }
 		available = {	}
-		x = 18
+		x = 19
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1299,7 +1300,7 @@ focus = {
 			}
 		}
 		x = 17
-		y = 3
+		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1377,6 +1378,42 @@ focus = {
 			}
 		}
 }
+
+focus = {
+		id = LAT_baltic_state
+		icon = GFX_goal_generic_major_alliance
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = LAT_baltic_entente }
+		available = { 
+			OR = {
+				threat > 0.80
+			}
+		}
+		x = 17
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			
+		}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 	
