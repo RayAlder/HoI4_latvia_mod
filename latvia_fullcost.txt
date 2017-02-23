@@ -651,7 +651,7 @@ focus = {
 		text = LAT_industry_effort2
 		icon = GFX_goal_generic_construct_civilian
 		prerequisite = { focus = LAT_industry_effort }
-		mutually_exclusive = { focus = LAT_industrial_research }
+		
 		x = 2
 		y = 3
 		cost = 10
@@ -768,7 +768,7 @@ focus = {
 		icon = GFX_goal_generic_production 
 		
 		prerequisite = { focus = LAT_industry_effort}
-		mutually_exclusive = { focus = LAT_industry_effort2 }
+		
 		x = 4
 		y = 3
 		cost = 10
@@ -849,11 +849,11 @@ focus = {
 		
 focus = {
 		id = LAT_SS_division
-		icon = GFX_goal_generic_army_motorized
+		icon = GFX_goal_generic_army_tanks
 		prerequisite = {focus = LAT_Strelnieki}
 		x = 8
 		y = 1
-		cost = 10
+		cost = 0
 		
 		completion_reward = {
 		ROOT = { country_event = { id = latvia.3 } }
@@ -879,7 +879,7 @@ focus = {
 		
 		x = 11
 		y = 0
-		cost = 10
+		cost = 0
 		
 		completion_reward = {
 		set_party_name = { ideology = fascism long_name = LAT_fascism_party name = LAT_fascism_party }
@@ -902,21 +902,23 @@ focus = {
 		
 		x = 11
 		y = 1
-		cost = 10
+		cost = 0
 		
 		completion_reward = {
 		add_political_power = 150
 		}
 }
-	
+
 focus = {
 		id = LAT_ESTONIA_aneksija
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = LAT_Annex }
-		
+		available = {
+			has_government = fascism
+		}
 		x = 10
 		y = 2
-		cost = 10
+		cost = 0
 		
 		completion_reward = {
 			army_experience = 10
@@ -931,9 +933,9 @@ focus = {
 						}
 					}
 				}
-				#EST = {
-				#	country_event = germany.28
-				#}
+				EST = {
+					country_event = latvia.8
+				}
 				
 			}
 			if = {
@@ -974,11 +976,13 @@ focus = {
 		id = LAT_LITHUANIA_aneksija
 		icon = GFX_goal_generic_occupy_states_ongoing_war
 		prerequisite = { focus = LAT_Annex}
-		
+		available = {
+			has_government = fascism
+		}
 		x = 12
 		y = 2
-		cost = 10
-
+		cost = 0
+		
 		completion_reward = {
 			army_experience = 10
 			if = {
@@ -993,9 +997,9 @@ focus = {
 						}
 					}
 				}
-				#EST = {
-				#	country_event = germany.28
-				#}
+				LIT = {
+					country_event = latvia.11
+				}
 				
 			}
 			if = {
@@ -1045,7 +1049,9 @@ focus = {
 			}
 			
 		}
-}
+}	
+
+	
 
 #Soviet
 focus = {
@@ -1053,7 +1059,7 @@ focus = {
 		icon = GFX_goal_anti_comintern_pact
 		prerequisite = {   }
 		x = 14
-		y = 0
+		y = 1
 		cost = 10
 		available = {
 			is_puppet = no
@@ -1100,7 +1106,7 @@ focus = {
 			is_neighbor_of = SOV
 		}
 		x = 14
-		y = 1
+		y = 2
 		cost = 10
 		ai_will_do = {
 			factor = 2.5	
@@ -1142,7 +1148,7 @@ focus = {
 			NOT = { country_exists = SOV }
 		}
 		x = 14
-		y = 2
+		y = 3
 		cost = 10
 		historical_ai = {
 			NOT = {
@@ -1173,7 +1179,7 @@ focus = {
 			NOT = { has_war_with = LIT }
 		}
 		
-		x = 18
+		x = 17
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -1198,7 +1204,7 @@ focus = {
 		id = LAT_baltic_joint_research
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = LAT_baltic_cooperation }
-		x = 17
+		x = 16
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1215,7 +1221,7 @@ focus = {
 		prerequisite = { focus = LAT_baltic_cooperation }
 		mutually_exclusive = {  }
 		available = {	}
-		x = 19
+		x = 18
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1224,45 +1230,42 @@ focus = {
 		completion_reward = {
 			#For Estonia
 			13 = {
-				add_extra_state_shared_building_slots = 2
-				
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
-			
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
 			}			
-			
-			191 = {
-				add_extra_state_shared_building_slots = 2
-				
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				
-			}
 		
 			#For Latvia
 			12 = {
-				add_extra_state_shared_building_slots = 2
-				
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = LAT_industrial_effort_1IC
 			}			
 			
 			744 = {
-				add_extra_state_shared_building_slots = 2
-				
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
 					instant_build = yes
 				}
 				set_state_flag = LAT_industrial_effort_1IC
@@ -1270,31 +1273,113 @@ focus = {
 			
 			#For Lithuania
 			11 = {
-				add_extra_state_shared_building_slots = 2
-				
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
 				}
-			
-			}			
-			
-			189 = {
-				add_extra_state_shared_building_slots = 2
-				
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
+					type = infrastructure
+					level = 2
 					instant_build = yes
 				}
-				
 			}
 		}
 }
 
+focus = {
+		id = LAT_baltic_entente
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = LAT_anti_comitern_pact }
+		prerequisite = { focus = LAT_baltic_way }
+		prerequisite = { focus = LAT_baltic_joint_research }
+		available = { 
+			OR = {
+				threat > 0.40
+			}
+		}
+		x = 17
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = BALTIC_entente_faction
+			hidden_effect = {
+				news_event = { hours = 6 id = news.287 }
+			}
+			
+			#Opinion modifiers
+			add_opinion_modifier = { target = EST modifier = POL_the_baltic_alliance }
+			EST = { 
+				add_opinion_modifier = { target = ROOT modifier = POL_the_baltic_alliance } 
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						EST = {
+							is_in_faction = no
+							is_puppet = no
+							NOT = { has_war_with = LAT }
+						}
+					}
+					EST = {
+						country_event = { id = baltic.8 days = 1 }
+					}
+				}
+			}
+			add_opinion_modifier = { target = LIT modifier = POL_the_baltic_alliance }
+			
+			LIT = { 
+				add_opinion_modifier = { target = ROOT modifier = POL_the_baltic_alliance }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LIT = {
+							is_in_faction = no
+							is_puppet = no
+							NOT = { has_war_with = LAT }
+						}
+					}
+					LIT = {
+						country_event = { id = baltic.8 days = 1 }
+					}
+				}
+			}
+			
+			#Invites
+			if = {
+				limit = {
+					EST = {
+						is_in_faction = no
+						is_puppet = no
+						NOT = { has_war_with = LAT }
+					}
+				}
+				EST = {
+					custom_effect_tooltip = POL_invite_to_faction_tooltip
+				}
+			}
+			if = {
+				limit = {
+					LIT = {
+						is_in_faction = no
+						is_puppet = no
+						NOT = { has_war_with = LAT }
+					}
+				}
+				LIT = {
+					custom_effect_tooltip = POL_invite_to_faction_tooltip
+				}
+			}
+		}
+}
+}
+
 	
-}	
 	
 
 

@@ -225,7 +225,7 @@ country {
 political_advisor = {
 
 		LAT_Kornelijs_Veidnieks = {
-			cost = 10
+			cost = 150
 		
 			
 			allowed = {
@@ -236,7 +236,7 @@ political_advisor = {
 		}
 
 		LAT_Janis_Kaminskis = {
-			cost = 10
+			cost = 150
 			
 				
 			allowed = {
@@ -247,7 +247,7 @@ political_advisor = {
 		}
 
 		LAT_Vilhelms_Munters = {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -258,7 +258,7 @@ political_advisor = {
 		}
 		
 		LAT_Herberts_Cukurs = {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -269,7 +269,7 @@ political_advisor = {
 		}
 		
 		LAT_Vilis_Gulbis = {
-			cost = 10
+			cost = 100
 			
 			
 			allowed = {
@@ -280,7 +280,7 @@ political_advisor = {
 		}
 		
 		LAT_Vilis_Lacis = {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -299,7 +299,7 @@ political_advisor = {
 theorist = {
 
 		LAT_Ludvigs_Bolsteins = {
-			cost = 10		
+			cost = 150		
 			
 
 			allowed = {
@@ -314,7 +314,7 @@ theorist = {
 		}
 
 		LAT_Eduards_Pulpe = {
-			cost = 10		
+			cost = 150		
 			
 				
 			allowed = {
@@ -329,7 +329,7 @@ theorist = {
 		}
 		
 		LAT_Karlis_Irbitis = {
-			cost = 10		
+			cost = 100		
 			
 				
 			allowed = {
@@ -342,7 +342,7 @@ theorist = {
 		}
 		
 		LAT_Eizens_Arins = {
-			cost = 10		
+			cost = 150		
 			
 				
 			allowed = {
@@ -353,7 +353,7 @@ theorist = {
 		}
 		
 		LAT_Ludvigs_Jansons = {
-			cost = 10		
+			cost = 150		
 			
 				
 			allowed = {
@@ -370,7 +370,7 @@ theorist = {
 army_chief = {
 
 		LAT_Fricis_Celmins = {
-		cost = 10
+		cost = 150
 			
 			
 			allowed = {
@@ -387,7 +387,7 @@ army_chief = {
 		}
 
 		LAT_Krisjanis_Berkis = {
-		cost = 10
+		cost = 150
 			
 			
 			allowed = {
@@ -406,7 +406,7 @@ army_chief = {
 		}
 
 		LAT_Arturs_Silgailis = {
-		cost = 10
+		cost = 150
 			
 			
 			allowed = {
@@ -427,7 +427,7 @@ army_chief = {
 air_chief = {
 
 		LAT_Peteris_Tompsons = {
-		cost = 10
+		cost = 150
 			
 			
 			allowed = {
@@ -444,7 +444,7 @@ air_chief = {
 		}
 
 		LAT_Alfreds_Valeika = {
-		cost = 10
+		cost = 150
 			
 			
 			allowed = {
@@ -465,7 +465,7 @@ air_chief = {
 navy_chief = {
 
 		LAT_Teodors_Spade = {
-		cost = 10
+		cost = 150
 			
 			
 			allowed = {
@@ -482,7 +482,7 @@ navy_chief = {
 		}
 
 		LAT_Archibalds_Keizerlings = {
-		cost = 10
+		cost = 150
 		
 			
 			allowed = {
@@ -502,7 +502,7 @@ navy_chief = {
 #Military High Command
 high_command = {
 		LAT_Janis_Kurelis	= {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -517,7 +517,7 @@ high_command = {
 		}
 		
 		LAT_Janis_Lavenieks = {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -532,7 +532,7 @@ high_command = {
 		}
 		
 		LAT_Olgierds_Teteris = {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -547,7 +547,7 @@ high_command = {
 		}
 		
 		LAT_Toms_Gaillitis = {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -563,7 +563,7 @@ high_command = {
 		
 
 		LAT_Rudolfs_Bangerskis = {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -578,7 +578,7 @@ high_command = {
 		}
 		
 		LAT_Ernests_Gothards = {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -593,7 +593,7 @@ high_command = {
 		}
 		
 		LAT_Ernests_Barotajs = {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -608,7 +608,7 @@ high_command = {
 		}
 		
 		LAT_Adolfs_Kalns = {
-			cost = 10
+			cost = 150
 			
 			
 			allowed = {
@@ -630,7 +630,7 @@ tank_manufacturer = {
 		designer = yes
 rvr = {
 			
-			cost = 10
+			cost = 120
 			
 			allowed = {
 				original_tag = LAT
@@ -656,7 +656,7 @@ rvr = {
 		
 vairogs = {
 			
-			cost = 10
+			cost = 120
 			
 			allowed = {
 				original_tag = LAT
@@ -684,7 +684,7 @@ vairogs = {
 
 raf = {
 			
-			cost = 10
+			cost = 200
 			
 			allowed = {
 				original_tag = LAT
@@ -721,7 +721,7 @@ aircraft_manufacturer = {
 		
 		vef = {
 			
-			cost = 10
+			cost = 120
 			
 			allowed = {
 				original_tag = LAT
@@ -744,7 +744,7 @@ aircraft_manufacturer = {
 		
 		vef2 = {
 			
-			cost = 10
+			cost = 120
 			
 			allowed = {
 				original_tag = LAT
@@ -773,7 +773,7 @@ naval_manufacturer = {
 		
 		rkb = {
 			
-			cost = 10
+			cost = 150
 			
 			allowed = {
 				original_tag = LAT
@@ -810,7 +810,7 @@ naval_manufacturer = {
 		
 		lkb = {
 			
-			cost = 10
+			cost = 150
 			
 			allowed = {
 				original_tag = LAT
@@ -846,7 +846,7 @@ materiel_manufacturer = {
 		
 		lkr = {
 		
-		cost = 10	
+		cost = 150	
 			allowed = {
 				original_tag = LAT
 			}
@@ -862,7 +862,7 @@ materiel_manufacturer = {
 		
 		dsr = {
 	
-		cost = 10					
+		cost = 150					
 			allowed = {
 				original_tag = LAT
 			}
@@ -883,7 +883,7 @@ materiel_manufacturer = {
 	
 		venn = {
 			
-			cost = 10
+			cost = 150
 			
 			allowed = {
 				original_tag = LAT
@@ -910,7 +910,7 @@ industrial_concern = {
 		
 		lmet = {
 		
-		cost = 10		
+		cost = 150		
 			allowed = {
 				original_tag = LAT
 			}
@@ -924,7 +924,7 @@ industrial_concern = {
 		
 		rrr = {
 			
-			cost = 10
+			cost = 150
 			
 			allowed = {
 				original_tag = LAT
@@ -949,7 +949,7 @@ industrial_concern = {
 		
 		ldz = {
 			
-			cost = 10
+			cost = 100
 			
 			allowed = {
 				original_tag = LAT
@@ -972,7 +972,7 @@ industrial_concern = {
 		
 		minox = {
 			
-			cost = 10
+			cost = 150
 			
 			allowed = {
 				original_tag = LAT

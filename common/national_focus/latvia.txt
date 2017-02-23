@@ -82,7 +82,7 @@ focus = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { }
 		
-		x = 4
+		x = 20
 		y = 0
 		cost = 10
 		available = {
@@ -104,7 +104,7 @@ focus = {
 		icon = GFX_goal_generic_fortify_city
 		text = LAT_fortification_focus2
 		prerequisite = {focus = LAT_fortification_focus }
-		x = 4
+		x = 20
 		y = 1
 		cost = 10
 		available = {
@@ -128,7 +128,7 @@ focus = {
 		text = LAT_sea_fortification_focus
 		icon = GFX_goal_generic_construct_military
 		
-		x = 6
+		x = 22
 		y = 0
 		cost = 10
 		
@@ -219,7 +219,7 @@ focus = {
 		text = LAT_sea_fortification_focus2
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = LAT_sea_fortification_focus }
-		x = 6
+		x = 22
 		y = 1
 		cost = 10
 		
@@ -309,7 +309,7 @@ focus = {
 		id = LAT_naval
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = LAT_sea_fortification_focus2 }
-		x = 6
+		x = 22
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -833,7 +833,7 @@ focus = {
 		id = LAT_Strelnieki
 		icon = GFX_goal_generic_allies_build_infantry
 		
-		x = 8
+		x = 7
 		y = 0
 		cost = 10
 		
@@ -849,11 +849,11 @@ focus = {
 		
 focus = {
 		id = LAT_SS_division
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_goal_generic_army_motorized
 		prerequisite = {focus = LAT_Strelnieki}
-		x = 8
+		x = 7
 		y = 1
-		cost = 0
+		cost = 10
 		
 		completion_reward = {
 		ROOT = { country_event = { id = latvia.3 } }
@@ -871,7 +871,7 @@ focus = {
 		}
 }
 
-#Peterkrusts
+#Operation Thunder Cross
 focus = {
 		id = LAT_Peterkrusts
 		icon = GFX_goal_generic_attack_allies
@@ -880,7 +880,7 @@ focus = {
 		
 		x = 11
 		y = 0
-		cost = 0
+		cost = 10
 		
 		completion_reward = {
 		set_party_name = { ideology = fascism long_name = LAT_fascism_party name = LAT_fascism_party }
@@ -900,15 +900,45 @@ focus = {
 		id = LAT_Annex
 		icon = GFX_goal_generic_attack_allies
 		prerequisite = { focus = LAT_Peterkrusts }
-		
+		available = {
+			has_government = fascism
+		}
 		x = 11
-		y = 1
-		cost = 0
+		y = 2
+		cost = 10
 		
 		completion_reward = {
 		add_political_power = 150
 		}
 }
+
+focus = {
+		id = LAT_GER_Friend
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = LAT_Annex }
+		
+		available = {
+			OR = {
+				country_exists = GER
+				GER = { is_puppet = no }
+				NOT = { has_war_with = GER }
+				
+			}
+		}
+		x = 8
+		y = 4
+		cost = 10
+		
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = { target = LAT modifier = lat_ger_diplomacy_focus }
+			}
+			
+		}
+	}
 
 focus = {
 		id = LAT_ESTONIA_aneksija
@@ -918,8 +948,8 @@ focus = {
 			has_government = fascism
 		}
 		x = 10
-		y = 2
-		cost = 0
+		y = 4
+		cost = 10
 		
 		completion_reward = {
 			army_experience = 10
@@ -972,6 +1002,88 @@ focus = {
 			
 		}
 }
+
+focus = {
+		id = LAT_military_effort_EST
+		text = LAT_military_effort_EST
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LAT_ESTONIA_aneksija}
+		
+		x = 10
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 9
+		}
+
+	complete_tooltip = {
+			13 = {
+				
+				add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			191 = {
+				
+				add_extra_state_shared_building_slots = 5
+					add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+		}
+
+		completion_reward = {
+			13 = {
+				
+				add_extra_state_shared_building_slots = 5
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			191 = {
+				
+				add_extra_state_shared_building_slots = 5
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}						
+		}
+}
+
+focus = {      
+		id = LAT_fortification_focus_EST
+		text = LAT_fortification_focus_EST
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = LAT_military_effort_EST }
+		
+		x = 10
+		y = 6
+		cost = 10
+		available = {
+		191 = { is_controlled_by = LAT }
+			
+		}
+		
+		completion_reward = {
+					ROOT = { country_event = { id = latvia.16 } }
+		
+		
+}
+}
 	
 focus = {
 		id = LAT_LITHUANIA_aneksija
@@ -981,8 +1093,8 @@ focus = {
 			has_government = fascism
 		}
 		x = 12
-		y = 2
-		cost = 0
+		y = 4
+		cost = 10
 		
 		completion_reward = {
 			army_experience = 10
@@ -1052,7 +1164,107 @@ focus = {
 		}
 }	
 
-	
+focus = {
+		id = LAT_military_effort_LIT
+		text = LAT_military_effort_LIT
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LAT_LITHUANIA_aneksija}
+		
+		x = 12
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 9
+		}
+
+	complete_tooltip = {
+			11 = {
+				
+				add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			188 = {
+				
+				add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			189 = {
+				
+				add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			
+		}
+
+		completion_reward = {
+			11 = {
+				
+				add_extra_state_shared_building_slots = 4
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			188 = {
+				
+				add_extra_state_shared_building_slots = 3
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+			}
+			189 = {
+				
+				add_extra_state_shared_building_slots = 3
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				
+			}			
+		}
+}
+
+focus = {      
+		id = LAT_fortification_focus_LIT
+		text = LAT_fortification_focus_LIT
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = LAT_military_effort_LIT }
+		
+		x = 12
+		y = 6
+		cost = 10
+		available = {
+		11 = { is_controlled_by = LAT }
+			
+		}
+		
+		completion_reward = {
+					ROOT = { country_event = { id = latvia.17 } }
+		
+		
+}
+}	
 
 #Soviet
 focus = {
@@ -1296,7 +1508,7 @@ focus = {
 		prerequisite = { focus = LAT_baltic_joint_research }
 		available = { 
 			OR = {
-				threat > 0.40
+				threat > 0.02
 			}
 		}
 		x = 17

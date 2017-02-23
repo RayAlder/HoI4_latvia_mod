@@ -1,15 +1,15 @@
 ﻿l_english:
-latvia.1.t:0 "Border fortification from evil USSR"
-latvia.1.d:0 "We know that USSR is up to no good and it's time we act!"
+latvia.1.t:0 "Border fortification from evil Soviet Invasion"
+latvia.1.d:0 "We know that Soviets is up to no good and it's time we act!"
 latvia.1.a:0 "You Shall not Pass!"
 
-latvia.2.t:0 "Latvian Sniper Division"
+latvia.2.t:0 "Latvian Rifleman Division"
 latvia.2.d:0 "Upgrade weapons and divisions."
-latvia.2.a:0 "Boom, headshot!"
+latvia.2.a:0 "Boom, Headshot!"
 
-latvia.3.t:0 "Latvian Motiriz divisions"
-latvia.3.d:0 "Fashist handgrenade."
-latvia.3.a:0 "Bang!"
+latvia.3.t:0 "Latvian Motorized divisions"
+latvia.3.d:0 "Introducing our new motorized divisions."
+latvia.3.a:0 "Rum, Rum!"
 
 latvia.4.t:0 "Anti-Comintern Pact"
 latvia.4.d:0 "Latvia proposes that we sign a pact recognizing that the aim of the Communist International, known as the Comintern, is to disintegrate and subdue existing States by all the means at its command; convinced that the toleration of interference by the Communist International in the internal affairs of the nations not only endangers their internal peace and social well-being, but is also a menace to the peace of the world desirous of co-operating in the defense against Communist subversive activities."
@@ -37,6 +37,13 @@ latvia.13.t:0 "Lithuania Refuses Our Offer"
 latvia.13.d:0 "Lithuania seems bent on self-destruction, and the fools in their government are denying our forces access to their country. Do they think they would be better off under the Germans? Their selfish leaders are committing a crime against the people by denying their citizens true socialism."
 latvia.13.a:0 "The Lithuanian people have suffered enough."
 
+latvia.16.t:0 "Border fortification from evil Soviet Invasion"
+latvia.16.d:0 "Estonians also needs to be safe from Soviets!"
+latvia.16.a:0 "Together we stand!"
+
+latvia.17.t:0 "Border fortification from scum Poland"
+latvia.17.d:0 "Lithuanians will  also never give Wilno to Polish Scum!"
+latvia.17.a:0 "Together we stand!"
  
  germany.4.t:0 "Anschluss"
  germany.4.d:0 "Repeated uprisings in Austria clearly show that the people there long to be united with our Reich. It is now time to take action and allow the will of the people to be made manifest."
