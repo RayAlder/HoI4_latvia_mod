@@ -82,7 +82,7 @@ focus = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { }
 		
-		x = 20
+		x = 22
 		y = 0
 		cost = 10
 		available = {
@@ -104,7 +104,7 @@ focus = {
 		icon = GFX_goal_generic_fortify_city
 		text = LAT_fortification_focus2
 		prerequisite = {focus = LAT_fortification_focus }
-		x = 20
+		x = 22
 		y = 1
 		cost = 10
 		available = {
@@ -128,7 +128,7 @@ focus = {
 		text = LAT_sea_fortification_focus
 		icon = GFX_goal_generic_construct_military
 		
-		x = 22
+		x = 24
 		y = 0
 		cost = 10
 		
@@ -219,7 +219,7 @@ focus = {
 		text = LAT_sea_fortification_focus2
 		icon = GFX_goal_generic_fortify_city
 		prerequisite = { focus = LAT_sea_fortification_focus }
-		x = 22
+		x = 24
 		y = 1
 		cost = 10
 		
@@ -309,7 +309,7 @@ focus = {
 		id = LAT_naval
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = { focus = LAT_sea_fortification_focus2 }
-		x = 22
+		x = 24
 		y = 2
 		cost = 10
 		ai_will_do = {
