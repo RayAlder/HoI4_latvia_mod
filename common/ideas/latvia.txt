@@ -195,8 +195,8 @@ country {
 					
 			removal_cost = -1
 			modifier = {
-				political_power_gain = 0.25
-				fascism_drift = 0.2
+				political_power_gain = 0.05
+				fascism_drift = 0.1
 			}			
 			rule = {
 				can_create_factions = yes
@@ -236,7 +236,7 @@ political_advisor = {
 		}
 
 		LAT_Janis_Kaminskis = {
-			cost = 150
+			cost = 80
 			
 				
 			allowed = {
@@ -335,7 +335,9 @@ theorist = {
 			allowed = {
 				original_tag = LAT
 			}
-			
+			research_bonus = {
+				air_equipment = 0.2
+			}
 			
 			
 			traits = { air_engineer }
@@ -393,9 +395,7 @@ army_chief = {
 			allowed = {
 				original_tag = LAT
 			}
-			available = {
-					has_completed_focus = LAT_SS_division
-				}
+			
 
 			
 			traits = { army_chief_defensive_4 }
@@ -413,10 +413,14 @@ army_chief = {
 				original_tag = LAT
 			}
 			
-
+		available = {
+					has_completed_focus = LAT_SS_division
+		}
 			
 			traits = { army_chief_drill_3 }
-			
+			modifier = {
+				army_org_factor = 0.25
+			}
 			ai_will_do = {
 				factor = 1
 			}
@@ -453,7 +457,7 @@ air_chief = {
 			
 
 			
-			traits = { air_chief_ground_support_2 }
+			traits = { valeika }
 			
 			ai_will_do = {
 				factor = 1
@@ -517,7 +521,7 @@ high_command = {
 		}
 		
 		LAT_Janis_Lavenieks = {
-			cost = 150
+			cost = 120
 			
 			
 			allowed = {
@@ -539,7 +543,7 @@ high_command = {
 				original_tag = LAT
 			}
 			
-			traits = { air_close_air_support_2 }
+			traits = { air_close_air_support_3 }
 			
 			ai_will_do = {
 				factor = 1
@@ -547,7 +551,7 @@ high_command = {
 		}
 		
 		LAT_Toms_Gaillitis = {
-			cost = 150
+			cost = 100
 			
 			
 			allowed = {
@@ -578,14 +582,14 @@ high_command = {
 		}
 		
 		LAT_Ernests_Gothards = {
-			cost = 150
+			cost = 120
 			
 			
 			allowed = {
 				original_tag = LAT
 			}
 			
-			traits = { mobile_warfare_expert }
+			traits = { mass_assault_expert }
 			
 			ai_will_do = {
 				factor = 1
@@ -593,7 +597,7 @@ high_command = {
 		}
 		
 		LAT_Ernests_Barotajs = {
-			cost = 150
+			cost = 200
 			
 			
 			allowed = {
@@ -608,7 +612,7 @@ high_command = {
 		}
 		
 		LAT_Adolfs_Kalns = {
-			cost = 150
+			cost = 200
 			
 			
 			allowed = {
@@ -684,7 +688,7 @@ vairogs = {
 
 raf = {
 			
-			cost = 200
+			cost = 150
 			
 			allowed = {
 				original_tag = LAT
@@ -846,7 +850,7 @@ materiel_manufacturer = {
 		
 		lkr = {
 		
-		cost = 150	
+		cost = 120	
 			allowed = {
 				original_tag = LAT
 			}
@@ -924,7 +928,7 @@ industrial_concern = {
 		
 		rrr = {
 			
-			cost = 150
+			cost = 120
 			
 			allowed = {
 				original_tag = LAT
@@ -972,7 +976,7 @@ industrial_concern = {
 		
 		minox = {
 			
-			cost = 150
+			cost = 75
 			
 			allowed = {
 				original_tag = LAT
