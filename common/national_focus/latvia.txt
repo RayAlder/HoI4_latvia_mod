@@ -487,33 +487,61 @@ focus = {
 
 ###Strelnieki	
 focus = {
-		id = LAT_Strelnieki
-		icon = GFX_goal_generic_allies_build_infantry
+		id = LAT_Army
+		icon = GFX_goal_generic_axis_build_infantry
 		
-		x = 7
+		x = 6
 		y = 0
 		cost = 10
 		
 		completion_reward = 
 		{
 	
-		ROOT = { country_event = { id = latvia.2 } }
 		army_experience = 20
-			
+		add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}	
 		}
 			
+}
+
+focus = {
+		id = LAT_Strelnieki
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = {focus = LAT_Army}
+		x = 6
+		y = 1
+		cost = 10
+		
+		
+		completion_reward = 
+		{
+	
+		ROOT = { country_event = { id = latvia.2 } }
+		
+		set_technology = { support_weapons = 1}
+			set_technology = { night_vision = 1}
+			set_technology = { tech_recon = 1}
+			set_technology = { tech_engineers = 1}
+			set_technology = { infantry_weapons2 = 1}
+			
+}
 }
 		
 focus = {
 		id = LAT_SS_division
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = {focus = LAT_Strelnieki}
-		x = 7
-		y = 1
+		x = 6
+		y = 2
 		cost = 10
 		
 		completion_reward = {
 		ROOT = { country_event = { id = latvia.3 } }
+		set_technology = { mechanised_infantry = 1}
 			army_experience = 20
 			add_tech_bonus = {
 				name = land_doc_bonus
@@ -535,7 +563,7 @@ focus = {
 		prerequisite = {  }
 		mutually_exclusive = { focus = LAT_baltic_cooperation }
 		
-		x = 11
+		x = 10
 		y = 0
 		cost = 0
 		
@@ -560,7 +588,7 @@ focus = {
 		available = {
 			has_government = fascism
 		}
-		x = 11
+		x = 10
 		y = 2
 		cost = 10
 		
@@ -596,7 +624,129 @@ focus = {
 			}
 			
 		}
-	}
+}
+
+focus = {
+		id = LAT_GER_Tech1
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = LAT_GER_Friend }
+	
+		available = {
+			has_government = fascism
+			OR = {
+				country_exists = GER
+				GER = { is_puppet = no }
+				NOT = { has_war_with = GER }
+				
+			}
+		}
+		x = 8
+		y = 5
+		cost = 0
+		
+
+		available_if_capitulated = yes
+		completion_reward = {
+		army_experience = 20
+		
+		add_tech_bonus = {
+				bonus = 0.5
+				uses = 3
+				name = mech_army_bonus
+				technology = improved_light_tank
+				technology = advanced_light_tank
+				technology = basic_medium_tank
+				technology = improved_medium_tank
+				technology = advanced_medium_tank
+				technology = improved_heavy_tank
+		}	
+}
+}
+
+focus = {
+		id = LAT_GER_Tech2
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = LAT_GER_Tech1 }
+	
+		available = {
+			has_government = fascism
+			OR = {
+				country_exists = GER
+				GER = { is_puppet = no }
+				NOT = { has_war_with = GER }
+				
+			}
+		}
+		x = 8
+		y = 6
+		cost = 0
+		
+
+		available_if_capitulated = yes
+		
+			completion_reward = {
+		air_experience = 20
+		
+		add_tech_bonus = {
+				name = op_dest_bonus
+				bonus = 0.5
+				uses = 2
+				category = battlefield_support_tree
+			}
+		add_tech_bonus = {
+				name = GER_TAC
+				uses = 2
+				bonus = 0.5
+				category = tactical_bomber
+			}
+		add_tech_bonus = {
+				name = GER_NAVAL
+				uses = 2
+				bonus = 0.5
+				category = naval_bomber
+			}
+}
+}
+
+focus = {
+		id = LAT_GER_Tech3
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = LAT_GER_Tech2 }
+	
+		available = {
+			has_government = fascism
+			OR = {
+				country_exists = GER
+				GER = { is_puppet = no }
+				NOT = { has_war_with = GER }
+				
+			}
+		}
+		x = 8
+		y = 7
+		cost = 0
+		
+
+		available_if_capitulated = yes
+		
+			completion_reward = {
+		navy_experience = 20
+		
+		add_tech_bonus = {
+				name = GER_u_boat_effort
+				uses = 2
+				ahead_reduction = 1
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		add_tech_bonus = {
+				name = GER_navy
+				uses = 3
+				bonus = 0.5
+				category = naval_doctrine
+			}
+}
+}
 
 focus = {
 		id = LAT_ESTONIA_aneksija
@@ -1049,6 +1199,7 @@ focus = {
 focus = {
 		id = LAT_baltic_cooperation
 		icon = GFX_goal_generic_improve_relations
+		mutually_exclusive = { focus = LAT_Peterkrusts }
 		available = {
 			NOT = { has_war_with = EST }
 			NOT = { has_war_with = LIT }
@@ -1281,7 +1432,7 @@ focus = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { }
 		
-		x = 22
+		x = 8
 		y = 0
 		cost = 10
 		available = {
@@ -1303,7 +1454,7 @@ focus = {
 		icon = GFX_goal_generic_fortify_city
 		text = LAT_fortification_focus2
 		prerequisite = {focus = LAT_fortification_focus }
-		x = 22
+		x = 8
 		y = 1
 		cost = 10
 		available = {
