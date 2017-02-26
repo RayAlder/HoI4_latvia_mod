@@ -155,9 +155,9 @@ country {
 		}
 
 		
-		LAT_wartime = {
+		warmongers = {
 		
-		picture = generic_volunteer_expedition_bonus
+		
 			allowed = { always = no	}
 
 			allowed_civil_war = {

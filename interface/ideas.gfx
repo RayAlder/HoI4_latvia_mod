@@ -3080,5 +3080,8 @@ spriteTypes = {
 		name = "GFX_idea_LAT_Krisjanis_Berkis"
 		texturefile = "gfx/interface/ideas/idea_berkis.dds"
 	}
-
+	spriteType = {
+		name = "GFX_idea_warmongers"
+		texturefile = "gfx/interface/ideas/idea_warmongers.dds"
+	}
 }

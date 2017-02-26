@@ -75,350 +75,7 @@ focus_tree = {
 		}
 }
 
-#Robežas ar Krieviju  fortifikācija		
-focus = {      
-		id = LAT_fortification_focus
-		text = LAT_fortification_focus
-		icon = GFX_goal_generic_construct_military
-		prerequisite = { }
-		
-		x = 22
-		y = 0
-		cost = 10
-		available = {
-			743 = { is_controlled_by = LAT }
-			744 = { is_controlled_by = LAT }
-			12 = { is_controlled_by = LAT }
-		}
-		
-		completion_reward = {
-					ROOT = { country_event = { id = latvia.1 } }
-		
-		add_ideas = {LAT_fortification}
-			
-		}
-}
 
-focus = {
-		id = LAT_fortification_focus2
-		icon = GFX_goal_generic_fortify_city
-		text = LAT_fortification_focus2
-		prerequisite = {focus = LAT_fortification_focus }
-		x = 22
-		y = 1
-		cost = 10
-		available = {
-			743 = { is_controlled_by = LAT }
-			744 = { is_controlled_by = LAT }
-			12 = { is_controlled_by = LAT }
-		}
-		
-		completion_reward = {
-					ROOT = { country_event = { id = latvia.1 } }
-		
-		remove_ideas = {LAT_fortification}
-		add_ideas = {LAT_fortification2}
-			
-		}
-}
-	
-#Jūras fortifikācija	
-focus = {
-		id = LAT_sea_fortification_focus
-		text = LAT_sea_fortification_focus
-		icon = GFX_goal_generic_construct_military
-		
-		x = 24
-		y = 0
-		cost = 10
-		
-		ai_will_do = {
-			factor = 1
-		}	
-		completion_reward = {
-
-			12 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 9317
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 9240
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 9340
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 6222
-						instant_build = yes
-					}
-				}
-			}
-
-			190 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 6322
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 3296
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 3319
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 9262
-						instant_build = yes
-					}
-				}
-			}
-
-			744 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 3525
-						instant_build = yes
-					}
-				}
-			}
-
-		add_ideas = {LAT_sea_fort}
-			
-		}
-}
-
-focus = {
-		id = LAT_sea_fortification_focus2
-		text = LAT_sea_fortification_focus2
-		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = LAT_sea_fortification_focus }
-		x = 24
-		y = 1
-		cost = 10
-		
-		ai_will_do = {
-			factor = 1
-		}	
-		completion_reward = {
-
-			12 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 9317
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 9240
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 9340
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 6222
-						instant_build = yes
-					}
-				}
-			}
-
-			190 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 6322
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 3296
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 3319
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 9262
-						instant_build = yes
-					}
-				}
-			}
-
-			744 = {
-				if = {
-					limit = { is_controlled_by = ROOT }
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 3525
-						instant_build = yes
-					}
-				}
-			}
-
-		remove_ideas = {LAT_sea_fort}
-		add_ideas = {LAT_sea_fort2}
-		}
-}
-	
-focus = {
-		id = LAT_naval
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = LAT_sea_fortification_focus2 }
-		x = 24
-		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-
-		bypass = {
-			custom_trigger_tooltip =  {
-				tooltip = naval_effort_tt
-				NOT = {
-					any_owned_state = {
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-			}
-		}
-
-		complete_tooltip = {
-			every_state = {
-				
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			every_state = {
-				
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			every_state = {
-				
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			
-			
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = LAT_naval_rearmament_2dockyard
-			}
-			random_owned_controlled_state = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = LAT_naval_rearmament_1dockyard
-			}
-			random_owned_controlled_state = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = LAT_naval_rearmament_1dockyard
-			}
-		}
-}
 
 #Military
 focus = {
@@ -511,7 +168,7 @@ focus = {
 		complete_tooltip = {
 			every_state = {
 				
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -524,7 +181,7 @@ focus = {
 		completion_reward = {
 			12 = {
 				
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 				
 				add_building_construction = {
 					type = arms_factory
@@ -535,7 +192,7 @@ focus = {
 			}
 			190 = {
 				
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 				
 				add_building_construction = {
 					type = arms_factory
@@ -546,7 +203,7 @@ focus = {
 			}
 			743 = {
 				
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 5
 				
 				add_building_construction = {
 					type = arms_factory
@@ -792,7 +449,7 @@ focus = {
 		
 		prerequisite = { focus = LAT_industrial_research }
 		x = 4
-		y = 5
+		y = 3
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -815,7 +472,7 @@ focus = {
 		
 		prerequisite = { focus = LAT_electronics_research }
 		x = 4
-		y = 6
+		y = 5
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -880,14 +537,14 @@ focus = {
 		
 		x = 11
 		y = 0
-		cost = 10
+		cost = 0
 		
 		completion_reward = {
 		set_party_name = { ideology = fascism long_name = LAT_fascism_party name = LAT_fascism_party }
 		
 		
 			add_ideas = patriotisms
-			add_ideas = LAT_wartime
+			add_ideas = warmongers
 			#if = {
 			#	limit = { has_idea = boot }
 			#	remove_ideas = boot
@@ -1617,7 +1274,350 @@ focus = {
 		}
 }
 
+#Robežas ar Krieviju  fortifikācija		
+focus = {      
+		id = LAT_fortification_focus
+		text = LAT_fortification_focus
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { }
+		
+		x = 22
+		y = 0
+		cost = 10
+		available = {
+			743 = { is_controlled_by = LAT }
+			744 = { is_controlled_by = LAT }
+			12 = { is_controlled_by = LAT }
+		}
+		
+		completion_reward = {
+					ROOT = { country_event = { id = latvia.1 } }
+		
+		add_ideas = {LAT_fortification}
+			
+		}
+}
 
+focus = {
+		id = LAT_fortification_focus2
+		icon = GFX_goal_generic_fortify_city
+		text = LAT_fortification_focus2
+		prerequisite = {focus = LAT_fortification_focus }
+		x = 22
+		y = 1
+		cost = 10
+		available = {
+			743 = { is_controlled_by = LAT }
+			744 = { is_controlled_by = LAT }
+			12 = { is_controlled_by = LAT }
+		}
+		
+		completion_reward = {
+					ROOT = { country_event = { id = latvia.1 } }
+		
+		remove_ideas = {LAT_fortification}
+		add_ideas = {LAT_fortification2}
+			
+		}
+}
+	
+#Jūras fortifikācija	
+focus = {
+		id = LAT_sea_fortification_focus
+		text = LAT_sea_fortification_focus
+		icon = GFX_goal_generic_construct_military
+		
+		x = 24
+		y = 0
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+
+			12 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9317
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9240
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9340
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 6222
+						instant_build = yes
+					}
+				}
+			}
+
+			190 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 6322
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3296
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3319
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9262
+						instant_build = yes
+					}
+				}
+			}
+
+			744 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3525
+						instant_build = yes
+					}
+				}
+			}
+
+		add_ideas = {LAT_sea_fort}
+			
+		}
+}
+
+focus = {
+		id = LAT_sea_fortification_focus2
+		text = LAT_sea_fortification_focus2
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = LAT_sea_fortification_focus }
+		x = 24
+		y = 1
+		cost = 10
+		
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+
+			12 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9317
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9240
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9340
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 6222
+						instant_build = yes
+					}
+				}
+			}
+
+			190 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 6322
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3296
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3319
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 9262
+						instant_build = yes
+					}
+				}
+			}
+
+			744 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = 3525
+						instant_build = yes
+					}
+				}
+			}
+
+		remove_ideas = {LAT_sea_fort}
+		add_ideas = {LAT_sea_fort2}
+		}
+}
+	
+focus = {
+		id = LAT_naval
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = LAT_sea_fortification_focus2 }
+		x = 24
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = naval_effort_tt
+				NOT = {
+					any_owned_state = {
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			every_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_state = {
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_naval_rearmament_2dockyard
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_naval_rearmament_1dockyard
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_naval_rearmament_1dockyard
+			}
+		}
+}
 
 
 
