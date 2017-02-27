@@ -1,0 +1,8 @@
+﻿air_wings = {
+12 = { 																
+		### Luftwaffenkommando XIII
+		fighter_equipment_1 = { owner = "LAT"  amount = 200 }
+	}
+
+}
+

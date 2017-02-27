@@ -1,15 +1,15 @@
 ﻿l_english:
-latvia.1.t:0 "Border fortification from evil Soviet Invasion"
+latvia.1.t:0 "Border fortification from evil Soviets"
 latvia.1.d:0 "We know that Soviets is up to no good and it's time we act!"
-latvia.1.a:0 "You Shall not Pass!"
+latvia.1.a:0 "Find another way around!"
 
-latvia.2.t:0 "Latvian Rifleman Division"
-latvia.2.d:0 "Upgrade weapons and divisions."
-latvia.2.a:0 "Boom, Headshot!"
+latvia.2.t:0 "Latvian Rifleman Divisions"
+latvia.2.d:0 "Latvian voluntary army with superior infantry and support weapons."
+latvia.2.a:0 "Honor to serve Latvia!"
 
 latvia.3.t:0 "Latvian Motorized divisions"
-latvia.3.d:0 "Introducing our new motorized divisions."
-latvia.3.a:0 "Rum, Rum!"
+latvia.3.d:0 "Latvian Motorized divisions is the first stage towards the mechanization of an army. Our new trucks are readily adaptable to military uses of transporting soldiers, towing guns, and carrying equipment and supplies. That greatly increases the strategic mobility of infantry units, which would otherwise rely on marches or railroads."
+latvia.3.a:0 "For the Fatherland and Freedom!"
 
 latvia.4.t:0 "Anti-Comintern Pact"
 latvia.4.d:0 "Latvia proposes that we sign a pact recognizing that the aim of the Communist International, known as the Comintern, is to disintegrate and subdue existing States by all the means at its command; convinced that the toleration of interference by the Communist International in the internal affairs of the nations not only endangers their internal peace and social well-being, but is also a menace to the peace of the world desirous of co-operating in the defense against Communist subversive activities."
@@ -44,7 +44,31 @@ latvia.16.a:0 "Together we stand!"
 latvia.17.t:0 "Border fortification from scum Poland"
 latvia.17.d:0 "Lithuanians will  also never give Wilno to Polish Scum!"
 latvia.17.a:0 "Together we stand!"
- 
+
+latvia.18.t:0 "Germans friends are sharing with their fighter tech and airwing"
+latvia.18.d:0 "Germans promised us a whole airwing of 200 1. generation fighters. Also they are sharing their Tactical Bomber tech"
+latvia.18.a:0 "This is so generous. Thank you!"
+
+latvia.19.t:0 "Germans friends are sharing with their submarine tech and fleet"
+latvia.19.d:0 "German friends promised us five 2. generation submarines and blueprints for 3.generation Submarine Tech"
+latvia.19.a:0 "You are true friends!"
+
+latvia.20.t:0 "Germans friends are sharing with their fighter tech's"
+latvia.20.d:0 "Hitler himself promised 2 divisions of Panzer IV's tanks alongside with their motorised divisions!"
+latvia.20.a:0 "Heil Hitler!"
+
+latvia.21.t:0 "Operation Thunder Cross"
+latvia.21.d:0 "Fascist's will not stand while such incompetent leader like Karlis Ulmanis is leading our great nation. Soon we will take over this country and make it a great empire!"
+latvia.21.a:0 "Make Latvia Great Again!"
+
+latvia.22.t:0 "The Empire of the Thunder Cross"
+latvia.22.d:0 "It's time we expand our borders and take what is rightfully ours!"
+latvia.22.a:0 "There is only one baltic state!"
+
+latvia.23.t:0 "Germany finally meets Empire of Thunder Cross"
+latvia.23.d:0 "We welcome the great Empire of Thunder Cross! Soon they will join our faction! "
+latvia.23.a:0 "For the Axis!"
+
  germany.4.t:0 "Anschluss"
  germany.4.d:0 "Repeated uprisings in Austria clearly show that the people there long to be united with our Reich. It is now time to take action and allow the will of the people to be made manifest."
  germany.4.a:0 "How can anyone say that Austria is not German?!"

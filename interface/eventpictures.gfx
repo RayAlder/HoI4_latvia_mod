@@ -1595,6 +1595,30 @@ spriteTypes = {
 		name = "GFX_report_event_strelnieki"
 		texturefile = "gfx/event_pictures/report_event_strelnieki.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_thunder"
+		texturefile = "gfx/event_pictures/report_event_thunder.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hitler"
+		texturefile = "gfx/event_pictures/report_event_hitler.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ger_planes"
+		texturefile = "gfx/event_pictures/report_event_ger_planes.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ger_subs"
+		texturefile = "gfx/event_pictures/report_event_ger_subs.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_ger_tanks"
+		texturefile = "gfx/event_pictures/report_event_ger_tanks.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_motorised"
+		texturefile = "gfx/event_pictures/report_event_motorised.dds"
+	}
 	#### END TFV EVENTS ####
 
 }

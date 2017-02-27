@@ -111,7 +111,7 @@ country_event = {
 	id = latvia.3
 	title = latvia.3.t
 	desc = latvia.3.d
-	picture = GFX_report_event_strelnieki
+	picture = GFX_report_event_motorised
 	
 	is_triggered_only = yes
 	
@@ -121,7 +121,7 @@ country_event = {
 		}
 		name = latvia.3.a
 			custom_effect_tooltip = latvia.3.t
-			set_technology = { mechanised_infantry = 1}
+			
 			
 		
 	}
@@ -604,3 +604,112 @@ country_event = {
 		
 	
 }}
+#German Air
+country_event = {
+	id = latvia.18
+	title = latvia.18.t
+	desc = latvia.18.d
+	picture = GFX_report_event_ger_planes
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.18.a
+		hidden_effect = {
+			load_oob = "GermanAir"
+		}
+		custom_effect_tooltip = latvia.18.t
+			
+		
+	}
+	
+}
+#German Subs
+country_event = {
+	id = latvia.19
+	title = latvia.19.t
+	desc = latvia.19.d
+	picture = GFX_report_event_ger_subs
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.19.a
+		hidden_effect = {
+			load_oob = "GermanSubs"
+		}
+		custom_effect_tooltip = latvia.19.t
+			
+		
+	}
+	
+}
+#German Tanks
+country_event = {
+	id = latvia.20
+	title = latvia.20.t
+	desc = latvia.20.d
+	picture = GFX_report_event_ger_tanks
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.20.a
+		hidden_effect = {
+			load_oob = "GermanTanks"
+		}
+		custom_effect_tooltip = latvia.20.t
+			
+		
+	}
+	
+}
+
+#Operation Thunder Cross
+country_event = {
+	id = latvia.21
+	title = latvia.21.t
+	desc = latvia.21.d
+	picture = GFX_report_event_fascist_gathering
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.21.a
+		
+		custom_effect_tooltip = latvia.21.t
+			
+		
+	}
+	
+}
+
+country_event = {
+	id = latvia.22
+	title = latvia.22.t
+	desc = latvia.22.d
+	picture = GFX_report_event_thunder
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.22.a
+		
+		custom_effect_tooltip = latvia.22.t
+			
+		
+	}
+	
+}
+
+country_event = {
+	id = latvia.23
+	title = latvia.23.t
+	desc = latvia.23.d
+	picture = GFX_report_event_hitler
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.23.a
+		
+		custom_effect_tooltip = latvia.23.t
+			
+		
+	}
+	
+}

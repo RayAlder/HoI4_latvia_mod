@@ -1,0 +1,16 @@
+﻿##### German Subs #####
+units = {
+navy = {					
+		name = "German 7. U-boat fleet"				
+		base = 9262
+		location =  9262 # Liepaja
+		
+		ship = { name = "U-62" definition = submarine equipment = { submarine_2 = { amount = 1 owner = LAT version_name = "Type VIIA" } } }
+		ship = { name = "U-63" definition = submarine equipment = { submarine_2 = { amount = 1 owner = LAT version_name = "Type VIIA" } } }
+		ship = { name = "U-64" definition = submarine equipment = { submarine_2 = { amount = 1 owner = LAT version_name = "Type VIIA" } } }
+		ship = { name = "U-65" definition = submarine equipment = { submarine_2 = { amount = 1 owner = LAT version_name = "Type VIIA" } } }
+		ship = { name = "U-66" definition = submarine equipment = { submarine_2 = { amount = 1 owner = LAT version_name = "Type VIIA" } } }
+	
+	}
+}
+
