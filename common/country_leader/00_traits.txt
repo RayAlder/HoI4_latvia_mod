@@ -2256,6 +2256,12 @@ cukurs = {
 		experience_gain_air_factor = 0.05
 		
 	}
+
+balodis = {
+sprite = 13
+army_morale_Factor = 0.1
+unity_factor = 0.1
+}
 	
 finance_advisor = {
 		sprite = 13

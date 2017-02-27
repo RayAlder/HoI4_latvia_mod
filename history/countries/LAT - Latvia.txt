@@ -99,18 +99,29 @@ set_politics = {
 create_country_leader = {
 	name = "Kārlis Ulmanis"
 	desc = "POLITICS_KARLIS_ULMANIS_DESC"
-	picture = "gfx/leaders/LAT/Karlis_Ulmanis.tga"
+	picture = "gfx/leaders/LAT/Karlis_Ulmanis.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		 political_dancer 
+	}
+}
+
+create_country_leader = {
+	name = "Atis Ķēniņš"
+	
+	picture = "gfx/leaders/LAT/Atis_Kenins.dds"
 	expire = "1965.1.1"
 	ideology = liberalism
 	traits = {
-		 political_dancer popular_figurehead
+		 popular_figurehead
 	}
 }
 
 create_country_leader = {
 	name = "Gustavs Celmiņš"
 	desc = ""
-	picture = "gfx/leaders/LAT/Gustavs Celmins.tga"
+	picture = "gfx/leaders/LAT/Gustavs Celmins.dds"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
@@ -122,17 +133,16 @@ create_country_leader = {
 create_country_leader = {
 	name = "Augusts Kirhenšteins"
 	desc = ""
-	picture = "gfx/leaders/LAT/Augusts Kirhensteins.tga"
+	picture = "gfx/leaders/LAT/Augusts Kirhensteins.dds"
 	expire = "1965.1.1"
 	ideology = stalinism
-	traits = {
-	}
+	traits = {	}
 }
 
 create_field_marshal = {
 	name = "Ernests Gothards"
 	desc = "Fascist Field Marchal"
-		picture = "Ernests Gothards.tga"
+		picture = "Ernests Gothards.dds"
 	traits = { logistics_wizard  }
 	skill = 2
 	
@@ -141,7 +151,7 @@ create_field_marshal = {
 create_corps_commander = {
 	name = "Rūdolfs Bangerskis"
 	desc = "Fascist Army General"
-		picture = "Rudolfs Bangerskis.tga"
+		picture = "Rudolfs Bangerskis.dds"
 	traits = { naval_invader }
 	skill = 1
 	
@@ -150,7 +160,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Fricis Celmiņš"
 	desc = "Field Marchal"
-			picture = "Fricis_Celmins.tga"
+			picture = "Fricis_Celmins.dds"
 	traits = { winter_specialist   }
 	skill = 1
 
@@ -159,7 +169,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Artūrs Sīlgailis"
 	desc = "Army General"
-			picture = "Arturs_Silgailis.tga"
+			picture = "Arturs_Silgailis.dds"
 	traits = {  ranger commando }
 	skill = 2
 	
@@ -167,7 +177,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Jānis Kurelis"
 	desc = "Army General"
-			picture = "Janis_Kurelis.tga"
+			picture = "Janis_Kurelis.dds"
 	traits = {  trickster fortress_buster }
 	skill = 2
 	
@@ -175,7 +185,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Jānis Balodis"
 	desc = "Army General"
-			picture = "Balodis.tga"
+			picture = "Balodis.dds"
 	traits = { hill_fighter commando }
 	skill = 3
 	
@@ -183,21 +193,21 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Jānis Lavenieks"
 	desc = "Army General"
-		picture = "Janis Lavenieks.tga"
+		picture = "Janis Lavenieks.dds"
 	traits = {  winter_specialist urban_assault_specialist  }
 	skill = 2
 	
 }
 create_navy_leader = {
 	name = "Teodors Spāde"
-		picture = "Teodors Spade.tga"
+		picture = "Teodors Spade.dds"
 	traits = { seawolf superior_tactician }
 	skill = 4
 }
 
 create_navy_leader = {
 	name = "Arčibalds P.T. Keizerlings"
-		picture = "Keizerlings.tga"
+		picture = "Keizerlings.dds"
 	traits = { superior_tactician }
 	skill = 1
 }

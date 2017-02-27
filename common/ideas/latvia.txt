@@ -21,14 +21,8 @@ country {
 		
 				
 			removal_cost = -1
-			modifier = {
-				enemy_partisan_effect = -0.1
-				experience_gain_army = 0.05
-				army_defence_factor = 0.15
-				
-				
-			}		
-			traits = { popular_figurehead }
+					
+			traits = { balodis }
 			rule = {
 				can_create_factions = yes
 			}
