@@ -391,6 +391,7 @@ focus = {
 		cost = 20
 		
 		completion_reward = {
+		ROOT = { country_event = { id = latvia.26 } }
 			add_resource = {
 				type = oil
 				amount = 25
@@ -411,6 +412,7 @@ focus = {
 		cost = 20
 		
 		completion_reward = {
+		ROOT = { country_event = { id = latvia.27 } }
 			add_resource = {
 				type = rubber
 				amount = 20
