@@ -713,3 +713,37 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = latvia.24
+	title = latvia.24.t
+	desc = latvia.24.d
+	picture = GFX_report_event_computing_center
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.24.a
+		
+		custom_effect_tooltip = latvia.24.t
+			
+		
+	}
+	
+}
+
+country_event = {
+	id = latvia.25
+	title = latvia.25.t
+	desc = latvia.25.d
+	picture = GFX_report_event_train
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.25.a
+		
+		custom_effect_tooltip = latvia.25.t
+			
+		
+	}
+	
+}

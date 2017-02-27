@@ -28,6 +28,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+		ROOT = { country_event = { id = latvia.25 } }
 			custom_effect_tooltip = LAT_INFRA
 			hidden_effect = {
 				12 = {
@@ -455,6 +456,8 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
+		ROOT = { country_event = { id = latvia.24 } }
+		
 		add_ideas = LAT_electronics_idea
 		add_tech_bonus = {
 				name = radar_tech_bonus
@@ -472,7 +475,7 @@ focus = {
 		
 		prerequisite = { focus = LAT_electronics_research }
 		x = 4
-		y = 5
+		y = 4
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -482,7 +485,48 @@ focus = {
 		}
 }
 
+focus = {
+		id = LAT_rocketry_focus
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = LAT_extra_tech_slots }
+		prerequisite = { focus = LAT_SS_division }
+		x = 6
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
 
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = LAT_rocketry_idea
+		}
+	}
+
+	focus = {
+		id = LAT_wonder_weapons
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = LAT_rocketry_focus }
+		x = 6
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 0.5
+				uses = 1
+				category = nuclear
+				
+			}
+		}
+	}
 	
 
 ###Strelnieki	
@@ -513,7 +557,7 @@ focus = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = {focus = LAT_Army}
 		x = 6
-		y = 1
+		y = 2
 		cost = 10
 		
 		
@@ -539,7 +583,7 @@ focus = {
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = {focus = LAT_Strelnieki}
 		x = 6
-		y = 2
+		y = 3
 		cost = 10
 		
 		completion_reward = {
@@ -1070,6 +1114,38 @@ focus = {
 }
 }	
 
+focus = {
+		id = LAT_ussr_war_goal
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {focus = LAT_fortification_focus_EST }
+		prerequisite = {focus = LAT_fortification_focus_LIT }
+		will_lead_to_war_with = SOV
+
+		cancel = {
+			NOT = { country_exists = SOV }
+		}
+		x = 11
+		y = 6
+		cost = 10
+		historical_ai = {
+			NOT = {
+				any_neighbor_country = {
+					has_war_with = ROOT
+				}		
+			}
+		}
+		bypass = {
+			has_war_with = SOV
+		}
+				completion_reward = {
+				
+			
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+		}
+}
 #Soviet
 focus = {
 		id = LAT_anti_comitern_pact
@@ -1154,38 +1230,7 @@ focus = {
 		}
 }
 
-focus = {
-		id = LAT_ussr_war_goal
-		icon = GFX_goal_generic_war_with_comintern
-		prerequisite = {focus = LAT_anti_soviet_pact }
-		
-		will_lead_to_war_with = SOV
 
-		cancel = {
-			NOT = { country_exists = SOV }
-		}
-		x = 14
-		y = 3
-		cost = 10
-		historical_ai = {
-			NOT = {
-				any_neighbor_country = {
-					has_war_with = ROOT
-				}		
-			}
-		}
-		bypass = {
-			has_war_with = SOV
-		}
-				completion_reward = {
-				
-			
-			create_wargoal = {
-				type = annex_everything
-				target = SOV
-			}
-		}
-}
 
 #Root of Baltic alliance tree	
 focus = {

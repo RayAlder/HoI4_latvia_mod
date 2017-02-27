@@ -1619,6 +1619,10 @@ spriteTypes = {
 		name = "GFX_report_event_motorised"
 		texturefile = "gfx/event_pictures/report_event_motorised.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_computing_center"
+		texturefile = "gfx/event_pictures/report_event_computing_center.dds"
+	}
 	#### END TFV EVENTS ####
 
 }

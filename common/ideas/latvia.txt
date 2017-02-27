@@ -93,7 +93,7 @@ country {
 			}
 		}
 		
-#Not used yet		
+		
 		LAT_rocketry_idea
 		{
 			
@@ -146,7 +146,7 @@ country {
 			}
 
 			picture = generic_research_bonus
-		
+			
 			research_bonus = {
 				electronics = 0.25
 				
@@ -414,7 +414,7 @@ army_chief = {
 			}
 			
 		available = {
-					has_completed_focus = LAT_SS_division
+					has_completed_focus = LAT_Strelnieki
 		}
 			
 			traits = { army_chief_drill_3 }
