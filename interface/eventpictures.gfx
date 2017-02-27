@@ -1623,6 +1623,18 @@ spriteTypes = {
 		name = "GFX_report_event_computing_center"
 		texturefile = "gfx/event_pictures/report_event_computing_center.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_rubber"
+		texturefile = "gfx/event_pictures/report_event_rubber.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_oilrig"
+		texturefile = "gfx/event_pictures/report_event_oilrig.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_train"
+		texturefile = "gfx/event_pictures/report_event_train.dds"
+	}
 	#### END TFV EVENTS ####
 
 }

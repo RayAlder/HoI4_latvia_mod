@@ -752,7 +752,7 @@ country_event = {
 	id = latvia.26
 	title = latvia.26.t
 	desc = latvia.26.d
-	picture = GFX_report_event_train
+	picture = GFX_report_event_oilrig
 	
 	is_triggered_only = yes
 	option = {
@@ -769,7 +769,7 @@ country_event = {
 	id = latvia.27
 	title = latvia.27.t
 	desc = latvia.27.d
-	picture = GFX_report_event_train
+	picture = GFX_report_event_rubber
 	
 	is_triggered_only = yes
 	option = {
