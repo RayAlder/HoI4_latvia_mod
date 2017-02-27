@@ -90,6 +90,7 @@ set_politics = {
 		
 	}
 	
+	
 	ruling_party = neutrality
 	last_election = "1936.11.4"
 	election_frequency = 48
