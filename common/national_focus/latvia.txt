@@ -1188,7 +1188,7 @@ focus = {
 focus = {
 		id = LAT_anti_comitern_pact
 		icon = GFX_goal_anti_comintern_pact
-		prerequisite = { focus = LAT_anti_communism_action }
+		prerequisite = { focus = LAT_anti_communism_movement }
 		x = 14
 		y = 2
 		cost = 10
@@ -1390,12 +1390,12 @@ focus = {
 focus = {
 		id = LAT_baltic_entente
 		icon = GFX_focus_generic_little_entente
-		prerequisite = { focus = LAT_anti_communism_action}
+		prerequisite = { focus = LAT_anti_communism_movement}
 		prerequisite = { focus = LAT_baltic_way }
 		prerequisite = { focus = LAT_baltic_joint_research }
 		available = { 
 			OR = {
-				threat > 0.40
+				threat > 0.20
 			}
 		}
 		x = 17
@@ -1485,7 +1485,8 @@ focus = {
 		prerequisite = { focus = LAT_baltic_entente }
 		available = { 
 			OR = {
-				threat > 0.80
+				threat > 0.60
+				GER = { has_completed_focus = GER_mol_rib_pact }
 			}
 		}
 		x = 17
@@ -1495,7 +1496,13 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
-			
+			add_state_core = 13
+			add_state_core = 191
+			add_state_core = 11
+			add_state_core = 188
+			add_state_core = 189
+			annex_country = { target = EST transfer_troops = yes}
+			annex_country = { target = LIT transfer_troops = yes }
 		}
 }
 
