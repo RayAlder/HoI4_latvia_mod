@@ -213,6 +213,22 @@ country {
 				army_org_factor = 0.25
 			}
 		}
+		
+		anti_communism = {
+			
+			allowed = {
+				always = no
+			}
+		
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				communism_drift = -0.02
+			}
+		}
+		
 	}
 	
 #Political Advisors	
@@ -993,7 +1009,6 @@ industrial_concern = {
 			}
 		}
 		
-		
-		
 	}	
+	
 }
