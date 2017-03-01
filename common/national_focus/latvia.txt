@@ -492,6 +492,7 @@ focus = {
 		icon = GFX_focus_rocketry
 		prerequisite = { focus = LAT_extra_tech_slots }
 		prerequisite = { focus = LAT_SS_division }
+		prerequisite = { focus = LAT_Air_Antiair }
 		x = 6
 		y = 5
 		cost = 10
@@ -576,7 +577,8 @@ focus = {
 				uses = 1
 				category = land_doctrine
 			}
-			
+		custom_effect_tooltip = available_chief_of_army
+		show_ideas_tooltip = LAT_Arturs_Silgailis			
 }
 }
 		
@@ -614,19 +616,163 @@ focus = {
 		completion_reward = 
 		{
 	
-		army_experience = 20
-		add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 0.25
+		air_experience = 20
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 0.5
 				uses = 2
-				category = land_doctrine
-			}	
+				category = battlefield_support_tree
+			}
+			}
+}
+
+focus = {
+		id = LAT_Air_Spilva
+		icon = GFX_goal_generic_air_production
+		prerequisite = {focus = LAT_Air }
+		x = 8
+		y = 1
+		cost = 10
+		
+		complete_tooltip = {
+		air_experience = 20
+		12 = {
+		add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
 		}
+		}
+		custom_effect_tooltip = available_chief_of_airforce
+		show_ideas_tooltip = LAT_Peteris_Tompsons
+		}
+		
+		completion_reward = 
+		{
+		ROOT = { country_event = { id = latvia.32 } }
+		air_experience = 20
+		12 = {
+		add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+		}
+		}
+		custom_effect_tooltip = available_chief_of_airforce
+		show_ideas_tooltip = LAT_Peteris_Tompsons
+		}
+}
+
+focus = {
+		id = LAT_Air_Fighter
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = {focus = LAT_Air_Spilva }
+		x = 8
+		y = 2
+		cost = 10
+		
+		completion_reward = 
+		{
+		ROOT = { country_event = { id = latvia.33 } }
+		air_experience = 20
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 0.5
+				uses = 1
+				technology = fighter1
+				technology = fighter2
+			}
+			add_tech_bonus = {
+				name = air_sup_bonus
+				bonus = 0.5
+				uses = 1
+				technology = CAS1
+				technology = CAS2
+			}
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = LAT_Karlis_Irbitis
+			
+			}
 			
 }
 
-
-
+focus = {
+		id = LAT_Air_Antiair
+		icon = GFX_focus_generic_air_defense
+		prerequisite = {focus = LAT_Air_Fighter }
+		x = 8
+		y = 4
+		cost = 10
+		
+		complete_tooltip = {
+		ROOT = { country_event = { id = latvia.34 } }
+		12 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+		}
+		}
+		190 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+		}
+		}
+		743 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+		}
+		}
+		744 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+		}
+		}
+		
+		}
+		
+		completion_reward = 
+		{
+		ROOT = { country_event = { id = latvia.34 } }
+		
+		
+		12 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+		}
+		}
+		190 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+		}
+		}
+		743 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+		}
+		}
+		744 = {
+		add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes
+		}
+		}
+		
+		}
+}
 
 #Operation Thunder Cross
 focus = {
@@ -1539,7 +1685,7 @@ focus = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { }
 		
-		x = 30
+		x = 10
 		y = 0
 		cost = 10
 		available = {
@@ -1561,7 +1707,7 @@ focus = {
 		icon = GFX_goal_generic_fortify_city
 		text = LAT_fortification_focus2
 		prerequisite = {focus = LAT_fortification_focus }
-		x = 30
+		x = 10
 		y = 1
 		cost = 10
 		available = {
@@ -1597,7 +1743,8 @@ focus = {
 				bonus = 0.5
 				uses = 1
 				category = trade_interdiction_tree
-			}	
+			}
+				
 		}
 			
 }
@@ -1741,62 +1888,42 @@ focus = {
 				}
 			}
 			
-			
+		custom_effect_tooltip = available_chief_of_navy
+		show_ideas_tooltip = LAT_Teodors_Spade	
 		}
 
 		completion_reward = {
 		ROOT = { country_event = { id = latvia.28 } }
 			12 = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
+				
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = LAT_naval_rearmament_2dockyard
+			
 			}
 			190 = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = LAT_naval_rearmament_1dockyard
+				
 			}
 			744 = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
 					level = 1
 					instant_build = yes
 				}
-				set_state_flag = LAT_naval_rearmament_1dockyard
+				
 			}
+		custom_effect_tooltip = available_chief_of_navy
+		show_ideas_tooltip = LAT_Teodors_Spade	
 		}
 }
 

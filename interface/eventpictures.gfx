@@ -1651,6 +1651,18 @@ spriteTypes = {
 		name = "GFX_report_event_sea_fort"
 		texturefile = "gfx/event_pictures/report_event_sea_fort.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_antiair"
+		texturefile = "gfx/event_pictures/report_event_antiair.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_spilva"
+		texturefile = "gfx/event_pictures/report_event_spilva.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_irbitis"
+		texturefile = "gfx/event_pictures/report_event_irbitis.dds"
+	}
 	#### END TFV EVENTS ####
 
 }

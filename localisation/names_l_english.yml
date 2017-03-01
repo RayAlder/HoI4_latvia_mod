@@ -57,4 +57,9 @@ LAT_GER_Tech1:0"German Tank Tech"
 LAT_GER_Tech2:0"German Air Tech"
 LAT_GER_Tech3:0"German Navy Tech"
 LAT_Army:0"Army Innovations"
+LAT_Air:0"Air Innovations"
+LAT_Air_Spilva:0"Airbase Spilva"
+LAT_Air_Fighter:0"Superior Aircraft"
+LAT_Air_Antiair:0"Air Defense"
+
 

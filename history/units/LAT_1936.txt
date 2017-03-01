@@ -20,7 +20,7 @@ units = {
 		name = "1. Kurzemes Divizīja"
 		location = 3296
 		division_template = "Kājinieku Divizīja"
-		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.5
 
@@ -29,7 +29,7 @@ units = {
 		name = "2. Kurzemes Divizīja"
 		location = 3296
 		division_template = "Kājinieku Divizīja"
-		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.5
 
@@ -41,7 +41,7 @@ units = {
 		name = "1. Veterānu divīzija"
 		location = 9340
 		division_template = "Kājinieku Divizīja"
-		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
 		start_experience_factor = 1
 		start_equipment_factor = 1
 
@@ -50,7 +50,7 @@ units = {
 		name = "2. Veterānu divīzija"
 		location = 9340
 		division_template = "Kājinieku Divizīja"
-		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
 		start_experience_factor = 1
 		start_equipment_factor = 1
 
@@ -59,7 +59,7 @@ units = {
 		name = "1. Zemgales Divizīja"
 		location = 6342
 		division_template = "Kājinieku Divizīja"
-		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.5
 
@@ -69,7 +69,7 @@ units = {
 		name = "1. Latgales Divizīja"
 		location = 310
 		division_template = "Kājinieku Divizīja"
-		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.5
 
@@ -78,7 +78,7 @@ units = {
 		name = "2. Latgales Divizīja"
 		location = 310
 		division_template = "Kājinieku Divizīja"
-		force_equipment_variants = { infantry_equipment_1 = { owner = "LAT" } }
+		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
 		start_experience_factor = 0.25
 		start_equipment_factor = 0.5
 
@@ -114,7 +114,7 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_1
+			type = infantry_equipment_0
 			creator = "LAT"
 		}
 		requested_factories = 5
@@ -130,14 +130,5 @@ instant_effect = {
 		progress = 0.35
 		efficiency = 50
 	}
-	add_equipment_production = {
-		equipment = {
-			type = convoy
-			creator = "LAT" 
-		}
-		requested_factories = 2
-		progress = 0.6
-		efficiency = 20
-		
-	}
+	
 }

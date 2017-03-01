@@ -849,3 +849,54 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = latvia.32
+	title = latvia.32.t
+	desc = latvia.32.d
+	picture = GFX_report_event_spilva
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.32.a
+		
+		custom_effect_tooltip = latvia.32.t
+			
+		
+	}
+	
+}
+
+country_event = {
+	id = latvia.33
+	title = latvia.33.t
+	desc = latvia.33.d
+	picture = GFX_report_event_irbitis
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.33.a
+		
+		custom_effect_tooltip = latvia.33.t
+			
+		
+	}
+	
+}
+
+country_event = {
+	id = latvia.34
+	title = latvia.34.t
+	desc = latvia.34.d
+	picture = GFX_report_event_antiair
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.34.a
+		
+		custom_effect_tooltip = latvia.34.t
+			
+		
+	}
+	
+}
