@@ -1663,6 +1663,10 @@ spriteTypes = {
 		name = "GFX_report_event_irbitis"
 		texturefile = "gfx/event_pictures/report_event_irbitis.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_bunker"
+		texturefile = "gfx/event_pictures/report_event_bunker.dds"
+	}
 	#### END TFV EVENTS ####
 
 }

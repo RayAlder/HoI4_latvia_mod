@@ -23,7 +23,7 @@ Vidzeme - 12
 
 Jūras robeža - 9317,9240,9340,6222
 
-Latgale -741
+Latgale -743
 7482 - Jēkabpils
 222 - Ludza
 310 - Daugavpils labais krasts
@@ -32,7 +32,7 @@ Latgale -741
 319 - Viļaka
 9275 - Zilupe
 
-Zemgale -742
+Zemgale -744
 265 - Bauska
 3255 - Nereta
 6342 - Jelgava

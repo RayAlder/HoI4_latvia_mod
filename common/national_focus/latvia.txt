@@ -1717,7 +1717,7 @@ focus = {
 		}
 		
 		completion_reward = {
-					ROOT = { country_event = { id = latvia.1 } }
+					ROOT = { country_event = { id = latvia.6 } }
 		
 		remove_ideas = {LAT_fortification}
 		add_ideas = {LAT_fortification2}

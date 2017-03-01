@@ -87,6 +87,7 @@ country_event = {
 		
 	
 }}
+
 # Strelnieki
 country_event = {
 	id = latvia.2
@@ -208,48 +209,95 @@ country_event = {
 		}
 	}
 }			
+
 country_event = {
+
 	id = latvia.6
+	title = latvia.6.t
+	desc = latvia.6.d
+	picture = GFX_report_event_bunker
 	
-	is_triggered_only = yes
-
-	hidden = yes
-	
-	immediate = {
-		every_other_country = {
-			limit = { has_idea = anti_soviet_pact }
-			add_opinion_modifier = { target = FROM modifier = anti_soviet_pact_call_refused }
-		}
-	}
-}
-# Anti-Soviet Pact
-country_event = {
-	id = latvia.7
-	title = latvia.7.t
-	desc = latvia.7.d
-	picture = GFX_report_event_japan_europe_pact
-
 	is_triggered_only = yes
 	
 	option = {
-		ai_chance = {
-			factor = 10
+		name = latvia.6.a
+		12= { 
+		#Vidzeme
+		custom_effect_tooltip = latvia.6.t
+			hidden_effect = {
+			add_building_construction = {
+				type = bunker
+				province = 3298
+				level = 3
+				instant_build = yes
+			}
 		}
-		name = latvia.7.a		#join
-		add_ideas = anti_soviet_pact
-		SOV = {
-			remove_opinion_modifier = { target = ROOT modifier = pact_against_us }
-			add_opinion_modifier = { target = ROOT modifier = worse_pact_against_us }
 		}
-	}
+		if = {
+				limit = { 743 = { is_demilitarized_zone = yes } }
+				custom_effect_tooltip = latvia.6.t
+							}	
+		743 ={
+		custom_effect_tooltip = latvia.6.t
+		#Latgale
+		hidden_effect = {
+			add_building_construction = {
+				type = bunker
+				province = 222
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 310
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 319
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6459
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9275
+				level = 3
+				instant_build = yes
+			}
+			}
+		}
+		
+		if = {
+				limit = { 744 = { is_demilitarized_zone = yes } }
+				custom_effect_tooltip = latvia.6.t
+				
+			}
+		744 = 
+		{
+			custom_effect_tooltip = latvia.6.t
+			hidden_effect = 
+			{
+			#Zemgale
+			add_building_construction = 
+				{
+				type = bunker
+				province = 11358
+				level = 3
+				instant_build = yes
+				}
+			}
+		}
+		
 	
-	option = {
-		name = latvia.7.b		#refuse
-		ai_chance = {
-			factor = 2
-		}
-	}
-}
+}}
+
 #Latvia annex EST and LIT
 # Thunder Cross Empire Ultimatum (Estonia)
 country_event = {
@@ -899,4 +947,47 @@ country_event = {
 		
 	}
 	
+}
+
+country_event = {
+	id = latvia.40
+	
+	is_triggered_only = yes
+
+	hidden = yes
+	
+	immediate = {
+		every_other_country = {
+			limit = { has_idea = anti_soviet_pact }
+			add_opinion_modifier = { target = FROM modifier = anti_soviet_pact_call_refused }
+		}
+	}
+}
+# Anti-Soviet Pact
+country_event = {
+	id = latvia.41
+	title = latvia.41.t
+	desc = latvia.41.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+			factor = 10
+		}
+		name = latvia.41.a		#join
+		add_ideas = anti_soviet_pact
+		SOV = {
+			remove_opinion_modifier = { target = ROOT modifier = pact_against_us }
+			add_opinion_modifier = { target = ROOT modifier = worse_pact_against_us }
+		}
+	}
+	
+	option = {
+		name = latvia.41.b		#refuse
+		ai_chance = {
+			factor = 2
+		}
+	}
 }
