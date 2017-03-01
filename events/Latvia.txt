@@ -781,3 +781,71 @@ country_event = {
 	}
 	
 }
+
+country_event = {
+	id = latvia.28
+	title = latvia.28.t
+	desc = latvia.28.d
+	picture = GFX_report_event_dockyard
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.28.a
+		
+		custom_effect_tooltip = latvia.28.t
+			
+		
+	}
+	
+}
+
+country_event = {
+	id = latvia.29
+	title = latvia.29.t
+	desc = latvia.29.d
+	picture = GFX_report_event_destroyer
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.29.a
+		
+		custom_effect_tooltip = latvia.29.t
+			
+		
+	}
+	
+}
+
+country_event = {
+	id = latvia.30
+	title = latvia.30.t
+	desc = latvia.30.d
+	picture = GFX_report_event_coastal
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.30.a
+		
+		custom_effect_tooltip = latvia.30.t
+			
+		
+	}
+	
+}
+
+country_event = {
+	id = latvia.31
+	title = latvia.31.t
+	desc = latvia.31.d
+	picture = GFX_report_event_sea_fort
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.31.a
+		
+		custom_effect_tooltip = latvia.31.t
+			
+		
+	}
+	
+}

@@ -1635,6 +1635,22 @@ spriteTypes = {
 		name = "GFX_report_event_train"
 		texturefile = "gfx/event_pictures/report_event_train.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_dockyard"
+		texturefile = "gfx/event_pictures/report_event_dockyard.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_destroyer"
+		texturefile = "gfx/event_pictures/report_event_destroyer.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_coastal"
+		texturefile = "gfx/event_pictures/report_event_coastal.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_sea_fort"
+		texturefile = "gfx/event_pictures/report_event_sea_fort.dds"
+	}
 	#### END TFV EVENTS ####
 
 }

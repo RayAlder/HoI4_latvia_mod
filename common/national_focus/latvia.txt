@@ -531,7 +531,7 @@ focus = {
 	}
 	
 
-###Strelnieki	
+###Army Innovations
 focus = {
 		id = LAT_Army
 		icon = GFX_goal_generic_axis_build_infantry
@@ -567,7 +567,7 @@ focus = {
 		{
 	
 		ROOT = { country_event = { id = latvia.2 } }
-		
+			set_technology = { infantry_weapons1 = 1}
 			set_technology = { support_weapons = 1}
 			set_technology = { tech_recon = 1}
 			add_tech_bonus = {
@@ -602,6 +602,32 @@ focus = {
 		}
 }
 
+###Air Innovations
+focus = {
+		id = LAT_Air
+		icon = GFX_goal_generic_build_airforce
+		
+		x = 8
+		y = 0
+		cost = 10
+		
+		completion_reward = 
+		{
+	
+		army_experience = 20
+		add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.25
+				uses = 2
+				category = land_doctrine
+			}	
+		}
+			
+}
+
+
+
+
 #Operation Thunder Cross
 focus = {
 		id = LAT_Peterkrusts
@@ -609,7 +635,7 @@ focus = {
 		prerequisite = {  }
 		mutually_exclusive = { focus = LAT_baltic_cooperation }
 		
-		x = 10
+		x = 13
 		y = 0
 		cost = 10
 		
@@ -634,7 +660,7 @@ focus = {
 		available = {
 			has_government = fascism
 		}
-		x = 10
+		x = 13
 		y = 1
 		cost = 10
 		
@@ -659,7 +685,7 @@ focus = {
 				
 			}
 		}
-		x = 8
+		x = 11
 		y = 3
 		cost = 10
 		
@@ -692,7 +718,7 @@ focus = {
 				
 			}
 		}
-		x = 8
+		x = 11
 		y = 4
 		cost = 10
 		
@@ -730,7 +756,7 @@ focus = {
 				
 			}
 		}
-		x = 8
+		x = 11
 		y = 5
 		cost = 10
 		
@@ -766,7 +792,7 @@ focus = {
 				
 			}
 		}
-		x = 8
+		x = 11
 		y = 6
 		cost = 10
 		
@@ -793,7 +819,7 @@ focus = {
 		available = {
 			has_government = fascism
 		}
-		x = 10
+		x = 13
 		y = 3
 		cost = 10
 		
@@ -857,7 +883,7 @@ focus = {
 		available = {
 			has_government = fascism
 		}
-		x = 10
+		x = 13
 		y = 4
 		cost = 10
 		ai_will_do = {
@@ -918,7 +944,7 @@ focus = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = LAT_military_effort_EST }
 		
-		x = 10
+		x = 13
 		y = 5
 		cost = 10
 		available = {
@@ -940,7 +966,7 @@ focus = {
 		available = {
 			has_government = fascism
 		}
-		x = 12
+		x = 15
 		y = 3
 		cost = 10
 		
@@ -1020,7 +1046,7 @@ focus = {
 		available = {
 			has_government = fascism
 		}
-		x = 12
+		x = 15
 		y = 4
 		cost = 10
 		ai_will_do = {
@@ -1101,7 +1127,7 @@ focus = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = LAT_military_effort_LIT }
 		
-		x = 12
+		x = 15
 		y = 5
 		cost = 10
 		available = {
@@ -1126,7 +1152,7 @@ focus = {
 		cancel = {
 			NOT = { country_exists = SOV }
 		}
-		x = 11
+		x = 14
 		y = 6
 		cost = 10
 		historical_ai = {
@@ -1153,7 +1179,7 @@ focus = {
 		id = LAT_anti_communism_movement
 		icon = GFX_goal_anti_comintern_pact
 		prerequisite = { focus = LAT_baltic_cooperation focus=LAT_Peterkrusts  }
-		x = 14
+		x = 17
 		y = 1
 		cost = 10
 		available = {
@@ -1189,7 +1215,7 @@ focus = {
 		id = LAT_anti_comitern_pact
 		icon = GFX_goal_anti_comintern_pact
 		prerequisite = { focus = LAT_anti_communism_movement }
-		x = 14
+		x = 17
 		y = 2
 		cost = 10
 		available = {
@@ -1236,7 +1262,7 @@ focus = {
 			
 			is_neighbor_of = SOV
 		}
-		x = 14
+		x = 17
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -1280,7 +1306,7 @@ focus = {
 			NOT = { has_war_with = LIT }
 		}
 		
-		x = 17
+		x = 20
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -1305,7 +1331,7 @@ focus = {
 		id = LAT_baltic_joint_research
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = LAT_baltic_cooperation }
-		x = 17
+		x = 20
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1321,7 +1347,7 @@ focus = {
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = LAT_baltic_cooperation }
 		available = {	}
-		x = 19
+		x = 22
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1398,7 +1424,7 @@ focus = {
 				threat > 0.20
 			}
 		}
-		x = 17
+		x = 20
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -1489,7 +1515,7 @@ focus = {
 				GER = { has_completed_focus = GER_mol_rib_pact }
 			}
 		}
-		x = 17
+		x = 20
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -1513,7 +1539,7 @@ focus = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { }
 		
-		x = 24
+		x = 30
 		y = 0
 		cost = 10
 		available = {
@@ -1535,7 +1561,7 @@ focus = {
 		icon = GFX_goal_generic_fortify_city
 		text = LAT_fortification_focus2
 		prerequisite = {focus = LAT_fortification_focus }
-		x = 24
+		x = 30
 		y = 1
 		cost = 10
 		available = {
@@ -1553,22 +1579,295 @@ focus = {
 		}
 }
 	
-#Jūras fortifikācija	
+#Navy innovations
+focus = {
+		id = LAT_Naval_Inno
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		
+		x = 26
+		y = 0
+		cost = 10
+		
+		completion_reward = 
+		{
+	
+		navy_experience = 20
+		add_tech_bonus = {
+				name = ti_bonus
+				bonus = 0.5
+				uses = 1
+				category = trade_interdiction_tree
+			}	
+		}
+			
+}
+
+focus = {
+		id = LAT_naval_base
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = {focus = LAT_Naval_Inno}
+		x = 26
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		
+
+		complete_tooltip = {
+		add_tech_bonus = {
+				name = ti_bonus
+				bonus = 0.5
+				uses = 1
+				category = trade_interdiction_tree
+			}	
+		
+			12 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			190 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			744 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}	
+		}
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = ti_bonus
+				bonus = 0.5
+				uses = 1
+				category = trade_interdiction_tree
+			}	
+		
+			12 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+			190 = {
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					instant_build = yes
+				}
+				
+			}
+			744 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+				
+			}
+		}
+}
+
+focus = {
+		id = LAT_naval
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = {focus = LAT_naval_base}
+		x = 26
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip =  {
+				tooltip = naval_effort_tt
+				NOT = {
+					any_owned_state = {
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+		
+			12 = {
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			190 = {
+				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			744 = {
+				
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			
+			
+		}
+
+		completion_reward = {
+		ROOT = { country_event = { id = latvia.28 } }
+			12 = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_naval_rearmament_2dockyard
+			}
+			190 = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = LAT_naval_rearmament_1dockyard
+			}
+			744 = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = LAT_naval_rearmament_1dockyard
+			}
+		}
+}
+
+focus = {
+		id = LAT_NAVAL_TECH1
+		icon = GFX_focus_generic_navy_transport
+		prerequisite = {focus = LAT_naval}
+		mutually_exclusive = { focus = LAT_sea_fortification_focus }
+		x = 25
+		y = 3
+		cost = 10
+		
+		completion_reward = {
+			navy_experience = 20
+			add_tech_bonus = {
+				name = transport_bonus
+				bonus = 0.5
+				uses = 2
+				technology = transport
+				technology = landing_craft
+			}
+			
+	
+		}
+}
+focus = {
+		id = LAT_NAVAL_TECH2
+		icon = GFX_goal_generic_navy_anti_submarine
+		prerequisite = {focus = LAT_NAVAL_TECH1}
+		x = 25
+		y = 4
+		cost = 10
+		
+		completion_reward = {
+		navy_experience = 20
+		ROOT = { country_event = { id = latvia.29 } }
+		add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 1
+				technology = basic_destroyer
+				technology = improved_destroyer
+				technology = advanced_destroyer
+			}
+		add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				uses = 1
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				technology = improved_heavy_cruiser
+				technology = advanced_heavy_cruiser
+			}
+		}
+}
+	
 focus = {
 		id = LAT_sea_fortification_focus
 		text = LAT_sea_fortification_focus
 		icon = GFX_focus_generic_coastal_fort
-		prerequisite = { focus = LAT_fortification_focus2 }
-		
-		x = 24
-		y = 2
+		prerequisite = { focus = LAT_naval }
+		mutually_exclusive = { focus = LAT_NAVAL_TECH1 }
+		x = 27
+		y = 3
 		cost = 10
 		
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
-
+		ROOT = { country_event = { id = latvia.30 } }
 			12 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
@@ -1651,15 +1950,15 @@ focus = {
 		text = LAT_sea_fortification_focus2
 		icon = GFX_focus_generic_coastal_fort
 		prerequisite = { focus = LAT_sea_fortification_focus }
-		x = 24
-		y = 3
+		x = 27
+		y = 4
 		cost = 10
 		
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
-
+		ROOT = { country_event = { id = latvia.31 } }
 			12 = {
 				if = {
 					limit = { is_controlled_by = ROOT }
@@ -1737,119 +2036,6 @@ focus = {
 		}
 }
 	
-focus = {
-		id = LAT_naval
-		icon = GFX_goal_generic_construct_naval_dockyard
-		
-		x = 26
-		y = 2
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
 
-		available_if_capitulated = yes
-
-		bypass = {
-			custom_trigger_tooltip =  {
-				tooltip = naval_effort_tt
-				NOT = {
-					any_owned_state = {
-						free_building_slots = {
-							building = dockyard
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-			}
-		}
-
-		complete_tooltip = {
-			every_state = {
-				
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			every_state = {
-				
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			every_state = {
-				
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-			}
-			
-			
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = LAT_naval_rearmament_2dockyard
-			}
-			random_owned_controlled_state = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = LAT_naval_rearmament_1dockyard
-			}
-			random_owned_controlled_state = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = dockyard
-					level = 2
-					instant_build = yes
-				}
-				set_state_flag = LAT_naval_rearmament_1dockyard
-			}
-		}
-}
 
 }
