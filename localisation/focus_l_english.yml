@@ -1025,3 +1025,12 @@
  NATIONAL_FOCUS_EXCLUSIVE_INFO_DESC:0 "Mutually exclusive with"
  NATIONAL_FOCUS_EXCLUSIVE_INFO_ENTRY:0 "$FOCUS|Y$"
  NATIONAL_FOCUS_NO_CURRENT_EFFECT:0 "This focus currently has no effect. Changes in the world situation may affect this."
+
+ 
+ #latvian
+LAT_Polish_war:0 "Wilno or War"
+LAT_war_POL_faction_LAT_leader:0 "§R[This.GetName] must approve of the agreement for bonuses to take effect. They will leave [Root.GetFactionName] if war is declared.§!\n"
+LAT_war_POL_faction_LAT_noleader:0 "§R[This.GetName] must approve of the agreement for bonuses to take effect. You will leave [Root.GetFactionName] the faction if war is declared.§!\n"
+LAT_Polish_war_desc:0 "Wilno was Lithuanian, Wilno has remained Lithuanian, and Wilno shall be Latvian from now on! If Poland does not cede the territory, we must prepare the Latvian people for the inevitable war. Wilno and the surrounding lands will return to Latvia!"
+LAT_POL_or_war_POL_civil_war:0 "Take Wilno in exchange for support"
+

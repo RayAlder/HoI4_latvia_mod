@@ -3084,4 +3084,9 @@ spriteTypes = {
 		name = "GFX_idea_warmongers"
 		texturefile = "gfx/interface/ideas/idea_warmongers.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_anti_communism"
+		texturefile = "gfx/interface/ideas/anti_soviet_pact.dds"
+	}
+	
 }

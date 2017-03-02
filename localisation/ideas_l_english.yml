@@ -2307,7 +2307,8 @@
  anti_nazi_coup_desc:0 "Having overthrown Prince Paul to prevent cooperation with Germany, the new regime oppose pro-fascist diplomacy."
  patriotisms: "Patriotisma akts"
 #Latvia 
-warmongers:"Warmongers"
+warmongers:0"Warmongers"
+anti_communism:0 "Anti-Communism Spirit"
 LAT_rocketry_idea:0 "Raķešzinātne"
 LAT_fortification:0 "Nocietināšanās"
 LAT_fortification2:0 "Advancētā nocietināšanās"

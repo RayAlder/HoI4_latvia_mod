@@ -7,7 +7,7 @@
 		infantry = { x = 0 y = 2 }
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
+		
 		
 	}
 		
@@ -35,26 +35,6 @@ units = {
 
 	}
 	
-
-	
-	division = {
-		name = "1. Veterānu divīzija"
-		location = 9340
-		division_template = "Kājinieku Divizīja"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
-		start_experience_factor = 1
-		start_equipment_factor = 1
-
-	}
-	division = {
-		name = "2. Veterānu divīzija"
-		location = 9340
-		division_template = "Kājinieku Divizīja"
-		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
-		start_experience_factor = 1
-		start_equipment_factor = 1
-
-	}
 	division = {
 		name = "1. Zemgales Divizīja"
 		location = 6342

@@ -1667,6 +1667,11 @@ spriteTypes = {
 		name = "GFX_report_event_bunker"
 		texturefile = "gfx/event_pictures/report_event_bunker.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_antitank"
+		texturefile = "gfx/event_pictures/report_event_antitank.dds"
+	}
+	report_event_antitank
 	#### END TFV EVENTS ####
 
 }

@@ -807,5 +807,13 @@ spriteTypes = {
 		name = "GFX_focus_generic_navy_transport"
 		texturefile = "gfx/interface/goals/goal_generic_navy_transport.dds"
 	}
+	SpriteType = { 
+		name = "GFX_focus_panzer4"
+		texturefile = "gfx/interface/goals/goal_panzer4.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_antitank"
+		texturefile = "gfx/interface/goals/goal_antitank.dds"
+	}
 
 }

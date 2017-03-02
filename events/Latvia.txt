@@ -589,7 +589,7 @@ country_event = {
 	
 }}
 
-#Lithuani Polish Wall
+#Lithuanian Polish Wall
 country_event = {
 
 	id = latvia.17
@@ -991,3 +991,191 @@ country_event = {
 		}
 	}
 }
+
+# Wilno or War (Poland)
+country_event = {
+	id = latvia.50
+	title = latvia.50.t
+	desc = latvia.50.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_war_with = LAT }
+	}
+	
+	option = {
+		ai_chance = {
+		factor = 40
+			base = 10
+			modifier = { # Don't accept if in a faction that can protect them
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						is_in_faction_with = POL
+					}
+					LAT = { surrender_progress > 0.5 }
+				}
+			}
+		}
+		LAT = { country_event = { id = latvia.51 days = 1 } }
+		effect_tooltip = {
+			LAT = {
+				transfer_state = 96
+				
+			}
+		}
+		
+		hidden_effect = {
+			news_event = { id = news.300 hours = 6 }
+		}
+	}
+	
+	option = {
+		name = latvia.50.b
+		ai_chance = {
+			factor = 60
+			modifier = {
+				add = 1
+				OR = {
+					is_historical_focus_on = no
+					any_other_country = {
+						is_major = yes
+						is_in_faction_with = POL
+					}
+				}
+			}
+			modifier = {
+				add = 5
+				any_other_country = {
+					is_major = yes
+					has_guaranteed = POL
+				}
+			}
+			
+		}
+		LAT = { country_event = { id = latvia.52 days = 1 } 
+			if = {
+				limit = {
+					is_in_faction_with = POL
+					is_faction_leader = yes
+				}
+				remove_from_faction = POL
+			}
+			if = {
+				limit = { 
+					is_in_faction_with = POL
+					is_faction_leader = no
+				}
+				random_other_country = {
+					limit = { 
+						is_in_faction_with = LAT
+						is_faction_leader = yes
+					}
+					remove_from_faction = LAT
+				}
+			}			
+		}		
+		hidden_effect = {
+			news_event = { hours = 1 id = news.301 }
+		}
+		effect_tooltip = {
+			LAT = {
+				declare_war_on = {
+					target = POL
+					type = take_state
+					generator = { 96 }
+				}
+			}
+		}
+	}
+}
+
+# Poland Cedes Wilno
+country_event = {
+	id = latvia.51
+	title = latvia.51.t
+	desc = latvia.51.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.51.a
+		transfer_state = 96
+		
+	}
+}
+
+# Poland Refuses to Cede Wilno
+country_event = {
+	id = latvia.52
+	title = latvia.52.t
+	desc = latvia.52.d
+	picture = GFX_report_event_polish_tanks_02
+
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.52.a
+		declare_war_on = {
+			target = POL
+			type = take_state
+			generator = { 96 }
+		}
+	}
+}
+
+# Wilno or War (Polish Civil War)
+country_event = {
+	id = latvia.53
+	title = latvia.53.t
+	desc = latvia.53.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	#Demand Danzig for aid
+	option = {
+		name = latvia.53.a
+		set_country_flag = GER_POL_wilno_promised
+		GER = {
+			country_event = { id = latvia.54 days = 1 }
+		}
+	}
+}
+
+# The Promise of Danzig (Polish Civil War)
+country_event = {
+	id = latvia.54
+	title = latvia.54.t
+	desc = latvia.54.d
+	picture = GFX_report_event_german_troops
+
+	is_triggered_only = yes
+
+	# This is a German struggle
+	option = {
+		name = latvia.54.a
+	}
+}
+
+country_event = {
+	id = latvia.60
+	title = latvia.60.t
+	desc = latvia.60.d
+	picture = GFX_report_event_antitank
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.60.a
+		
+		custom_effect_tooltip = latvia.60.t
+			
+		
+	}
+	
+}
+

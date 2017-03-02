@@ -10952,3 +10952,106 @@ news_event = {
 		}
 	}
 }
+
+#Wilno Ceded
+news_event = {
+	id = news.300
+	title = news.300.t
+	desc = news.300.d
+	picture = GFX_news_events_generic_sign_treaty2
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+
+	option = {
+		name = news.300.a
+		trigger = {
+			has_government = democratic
+			NOT = {
+				is_in_faction_with = LAT
+			}
+		}
+	}
+
+	option = {
+		name = news.300.b
+		trigger = {
+			is_in_faction_with = LAT
+		}
+	}
+
+	option = {
+		name = news.300.c
+		trigger = {
+			has_government = neutrality
+			NOT = {
+				is_in_faction_with = LAT
+			}
+		}
+	}
+
+	option = {
+		name = news.300.e
+		trigger = {
+			has_government = communism
+			NOT = {
+				is_in_faction_with = LAT
+			}
+		}
+	}
+}
+
+#Poland Refuses to Cede Wilno
+news_event = {
+	id = news.301
+	title = news.301.t
+	desc = news.301.d
+	picture = GFX_news_event_polish_tanks
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_for_sender = no
+
+	#They have ignored every warning!
+	option = {
+		name = news.301.a
+		trigger = {
+			is_in_faction = yes
+			NOT = {
+				is_in_faction_with = LAT
+			}
+			NOT = {
+				is_in_faction_with = POL
+			}
+		}
+	}
+
+	#
+	option = {
+		name = news.301.b
+		trigger = {
+			is_in_faction_with = LAT
+		}
+	}
+
+	#Together we must stop this aggressor!
+	option = {
+		name = news.301.c
+		trigger = {
+			is_in_faction_with = POL
+		}
+	}
+
+	#This is a grave situation.
+	option = {
+		name = news.301.e
+		trigger = {
+			is_in_faction = no
+		}
+	}
+}

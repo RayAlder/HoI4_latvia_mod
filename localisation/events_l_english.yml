@@ -118,6 +118,32 @@ latvia.34.t:0 "Air defenses"
 latvia.34.d:0 "Enemy planes are swarming our skies. These new AA guns will pulverize them!"
 latvia.34.a:0 "Ready for action!"
 
+
+latvia.50.t:0 "Wilno or War"
+latvia.50.d:0 "[LAT.GetNameDef] has long publicized their goal of reclaiming the territories what was occupied by Polish. In particular they look to the territory of Wilno, which unrightfully taken from Lithuania. \n\nNow, they have demanded that Wilno be ceded to [LAT.GetNameDef]. With the threat of war looming, accepting the offer will delay a possible conflict, but at the cost of freely granting the Latvians more strength for whatever lies ahead."
+latvia.50.a:0 "Let's make a deal. Maybe they'll turn elsewhere."
+latvia.50.b:0 "Wilno will remain Polish!"
+
+latvia.51.t:0 "Poland Cedes Wilno"
+latvia.51.d:0 "Faced with our ultimatum, Poland has agreed to give up their unjustly acquired territory to us, proving that they must have known it rightfully belonged to Lithuania!"
+latvia.51.a:0 "Poland has avoided war... for now."
+
+latvia.52.t:0 "Poland Refuses to Cede Wilno"
+latvia.52.d:0 "Despite our attempts to allow Poland to hand over Wilno peacefully, we have been met with refusal. As expected, the world gives nothing to us that we do not seize by force."
+latvia.52.a:0 "They know very well what the alternative is."
+
+latvia.53.t:0 "Latvia Officially Requests Wilno"
+latvia.53.d:0 "Seeing their military support as essential for any future success in our civil war, [LAT.GetNameDef] has presented plans for establishing [LAT.GetAdjective] control over Wilno upon the conclusion of hostilities. They have also made it clear that [Root.GetNameDef]'s reliance on their military support leaves [Root.GetLeader] no choice but to sign this "Wilno Agreement.""
+latvia.53.a:0 "[Root.GetName] must take one battle at a time."
+ 
+latvia.54.t:0 "The Wilno Agreement"
+latvia.54.d:0 "[From.GetName] has agreed to our request for Wilno in exchange for support in their civil war. Our request and our promise have been formalized in the Wilno Agreement. Now we must make certain that [From.GetName] emerges victorious from their conflict."
+latvia.54.a:0 "This is a [Root.GetAdjective] struggle, too."
+
+latvia.60.t:0 "Anti-Tank Defenses"
+latvia.60.d:0 "It is obvious that at some point Soviet Union or Germany will try to invade our country, and the best way would be with tanks. These new antitank guns will come in handy when they do."
+latvia.60.a:0 "Boom! Next!"
+
  germany.4.t:0 "Anschluss"
  germany.4.d:0 "Repeated uprisings in Austria clearly show that the people there long to be united with our Reich. It is now time to take action and allow the will of the people to be made manifest."
  germany.4.a:0 "How can anyone say that Austria is not German?!"
@@ -1752,6 +1778,22 @@ latvia.34.a:0 "Ready for action!"
  news.236.b:0 "We demanded what seemed right."
  news.236.c:0 "Let us bring this war to a swift conclusion."
  news.236.e:0 "This may be the end of [GER.GetNameDef]."
+ 
+ news.300.t:0 "Poland Cedes Wilno"
+ news.300.d:0 "Following the presentation of a [LAT.GetAdjective] ultimatum to [From.GetNameDef], [From.GetLeader] and the [From.GetAdjective] government have decided to comply with every demand rather than face war.\n\nIt is their hope that with the loss of Wilno, [From.GetNameDef] will be safe from further Latvian territorial ambitions. The situation remains tense, however, and it is telling that Polish border forces have not yet received the order to stand down"
+ news.300.a:0 "[LAT.GetLeader] cannot be allowed to keep making demands of Europe!"
+ news.300.b:0 "This is an acknowledgement of the power of the [LAT.GetFactionName]"
+ news.300.c:0 "Latvian expansion continues"
+ news.300.e:0 "It is clear that the "democracies" of Europe are incapable of stopping the fascist menace."
+ news.301.t:0 "Poland Refuses Latvian Ultimatum"
+ news.301.d:0 "Considering the demands, it seemed inevitable. \n\n[From.GetNameDef] would be forced to cede Wilno to Lithuania, and a Polish plenipotentiary would be sent to Riga to negotiate further terms. [From.GetLeader] pointed to [LAT.GetNameDef]'s recent actions when stating that it was obvious Latvia would not be satisfied with Wilno alone.\n\nLatvian and Polish forces are prepared for war, and reports are already coming in of clashes on the border. Once again there is war in Europe."
+ news.301.a:0 "Latvia has ignored every warning!"
+ news.301.b:0 "Then it is war"
+ news.301.c:0 "Together we must stop this aggressor!"
+ news.301.e:0 "This is a grave situation"
+ 
+ 
+ 
  ace_promoted.1.t:0 "Ace Pilot Promoted"
  ace_promoted.2.t:0 "A Wild Ace Appears"
  ace_promoted.1.d:0 "Few take as many risks as the brave pilots of the [Root.GetAdjective] air force. [From.GetName] [From.GetSurname], a skilled pilot known under the callsign [From.GetCallsign], has distinguished [From.GetHerselfHimself] in not only returning alive from the recent mission over [From.GetMissionRegion], but living through significant victories in many critical encounters.\n\nHeld up as a shining example of [Root.GetAdjective] courage, [From.GetName]'s recent promotion has been highly publicized. Although the people may view war as more hell than glory, many are glad to see that there are still heroes to rally behind."

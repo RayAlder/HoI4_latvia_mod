@@ -560,32 +560,62 @@ focus = {
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = {focus = LAT_Army}
 		x = 6
-		y = 2
-		cost = 10
+		y = 1
+		cost = 20
 		
 		
 		completion_reward = 
 		{
-	
-		ROOT = { country_event = { id = latvia.2 } }
+		
+		
 			set_technology = { infantry_weapons1 = 1}
 			set_technology = { support_weapons = 1}
 			set_technology = { tech_recon = 1}
+			set_technology = { interwar_artillery = 1}
+			
 			add_tech_bonus = {
 				name = land_doc_bonus
 				bonus = 0.25
 				uses = 1
 				category = land_doctrine
 			}
+			
+		ROOT = { country_event = { id = latvia.2 } }	
 		custom_effect_tooltip = available_chief_of_army
 		show_ideas_tooltip = LAT_Arturs_Silgailis			
+}
+}
+
+focus = {
+		id = LAT_Antitank
+		icon = GFX_focus_antitank
+		prerequisite = {focus = LAT_Strelnieki}
+		x = 6
+		y = 2
+		cost = 10
+		
+		
+		completion_reward = 
+		{
+
+			set_technology = { interwar_antitank = 1}
+	
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.50
+				uses = 1
+				technology = antitank1
+			}
+			
+		ROOT = { country_event = { id = latvia.60 } }	
+				
 }
 }
 		
 focus = {
 		id = LAT_SS_division
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = {focus = LAT_Strelnieki}
+		prerequisite = {focus = LAT_Antitank}
 		x = 6
 		y = 3
 		cost = 10
@@ -930,7 +960,7 @@ focus = {
 	
 		available = {
 			has_government = fascism
-			date > 1939.1.6
+			date > 1939.1.1
 			OR = {
 				country_exists = GER
 				GER = { is_puppet = no }
@@ -941,20 +971,49 @@ focus = {
 		x = 11
 		y = 6
 		cost = 10
-		
 
-		
 		available_if_capitulated = yes
 		completion_reward = {
 		army_experience = 20
-		ROOT = { country_event = { id = latvia.20 } }
 		
 		
-		set_technology = { basic_medium_tank = 1}
-		set_technology = { improved_medium_tank = 1}
-		set_technology = { improved_medium_tank = 1}
-		set_technology = { motorised_infantry = 1}
+		add_tech_bonus = {
+				uses = 2
+				bonus = 0.5
+				technology = basic_medium_tank
+				technology = improved_medium_tank
+			}
+
 				
+}
+}
+
+focus = {
+		id = LAT_GER_Tech4
+		icon = GFX_focus_panzer4
+		prerequisite = { focus = LAT_GER_Tech1 }
+	
+		available = {
+			has_government = fascism
+			has_tech = improved_medium_tank
+			has_tech = motorised_infantry
+			date > 1940.1.5
+			OR = {
+				country_exists = GER
+				GER = { is_puppet = no }
+				NOT = { has_war_with = GER }
+				
+			}
+		}
+		x = 11
+		y = 7
+		cost = 10
+		
+
+		available_if_capitulated = yes
+		completion_reward = {
+		army_experience = 25
+		ROOT = { country_event = { id = latvia.20 } }				
 }
 }
 
@@ -1090,7 +1149,7 @@ focus = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = LAT_ESTONIA_aneksija focus = LAT_baltic_state}
 		
-		x = 18
+		x = 19
 		y = 5
 		cost = 10
 		available = {
@@ -1272,7 +1331,7 @@ focus = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = LAT_LITHUANIA_aneksija focus = LAT_baltic_state}
 		
-		x = 16
+		x = 17
 		y = 5
 		cost = 10
 		available = {
@@ -1288,6 +1347,136 @@ focus = {
 }	
 
 focus = {
+		id = LAT_Polish_Ultimatum
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = {focus = LAT_fortification_focus_LIT }
+		will_lead_to_war_with = POL
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 30000 } #6 div			
+			#Make custom trigger tooltip here
+			96 = {
+				owner = {
+					original_tag = POL
+				}
+				controller = {
+					original_tag = POL
+				}
+			}
+			OR = {
+				POL = {
+					has_civil_war = no
+				}
+				
+			}
+		}
+
+		bypass = {
+			OR = {
+				has_war_with = POL
+				is_in_faction_with = POL
+				NOT = {
+					96 = {
+						controller = {
+							original_tag = POL 
+						}
+						owner = {
+							original_tag = POL 
+						}
+					}
+				}
+			}
+		}
+		cancel_if_invalid = no
+		x = 17
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 10	
+			modifier = {
+				factor = 0
+				OR = {
+					date < 1937.1.1
+					any_neighbor_country = {
+						has_war_with = LAT
+						NOT = { has_capitulated = yes }
+						strength_ratio = {
+							tag = LAT
+							ratio > 0.6
+						}
+					}
+				}
+			}
+		}	
+		
+		completion_reward = {
+			add_named_threat = { threat = 2 name = LAT_Polish_war }
+			if = {
+				limit = {
+					96 = {
+						controller = {
+							tag = POL
+							has_civil_war = no
+						}
+					}
+				}
+				effect_tooltip = {
+					transfer_state = 96
+					
+				}
+				POL = {
+					country_event = { id = latvia.50 }
+					if = {
+						limit = { NOT = { is_in_faction_with = ROOT } }
+						custom_effect_tooltip = needs_approval
+					}
+					if = {
+						limit = { 
+							is_in_faction_with = ROOT 
+							ROOT = { is_faction_leader = yes }
+						}
+						custom_effect_tooltip = LAT_war_POL_faction_LAT_leader
+					}
+					if = {
+						limit = {
+							is_in_faction_with = ROOT 
+							NOT = { ROOT = { is_faction_leader = yes } }
+						}
+						custom_effect_tooltip = LAT_war_POL_faction_LAT_noleader
+					}
+				}
+			}
+			if = {
+				limit = {
+					96 = {
+						owner = {
+							OR = {
+								original_tag = POL
+								tag = POL
+							}
+						}
+					}
+				}
+				random_other_country = {
+					limit = {
+						original_tag = POL
+						has_civil_war = yes
+						OR = {
+							is_in_faction_with = LAT
+							has_volunteers_amount_from = {
+								tag = LAT
+								count > 0
+							}
+						}
+					}
+					country_event = { id = latvia.51 days = 1 }
+				}
+				custom_effect_tooltip = LAT_POL_or_war_POL_civil_war
+			}
+		}
+	}
+
+focus = {
 		id = LAT_ussr_war_goal
 		icon = GFX_goal_generic_war_with_comintern
 		prerequisite = {focus = LAT_fortification_focus_EST }
@@ -1297,7 +1486,7 @@ focus = {
 		cancel = {
 			NOT = { country_exists = SOV }
 		}
-		x = 17
+		x = 18
 		y = 6
 		cost = 10
 		historical_ai = {
@@ -1319,12 +1508,13 @@ focus = {
 			}
 		}
 }
+
 #Soviet
 focus = {
 		id = LAT_anti_communism_movement
 		icon = GFX_goal_anti_comintern_pact
 		prerequisite = { focus = LAT_baltic_cooperation focus=LAT_Peterkrusts  }
-		x = 17
+		x = 18
 		y = 1
 		cost = 10
 		available = {
@@ -1353,89 +1543,6 @@ focus = {
 			SOV = { add_opinion_modifier = { target = LAT modifier = democratic_leanings_bad } }
 			SOV = { add_opinion_modifier = { target = EST modifier = democratic_leanings_bad } }
 			SOV = { add_opinion_modifier = { target = LIT modifier = democratic_leanings_bad } }
-		}
-}
-
-#moved to seperate tree - potential for deletion
-focus = {
-		id = LAT_anti_comitern_pact
-		icon = GFX_goal_anti_comintern_pact
-		x = 28
-		y = 0
-		cost = 10
-		available = {
-			is_puppet = no
-			NOT = { has_government = communism }
-			NOT = { is_in_faction_with = SOV }
-		}
-		
-		completion_reward = {
-			SOV = { add_opinion_modifier = { target = ROOT modifier = pact_against_us } }
-			add_named_threat = { threat = 1 name = LAT_anti_comitern_pact }
-			every_other_country = {
-				limit = {
-					NOT = { tag = LAT }
-					NOT = { has_war_with = LAT }
-					NOT = { is_in_faction_with = SOV }
-					OR = {
-						capital_scope = {
-								is_on_continent = europe
-						}
-						capital_scope = {
-								is_on_continent = asia
-						}
-						num_of_factories > 30
-					}
-					OR = {
-						
-							is_neighbor_of = SOV
-							NOT = { has_government = communism }
-						}
-					}
-				}
-				country_event = latvia.4
-		}
-}
-	
-focus = {
-		id = LAT_anti_soviet_pact
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = LAT_anti_comitern_pact }
-		
-		available = {
-			is_puppet = no
-			
-			is_neighbor_of = SOV
-		}
-		x = 28
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 2.5	
-		}
-		completion_reward = {
-			hidden_effect = {
-				SOV = { remove_opinion_modifier = { target = ROOT modifier = pact_against_us } }
-			}
-			SOV = { add_opinion_modifier = { target = ROOT modifier = worse_pact_against_us } }
-			add_ideas = anti_soviet_pact
-			custom_effect_tooltip = LAT_anti_soviet_pact_tt
-			custom_effect_tooltip = LAT_anti_soviet_pact_tt_2
-			every_other_country = {
-				limit = {
-					has_opinion_modifier = anti_comintern_pact_opinion
-					OR = {
-						NOT = { is_in_faction = yes }
-						is_in_faction_with = LAT
-					}
-					NOT = { tag = LAT }
-					NOT = { has_war_with = LAT }
-				}
-				country_event = latvia.5
-			}
-			hidden_effect = {
-				news_event = { hours = 12 id = news.215 }
-			}
 		}
 }
 
@@ -1706,7 +1813,7 @@ focus = {
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = LAT_anti_communism_movement}
 		
-		x = 17
+		x = 18
 		y = 2
 		cost = 10
 		available = {
@@ -1728,7 +1835,7 @@ focus = {
 		icon = GFX_goal_generic_fortify_city
 		text = LAT_fortification_focus2
 		prerequisite = {focus = LAT_fortification_focus }
-		x = 17
+		x = 18
 		y = 3
 		cost = 10
 		available = {
