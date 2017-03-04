@@ -82,13 +82,7 @@ latvia.25.t:0 "Latvian Infrastructure Upgrade"
 latvia.25.d:0 "Ensuring effective infrastructure management and logistics services and promptly resolving issues is only possible in coordinated operatio."
 latvia.25.a:0 "Great!"
 
-latvia.26.t:0 "Oil in Baltics"
-latvia.26.d:0 "By harvesting essential oil fields in Baltic sea we fuel our war marchine and we will be on our way to victory."
-latvia.26.a:0 "Awesome!"
 
-latvia.27.t:0 "Jelgava's Rubber factory"
-latvia.27.d:0 "If we want our Panzer divisions we need rubber. Much of it. This new factory will provides us with enough rubber for our Motorized infantry."
-latvia.27.a:0 "Awesome!"
 
 latvia.28.t:0 "Naval Arnaments"
 latvia.28.d:0 "Our navy is weak. We need more ships ASAP! These new naval dockyard will give us the capacity to construct a big enough navy."
@@ -143,6 +137,26 @@ latvia.54.a:0 "This is a [Root.GetAdjective] struggle, too."
 latvia.60.t:0 "Anti-Tank Defenses"
 latvia.60.d:0 "It is obvious that at some point Soviet Union or Germany will try to invade our country, and the best way would be with tanks. These new antitank guns will come in handy when they do."
 latvia.60.a:0 "Boom! Next!"
+
+latvia.70.t:0 "Oil in Baltics"
+latvia.70.d:0 "We have our own oilrig. How about that! ."
+latvia.70.a:0 "Drill'er Deep, Pump'er hard!"
+
+latvia.71.t:0 "Jelgava's Rubber factory"
+latvia.71.d:0 "If we want our Panzer divisions we need rubber. Much of it. This new factory will provides us with enough rubber for all our Motorized infantry."
+latvia.71.a:0 "There is no such thing as light infantry?"
+
+latvia.72.t:0 "LM Steel Factory"
+latvia.72.d:0 "We have some much steel right now we can start exporting it. Or let's make few dozen of panzer divisions!"
+latvia.72.a:0 "Fear the steel avalanche!"
+
+latvia.73.t:0 "Estonian Oil Shale"
+latvia.73.d:0 "We made oil from natural gas. Awesome!"
+latvia.73.a:0 "Be careful with that lighter, mate!"
+
+latvia.74.t:0 "Lithuanian Oil Fields"
+latvia.74.d:0 "All three oilfield are up and running! Our war machine will never be hungry again."
+latvia.74.a:0 "Keep Calm and Drill on!"
 
  germany.4.t:0 "Anschluss"
  germany.4.d:0 "Repeated uprisings in Austria clearly show that the people there long to be united with our Reich. It is now time to take action and allow the will of the people to be made manifest."

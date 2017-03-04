@@ -1671,7 +1671,18 @@ spriteTypes = {
 		name = "GFX_report_event_antitank"
 		texturefile = "gfx/event_pictures/report_event_antitank.dds"
 	}
-	report_event_antitank
+	spriteType = {
+		name = "GFX_report_event_metalurgs"
+		texturefile = "gfx/event_pictures/report_event_metalurgs.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_shale"
+		texturefile = "gfx/event_pictures/report_event_shale.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_refinery"
+		texturefile = "gfx/event_pictures/report_event_generic_refinery.dds"
+	}
 	#### END TFV EVENTS ####
 
 }

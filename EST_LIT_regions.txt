@@ -1,4 +1,12 @@
-EST region
+EST States
+13 Harju
+191 Tartu
+EST regions
 592,9221,6099,11057,4640
+
+LIT States
+188 Memel
+189 Saulai
+11 Kaunas
 LIT region
 11226,11498,9404,327,6281,11312

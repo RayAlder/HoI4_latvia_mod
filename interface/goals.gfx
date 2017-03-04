@@ -815,5 +815,13 @@ spriteTypes = {
 		name = "GFX_focus_antitank"
 		texturefile = "gfx/interface/goals/goal_antitank.dds"
 	}
+	SpriteType = { 
+		name = "GFX_focus_boyscout"
+		texturefile = "gfx/interface/goals/goal_boyscout.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_steel"
+		texturefile = "gfx/interface/goals/goal_generic_steel.dds"
+	}
 
 }

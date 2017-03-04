@@ -388,15 +388,16 @@ focus = {
 		
 		x = 0
 		y = 5
-		cost = 20
+		cost = 10
 		
 		completion_reward = {
-		ROOT = { country_event = { id = latvia.26 } }
+		ROOT = { country_event = { id = latvia.70 } }
 			add_resource = {
 				type = oil
-				amount = 25
+				amount = 7
 				state = 190
 			}
+			show_ideas_tooltip = venn
 		}
 }
 
@@ -412,14 +413,84 @@ focus = {
 		cost = 20
 		
 		completion_reward = {
-		ROOT = { country_event = { id = latvia.27 } }
+		ROOT = { country_event = { id = latvia.71 } }
 			add_resource = {
 				type = rubber
-				amount = 20
+				amount = 10
 				state = 744 #Jelgava
 			}
 		}
 }
+
+focus = {
+		id = LAT_Steel
+		text= LAT_Steel
+		icon = GFX_goal_generic_steel
+		prerequisite = { focus = LAT_Oil focus = LAT_Rubber  }
+		
+		x = 1
+		y = 6
+		cost = 20
+		
+		completion_reward = {
+		ROOT = { country_event = { id = latvia.72 } }
+			add_resource = {
+				type = steel
+				amount = 40
+				state = 190
+			}
+		
+		show_ideas_tooltip = lmet
+		
+		}
+}
+
+focus = {
+		id = LAT_EST_Oil
+		text= LAT_EST_Oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = LAT_military_effort_EST  }
+		
+		x = 13
+		y = 5
+		cost = 20
+		
+		completion_reward = {
+		ROOT = { country_event = { id = latvia.73 } }
+			add_resource = {
+				type = oil
+				amount = 5
+				state = 191
+			}
+		}
+}
+
+focus = {
+		id = LAT_LIT_Oil
+		text= LAT_LIT_Oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = LAT_military_effort_LIT  }
+		
+		x = 15
+		y = 5
+		cost = 25
+		
+		completion_reward = {
+		ROOT = { country_event = { id = latvia.74 } }
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 188
+			}
+			add_resource = {
+				type = oil
+				amount = 5
+				state = 189
+			}
+		}
+}
+
+
 
 #Research	
 focus = {
@@ -846,6 +917,26 @@ focus = {
 		add_ideas = warmongers
 		}
 }
+
+focus = {
+		id = LAT_military_youth
+		icon = GFX_focus_boyscout
+		prerequisite = { focus = LAT_Annex }
+		x = 12
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = military_youth
+		}
+	}
+
+
 
 focus = {
 		id = LAT_GER_Friend

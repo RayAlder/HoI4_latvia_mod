@@ -796,39 +796,6 @@ country_event = {
 	
 }
 
-country_event = {
-	id = latvia.26
-	title = latvia.26.t
-	desc = latvia.26.d
-	picture = GFX_report_event_oilrig
-	
-	is_triggered_only = yes
-	option = {
-		name = latvia.26.a
-		
-		custom_effect_tooltip = latvia.26.t
-			
-		
-	}
-	
-}
-
-country_event = {
-	id = latvia.27
-	title = latvia.27.t
-	desc = latvia.27.d
-	picture = GFX_report_event_rubber
-	
-	is_triggered_only = yes
-	option = {
-		name = latvia.27.a
-		
-		custom_effect_tooltip = latvia.27.t
-			
-		
-	}
-	
-}
 
 country_event = {
 	id = latvia.28
@@ -1178,4 +1145,88 @@ country_event = {
 	}
 	
 }
-
+#Oil in Baltics
+country_event = {
+	id = latvia.70
+	title = latvia.70.t
+	desc = latvia.70.d
+	picture = GFX_report_event_oilrig
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.70.a
+		
+		custom_effect_tooltip = latvia.70.t
+			
+		
+	}
+	
+}
+#Rubber in Latvia
+country_event = {
+	id = latvia.71
+	title = latvia.71.t
+	desc = latvia.71.d
+	picture = GFX_report_event_rubber
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.71.a
+		
+		custom_effect_tooltip = latvia.71.t
+			
+		
+	}
+	
+}
+#Steel in Latvia
+country_event = {
+	id = latvia.72
+	title = latvia.72.t
+	desc = latvia.72.d
+	picture = GFX_report_event_metalurgs
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.72.a
+		
+		custom_effect_tooltip = latvia.72.t
+			
+		
+	}
+	
+}
+#Oil in Estonia
+country_event = {
+	id = latvia.73
+	title = latvia.73.t
+	desc = latvia.73.d
+	picture = GFX_report_event_shale
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.73.a
+		
+		custom_effect_tooltip = latvia.73.t
+			
+		
+	}
+	
+}
+#Oil in Lithuania
+country_event = {
+	id = latvia.74
+	title = latvia.74.t
+	desc = latvia.74.d
+	picture = GFX_report_event_generic_refinery
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.74.a
+		
+		custom_effect_tooltip = latvia.74.t
+			
+		
+	}
+	
+}

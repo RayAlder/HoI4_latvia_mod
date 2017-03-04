@@ -46,8 +46,8 @@ units = {
 	}
 	
 	division = {
-		name = "1. Latgales Divizīja"
-		location = 310
+		name = "1. Vidzemes Divizīja"
+		location = 9340
 		division_template = "Kājinieku Divizīja"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }
 		start_experience_factor = 0.25
@@ -55,7 +55,7 @@ units = {
 
 	}
 	division = {
-		name = "2. Latgales Divizīja"
+		name = "1. Latgales Divizīja"
 		location = 310
 		division_template = "Kājinieku Divizīja"
 		force_equipment_variants = { infantry_equipment_0 = { owner = "LAT" } }

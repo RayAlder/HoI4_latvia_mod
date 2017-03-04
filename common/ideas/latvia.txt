@@ -229,6 +229,21 @@ country {
 			}
 		}
 		
+		military_youth = {
+		
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.03
+			}
+		}
 	}
 	
 #Political Advisors	
@@ -903,8 +918,10 @@ materiel_manufacturer = {
 	
 		venn = {
 			
-			cost = 150
-			
+			cost = 75
+			available = {
+			has_completed_focus = LAT_Oil
+			}
 			allowed = {
 				original_tag = LAT
 			}
@@ -930,7 +947,10 @@ industrial_concern = {
 		
 		lmet = {
 		
-		cost = 150		
+		available = {
+		has_completed_focus = LAT_Steel
+		}
+		cost = 25		
 			allowed = {
 				original_tag = LAT
 			}
