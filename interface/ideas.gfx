@@ -2882,19 +2882,19 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_dsr"
-		texturefile = "gfx/interface/ideas/idea_dsr.tga"
+		texturefile = "gfx/interface/ideas/idea_dsr.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_lmet"
-		texturefile = "gfx/interface/ideas/idea_lmet.tga"
+		texturefile = "gfx/interface/ideas/idea_lmet.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_rkb"
-		texturefile = "gfx/interface/ideas/idea_rkb.tga"
+		texturefile = "gfx/interface/ideas/idea_rkb.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_lkb"
-		texturefile = "gfx/interface/ideas/idea_lkb.tga"
+		texturefile = "gfx/interface/ideas/idea_lkb.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_rrr"
@@ -2918,7 +2918,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_venn"
-		texturefile = "gfx/interface/ideas/idea_venn.tga"
+		texturefile = "gfx/interface/ideas/idea_venn.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_lkr"
