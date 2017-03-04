@@ -92,7 +92,9 @@ LAT_Polish_Ultimatum:0"Polish Ultimatum"
 LAT_Polish_Ultimatum_desc:0"Lithuania has long publicized reclaiming the territories what was occupied by Polish. In particular they look to the territory of Wilno, which unrightfully taken from them. Now that we have edge over them it's time we get back the land  and include in our great Empire!"
 LAT_ussr_war_goal:0 "Soviet Ultimatum"
 LAT_ussr_war_goal_desc:0 "From WW1 Soviets have been itching to annex Baltic states. There is no place for them in our world. It's time me take them out once and for all!"
-
+lat_ger_diplomacy_focus:0"LAT GER relations"
+LAT_LIT_ANNEX:0"Latvia will annex §YLithuania§! \n"
+LAT_EST_ANNEX:0"Latvia will annex §YEstonia§! \n"
 #Naval innovationstree
 LAT_Naval_Inno:0"Naval Innovations"
 LAT_Naval_Inno:0"Now that the Navy is the recognized premier service of the Empire, it behooves us to devote more resources to naval research."

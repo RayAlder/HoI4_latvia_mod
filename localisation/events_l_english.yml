@@ -28,7 +28,8 @@ latvia.6.a:0 "No way you coming trough!"
 
 latvia.9.t:0 "Estonia Submits"
 latvia.9.d:0 "Estonia has surrendered to our demands. We have replaced the decadent government in Tallinn with a Thunder Cross ministers, which has unanimously voted to join our mighty empire. After deliberations, the Saiema has decided to accept this request."
-latvia.9.a:0 "Welcome friends!."
+latvia.9.a:0 "Welcome friends!"
+
 latvia.10.t:0 "Estonia Refuses Our Offer"
 latvia.10.d:0 "Estonia has outrageously decided to refuse our generous offer of a mutual assistance pact! The capitalists and sycophants in Tallinn have further had the gall to issue a statement demanding that we respect the territorial integrity of their nation!"
 latvia.10.a:0 "We must protect the Estonians from themselves."
@@ -37,6 +38,7 @@ latvia.10.a:0 "We must protect the Estonians from themselves."
 latvia.12.t:0 "Lithuania Submits"
 latvia.12.d:0 "Our request for military bases in Lithuania has been granted, but unfortunately their government has collapsed. We have established a Fascist Goverment to avoid anarchy, and they have unanimously voted to join in our union. This request has been granted."
 latvia.12.a:0 "We will save you from capitalism."
+
 latvia.13.t:0 "Lithuania Refuses Our Offer"
 latvia.13.d:0 "Lithuania seems bent on self-destruction, and the fools in their government are denying our forces access to their country. Do they think they would be better off under the Germans? Their selfish leaders are committing a crime against the people by denying their citizens true socialism."
 latvia.13.a:0 "The Lithuanian people have suffered enough."
@@ -82,8 +84,6 @@ latvia.25.t:0 "Latvian Infrastructure Upgrade"
 latvia.25.d:0 "Ensuring effective infrastructure management and logistics services and promptly resolving issues is only possible in coordinated operatio."
 latvia.25.a:0 "Great!"
 
-
-
 latvia.28.t:0 "Naval Arnaments"
 latvia.28.d:0 "Our navy is weak. We need more ships ASAP! These new naval dockyard will give us the capacity to construct a big enough navy."
 latvia.28.a:0 "Honor, Courage, Commitment!"
@@ -111,7 +111,6 @@ latvia.33.a:0 "No One Comes Close!"
 latvia.34.t:0 "Air defenses"
 latvia.34.d:0 "Enemy planes are swarming our skies. These new AA guns will pulverize them!"
 latvia.34.a:0 "Ready for action!"
-
 
 latvia.50.t:0 "Wilno or War"
 latvia.50.d:0 "[LAT.GetNameDef] has long publicized their goal of reclaiming the territories what was occupied by Polish. In particular they look to the territory of Wilno, which unrightfully taken from Lithuania. \n\nNow, they have demanded that Wilno be ceded to [LAT.GetNameDef]. With the threat of war looming, accepting the offer will delay a possible conflict, but at the cost of freely granting the Latvians more strength for whatever lies ahead."
