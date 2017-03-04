@@ -882,6 +882,9 @@ materiel_manufacturer = {
 		lkr = {
 		
 		cost = 120	
+		available = {
+			has_completed_focus = LAT_industrial_research
+		}
 			allowed = {
 				original_tag = LAT
 			}
@@ -948,7 +951,7 @@ industrial_concern = {
 		lmet = {
 		
 		available = {
-		has_completed_focus = LAT_Steel
+			has_completed_focus = LAT_Steel
 		}
 		cost = 25		
 			allowed = {
@@ -989,8 +992,10 @@ industrial_concern = {
 		
 		ldz = {
 			
-			cost = 100
-			
+			cost = 75
+			available = {
+			has_completed_focus = LAT_INFRA_
+			}
 			allowed = {
 				original_tag = LAT
 			}

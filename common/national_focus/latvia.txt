@@ -72,7 +72,8 @@ focus_tree = {
 						}
 					}
 				}
-			}		
+			}	
+		show_ideas_tooltip = ldz			
 		}
 }
 
@@ -449,9 +450,9 @@ focus = {
 		id = LAT_EST_Oil
 		text= LAT_EST_Oil
 		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = LAT_military_effort_EST  }
+		prerequisite = { focus = LAT_military_effort_EST focus = LAT_baltic_state }
 		
-		x = 13
+		x = 14
 		y = 5
 		cost = 20
 		
@@ -469,9 +470,9 @@ focus = {
 		id = LAT_LIT_Oil
 		text= LAT_LIT_Oil
 		icon = GFX_goal_generic_oil_refinery
-		prerequisite = { focus = LAT_military_effort_LIT  }
+		prerequisite = { focus = LAT_military_effort_LIT focus = LAT_baltic_state }
 		
-		x = 15
+		x = 16
 		y = 5
 		cost = 25
 		
@@ -514,6 +515,7 @@ focus = {
 				category = construction_tech
 			}
 		}
+		show_ideas_tooltip = lkr
 }	
 
 focus = {
@@ -1241,7 +1243,7 @@ focus = {
 		prerequisite = { focus = LAT_ESTONIA_aneksija focus = LAT_baltic_state}
 		
 		x = 19
-		y = 5
+		y = 6
 		cost = 10
 		available = {
 		191 = { is_controlled_by = LAT }
@@ -1423,7 +1425,7 @@ focus = {
 		prerequisite = { focus = LAT_LITHUANIA_aneksija focus = LAT_baltic_state}
 		
 		x = 17
-		y = 5
+		y = 6
 		cost = 10
 		available = {
 		11 = { is_controlled_by = LAT }
@@ -1480,7 +1482,7 @@ focus = {
 		}
 		cancel_if_invalid = no
 		x = 17
-		y = 7
+		y = 8
 		cost = 10
 		ai_will_do = {
 			factor = 10	
@@ -1578,7 +1580,7 @@ focus = {
 			NOT = { country_exists = SOV }
 		}
 		x = 18
-		y = 6
+		y = 7
 		cost = 10
 		historical_ai = {
 			NOT = {
