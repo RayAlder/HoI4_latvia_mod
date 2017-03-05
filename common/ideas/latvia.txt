@@ -200,7 +200,7 @@ country {
 			}
 
 			
-			picture = generic_manpower_bonus
+			
 			
 			modifier = {
 				conscription = 0.03
@@ -208,7 +208,7 @@ country {
 		}
 		
 		national_guard_expansion = {
-		
+		picture = generic_manpower_bonus
 			removal_cost = -1
 			
 			allowed = {
@@ -216,13 +216,28 @@ country {
 			}
 
 			
-			picture = generic_manpower_bonus
+			
 			
 			modifier = {
-				conscription = 0.03
+				conscription = 0.05
 			}
 		}
 		
+		war_mobilization = {
+			picture = generic_manpower_bonus
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			
+			
+			
+			modifier = {
+				conscription = 0.1
+			}
+		}
 		
 	}
 	

@@ -124,8 +124,7 @@ LAT_baltic_way_desc:0 "In order to bring together economies of the Baltic states
 BALTIC_entente_faction:0 "Baltic Entente"
 LAT_baltic_entente:0 "Baltic Entente"
 LAT_baltic_entente_desc:0 "Baltic Entente"
-LAT_baltic_state:0"Baltic State"
-LAT_baltic_state_desc:0"Emergency war council must be formed if we are to survive the oncoming war"
+
 LAT_fortification_focus:0 "Eastern Wall"
 LAT_fortification_focus_desc:0"The Eastern Wall is essential for our survival. Fortifying its defenses will allow us to hold the border with fewer men, freeing up divisions to participate in any potential conter-attack. Experience gained in construction of Eastern Wall will increase the efficiency in constructing more fortifications."
 LAT_fortification_focus2:0 "Eastern Fortress"
@@ -143,5 +142,11 @@ LAT_land_lease2:0 "Land lease II"
 LAT_land_lease2_desc:0 "Modern equipment for a modern war!"
 LAT_land_lease3:0 "Land lease III"
 LAT_land_lease3_desc:0 "Allied war machine keeps on rolling"
+
+#Baltic State Tree
+LAT_baltic_state:0"Baltic State"
+LAT_baltic_state_desc:0"Emergency war council must be formed if we are to survive the oncoming war"
+LAT_mobilization:0"War mobilization"
+LAT_baltic_state_desc:0"War mobilization "
 
 

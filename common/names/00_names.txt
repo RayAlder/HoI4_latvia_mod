@@ -381,28 +381,28 @@ LAT = {
 		names = { Anna Ieva Eva Inese Lilita Lilija Agnese Vaira}
 	}
 	surnames = { 
-		Apsenieks Apse
-		Balodis Baumanis Berķis Bērziņš Bētiņš 
-		Čaks Čakste	Celmiņš Čiekurs
-		Dāliņš Dambītis Dārziņš Dobelnieks
-		Eizenšteins Eglītis Egle
+		Apsenieks Apse Auziņš Avotiņš Ābele
+		Balodis Baumanis Berķis Bērziņš Bētiņš Bite Blūms Brīze 
+		Čaks Čakste	Celmiņš Čiekurs Cīrulis
+		Dāliņš Dambītis Dārziņš Dobelnieks Dzenis Dreimanis
+		Eizenšteins Eglītis Egle Elksnis
 		Feldmanis Freimanis
-		Gailis Grīnbergs Grīva
+		Gailis Grīnbergs Grīva Grūbe
 		Halsmans
 		Jansons Jēkabsons
-		Irbītis Ivanovs
-		Kalniņš Kalpaks Kronvalds Kārkliņš Kviesis Krūmiņš Kalns Krūze Krēsla Ķelle
-		Lācis Liepiņš Lāsmanis
-		Matisons Meierovics Millers Muzikants Menģelis Meļinovskis
+		Irbītis Ivanovs Igaunis
+		Kalniņš Kalpaks Kronvalds Kārkliņš Kviesis Krūmiņš Kalns Krūze Krēsla Ķelle Keišs Kokorēvičš
+		Lagzdiņš Lācis Liepiņš Lāsmanis Linde Lejnieks Lapsiņš Lūsis
+		Matisons Meierovics Millers Muzikants Menģelis Meļinovskis Magone Mednis Mucenieks
 		Niedra Naglis
-		Ozols Ozoliņš
-		Pliekšans Pumpurs Priede Putniņš Pēterons Purmalis
+		Ozols Ozoliņš Odiņš
+		Pliekšans Pumpurs Priede Putniņš Pētersons Purmalis Pūce Purviņš Plūme Paeglis Pīrāgs
 		Roga Rožkalns
-		Sīmanis Suns Siliņš Skuja Skreija
-		Tumins Tīmanis Timrots Telle
+		Sīmanis Suns Siliņš Skuja Skreija Sproģis
+		Tumins Tīmanis Timrots Telle Timma 
 		Ulmanis 
-		Vanags Vasiļevs Veidenbaums Vilde Vītols
-		Zariņš Zirnis Zanders Zālīte Zāģers
+		Vanags Vasiļevs Veidenbaums Vilde Vītols Virza Vīndedze Vizulis Vīksna
+		Zariņš Zirnis Zanders Zālīte Zāģers Zaķis
 	}
 	callsigns = {Vanags Piekūns Lāčplēsis Vilks Nazis Komando }
 }
