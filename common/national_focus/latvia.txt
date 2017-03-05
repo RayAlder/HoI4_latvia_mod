@@ -1871,7 +1871,7 @@ focus = {
 			NOT = { has_war_with = LIT }
 		}
 		
-		x = 20
+		x = 21
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -1890,7 +1890,7 @@ focus = {
 		id = LAT_baltic_joint_research
 		icon = GFX_goal_generic_scientific_exchange
 		prerequisite = { focus = LAT_baltic_cooperation }
-		x = 20
+		x = 21
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1906,7 +1906,7 @@ focus = {
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = LAT_baltic_cooperation }
 		available = {	}
-		x = 22
+		x = 23
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1983,7 +1983,7 @@ focus = {
 				threat > 0.20
 			}
 		}
-		x = 20
+		x = 21
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -2063,10 +2063,12 @@ focus = {
 		}
 }
 
+#Baltic state subtree
 focus = {
 		id = LAT_baltic_state
 		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = LAT_baltic_entente }
+		mutually_exclusive = { focus = LAT_support_democracy }
 		available = { 
 			OR = {
 				threat > 0.60
@@ -2074,14 +2076,14 @@ focus = {
 				LAT = { has_defensive_war = yes }
 			}
 		}
-		x = 20
+		x = 21
 		y = 3
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
-			
+		remove_ideas = LAT_joint_research	
 			custom_effect_tooltip = baltic_state_tt
 			hidden_effect {
 				add_state_core = 13
@@ -2094,37 +2096,126 @@ focus = {
 				
 			
 			}
-		ROOT = { country_event = { id = latvia.80 } }	
+		ROOT = { country_event = { id = latvia.80 } }
+		
 		}
 }
 
 focus = {
-		id = LAT_expand_the_national_guard
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = LAT_baltic_entente }
+		id = LAT_mobilization
+		icon = GFX_goal_generic_manpower
+		prerequisite = { focus = LAT_baltic_state }
 		ai_will_do = {
 			factor = 0.25
 		}
-		x = 22
-		y = 3
+		x = 21
+		y = 5
 		cost = 10
 		ai_will_do = {
 			factor = 1
 		}	
 		completion_reward = {
-			add_ideas = national_guard_expansion
+			add_ideas = war_mobilization
 		}
 }
+
+focus = {
+		id = LAT_northern_alliance
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = LAT_mobilization}
+		
+		
+		x = 21
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 3
+		}	
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = BALTIC_entente_faction
+			hidden_effect = {
+				news_event = { hours = 6 id = news.287 }
+			}
+			
+			#Opinion modifiers
+			add_opinion_modifier = { target = EST modifier = POL_the_baltic_alliance }
+			EST = { 
+				add_opinion_modifier = { target = ROOT modifier = POL_the_baltic_alliance } 
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						EST = {
+							is_in_faction = no
+							is_puppet = no
+							NOT = { has_war_with = LAT }
+						}
+					}
+					EST = {
+						country_event = { id = baltic.8 days = 1 }
+					}
+				}
+			}
+			add_opinion_modifier = { target = LIT modifier = POL_the_baltic_alliance }
+			
+			LIT = { 
+				add_opinion_modifier = { target = ROOT modifier = POL_the_baltic_alliance }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LIT = {
+							is_in_faction = no
+							is_puppet = no
+							NOT = { has_war_with = LAT }
+						}
+					}
+					LIT = {
+						country_event = { id = baltic.8 days = 1 }
+					}
+				}
+			}
+			
+			#Invites
+			if = {
+				limit = {
+					EST = {
+						is_in_faction = no
+						is_puppet = no
+						NOT = { has_war_with = LAT }
+					}
+				}
+				EST = {
+					custom_effect_tooltip = POL_invite_to_faction_tooltip
+				}
+			}
+			if = {
+				limit = {
+					LIT = {
+						is_in_faction = no
+						is_puppet = no
+						NOT = { has_war_with = LAT }
+					}
+				}
+				LIT = {
+					custom_effect_tooltip = POL_invite_to_faction_tooltip
+				}
+			}
+		}
+}
+
 
 #Democracy subtree
 focus = {
 		id = LAT_support_democracy
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = LAT_baltic_entente }
+		mutually_exclusive = { focus = LAT_baltic_state }
 		ai_will_do = {
 			factor = 0.25
 		}
-		x = 25
+		x = 24
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -2151,6 +2242,24 @@ focus = {
 				add_opinion_modifier = { target = EST modifier = democratic_leanings_good }
 				add_opinion_modifier = { target = LIT modifier = democratic_leanings_good }
 			}
+		}
+}
+
+focus = {
+		id = LAT_expand_the_national_guard
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = LAT_support_democracy }
+		ai_will_do = {
+			factor = 0.25
+		}
+		x = 23
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_ideas = national_guard_expansion
 		}
 }
 
@@ -2424,7 +2533,7 @@ focus = {
 		id = LAT_Naval_Inno
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		
-		x = 28
+		x = 29
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -2449,7 +2558,7 @@ focus = {
 		id = LAT_naval_base
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = {focus = LAT_Naval_Inno}
-		x = 28
+		x = 29
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -2530,7 +2639,7 @@ focus = {
 		id = LAT_naval
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = {focus = LAT_naval_base}
-		x = 28
+		x = 29
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -2628,7 +2737,7 @@ focus = {
 		icon = GFX_focus_generic_navy_transport
 		prerequisite = {focus = LAT_naval}
 		mutually_exclusive = { focus = LAT_sea_fortification_focus }
-		x = 27
+		x = 28
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -2651,7 +2760,7 @@ focus = {
 		id = LAT_NAVAL_TECH2
 		icon = GFX_goal_generic_navy_anti_submarine
 		prerequisite = {focus = LAT_NAVAL_TECH1}
-		x = 27
+		x = 28
 		y = 4
 		cost = 10
 		
@@ -2687,7 +2796,7 @@ focus = {
 		icon = GFX_focus_generic_coastal_fort
 		prerequisite = { focus = LAT_naval }
 		mutually_exclusive = { focus = LAT_NAVAL_TECH1 }
-		x = 29
+		x = 30
 		y = 3
 		cost = 10
 		
@@ -2778,7 +2887,7 @@ focus = {
 		text = LAT_sea_fortification_focus2
 		icon = GFX_focus_generic_coastal_fort
 		prerequisite = { focus = LAT_sea_fortification_focus }
-		x = 29
+		x = 30
 		y = 4
 		cost = 10
 		

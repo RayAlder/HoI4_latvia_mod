@@ -822,6 +822,10 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_goal_generic_steel"
 		texturefile = "gfx/interface/goals/goal_generic_steel.dds"
+	}	
+	SpriteType = { 
+		name = "GFX_goal_generic_manpower"
+		texturefile = "gfx/interface/goals/goal_generic_manpower.dds"
 	}
 
 }
