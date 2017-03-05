@@ -1230,3 +1230,66 @@ country_event = {
 	}
 	
 }
+
+
+# Baltic state
+country_event = {
+	id = latvia.80
+	title = latvia.80.t
+	desc = latvia.80.d
+	picture = GFX_report_event_usa_election_generic
+
+	is_triggered_only = yes
+	option = { 
+		name = latvia.80.a
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}		
+		retire_country_leader = yes
+		add_popularity = { ideology = neutrality popularity = 0.3 }
+		set_party_name = { ideology = neutrality  long_name = Baltic_State_Goverment name = Baltic_State_Goverment }
+		set_national_unity = 0.7
+		set_major = yes
+			
+		set_cosmetic_tag  = BLT_neutrality
+					
+		create_country_leader = {
+					name = "Hugo Celmiņš"
+					desc = "POLITICS_HUGO_CELMINS_DESC"
+					picture = "gfx/leaders/LAT/Hugo_Celmins.dds"
+					expire = "1965.1.1"
+					ideology = moderatism
+					traits = {
+					stout_defender cornered_fox
+					}
+		}
+	}
+}
+
+#Baltics wants to join alliance
+country_event = {
+	id = latvia.90
+	title = latvia.90.t
+	desc = latvia.90.d
+	picture = GFX_report_event_kenins_churchill
+
+	is_triggered_only = yes
+	
+	option = {
+		name = latvia.90.a
+		LAT = { dismantle_faction = yes }
+		ENG = { add_to_faction = LAT }
+		ENG = { add_to_faction = LIT }
+		ENG = { add_to_faction = EST }
+		
+		
+		hidden_effect = {
+			news_event = { id = news.310 hours = 12 }
+		}
+	}
+
+}

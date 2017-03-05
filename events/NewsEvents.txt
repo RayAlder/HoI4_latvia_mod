@@ -11055,3 +11055,19 @@ news_event = {
 		}
 	}
 }
+#Allies Baltics
+news_event = {
+	id = news.310
+	title = news.310.t
+	picture = GFX_news_event_churchill_kenins
+	desc = news.310.d
+
+	#major = yes
+
+	is_triggered_only = yes
+
+	#We stand together.
+	option = {
+		name = news.310.a
+		
+	}

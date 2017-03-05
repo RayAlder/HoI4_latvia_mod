@@ -2087,7 +2087,8 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
-			set_country_flag = baltic_flag
+			
+			custom_effect_tooltip = baltic_state_tt
 			hidden_effect {
 				add_state_core = 13
 				add_state_core = 191
@@ -2096,7 +2097,10 @@ focus = {
 				add_state_core = 189
 				annex_country = { target = EST transfer_troops = yes }
 				annex_country = { target = LIT transfer_troops = yes }
+				
+			
 			}
+		ROOT = { country_event = { id = latvia.80 } }	
 		}
 }
 
@@ -2155,9 +2159,14 @@ focus = {
 focus = {
 		id = LAT_join_allies
 		icon = GFX_goal_generic_alliance
-		prerequisite = { focus = LAT_support_democracy }
+		#prerequisite = { focus = LAT_support_democracy }
 		available = {
 				LAT = {has_government = democratic}
+				ENG = {
+				is_in_faction = yes 
+				is_faction_leader = yes
+				}
+				
 			OR = {
 				LAT = { has_defensive_war_with = GER } 
 				LAT = { has_defensive_war_with = SOV } 
@@ -2173,11 +2182,8 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
-			LAT { dismantle_faction = yes }
-			ENG { add_to_faction = LAT }
-			ENG { add_to_faction = LIT }
-			ENG { add_to_faction = EST }
-			
+		
+		ROOT = { country_event = { id = latvia.90 } }	
 		}
 }
 
@@ -2237,7 +2243,7 @@ focus = {
 		id = LAT_Naval_Inno
 		icon = GFX_goal_generic_navy_doctrines_tactics
 		
-		x = 26
+		x = 28
 		y = 0
 		cost = 10
 		ai_will_do = {

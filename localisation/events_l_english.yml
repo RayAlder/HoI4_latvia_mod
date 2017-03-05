@@ -157,6 +157,18 @@ latvia.74.t:0 "Lithuanian Oil Fields"
 latvia.74.d:0 "All three oilfield are up and running! Our war machine will never be hungry again."
 latvia.74.a:0 "Keep Calm and Drill on!"
 
+latvia.80.t:0 "Baltic State"
+latvia.80.d:0 "New country. New leader. Shared Army. Shared Equipment."
+latvia.80.a:0 "Excellent!"
+
+latvia.90.t:0 "English has agreed"
+latvia.90.d:0 "The world is growing increasingly unsafe. We are one of last bastions of liberty in Europe and Britain need our help as much as we need theirs.\nThey hace accepted our request to join Allies."
+latvia.90.a:0 "Together To Victory!"
+
+
+
+
+
  germany.4.t:0 "Anschluss"
  germany.4.d:0 "Repeated uprisings in Austria clearly show that the people there long to be united with our Reich. It is now time to take action and allow the will of the people to be made manifest."
  germany.4.a:0 "How can anyone say that Austria is not German?!"
@@ -1804,7 +1816,9 @@ latvia.74.a:0 "Keep Calm and Drill on!"
  news.301.b:0 "Then it is war"
  news.301.c:0 "Together we must stop this aggressor!"
  news.301.e:0 "This is a grave situation"
- 
+ news.310.t:0 "Baltic countries and Britain Announce Alliance"
+ news.310.d:0 "British knows exactly what Soviets will do with Baltic States and they will not let that happen. \nToday Baltics request was approved by the British Parliament, and Latvia, Estonia and Lithuania has joined the [ENG.GetFactionName]."
+ news.310.a:0 "Bad news for Soviets"
  
  
  ace_promoted.1.t:0 "Ace Pilot Promoted"

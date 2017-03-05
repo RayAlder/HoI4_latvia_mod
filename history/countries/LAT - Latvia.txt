@@ -93,10 +93,8 @@ set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.11.4"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 }
-
-
 
 create_country_leader = {
 	name = "Kārlis Ulmanis"
@@ -109,6 +107,7 @@ create_country_leader = {
 	}
 }
 
+				
 create_country_leader = {
 	name = "Atis Ķēniņš"
 	

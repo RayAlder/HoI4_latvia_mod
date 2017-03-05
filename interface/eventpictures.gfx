@@ -1683,6 +1683,14 @@ spriteTypes = {
 		name = "GFX_report_event_generic_refinery"
 		texturefile = "gfx/event_pictures/report_event_generic_refinery.dds"
 	}
+	spriteType = {
+		name = "GFX_report_event_kenins_churchill"
+		texturefile = "gfx/event_pictures/report_event_kenins_churchill.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_churchill_kenins"
+		texturefile = "gfx/event_pictures/news_event_churchill_kenins.dds"
+	}
 	#### END TFV EVENTS ####
 
 }
