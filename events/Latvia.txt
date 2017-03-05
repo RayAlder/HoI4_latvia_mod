@@ -1293,3 +1293,50 @@ country_event = {
 	}
 
 }
+
+#Allied planes
+country_event = {
+	id = latvia.91
+	title = latvia.91.t
+	desc = latvia.91.d
+	picture = GFX_goal_generic_navy_battleship
+	
+	is_triggered_only = yes
+	option = {
+		custom_effect_tooltip = latvia.91.t	
+	}
+	
+}
+
+#Computation
+country_event = {
+	id = latvia.92
+	title = latvia.92.t
+	desc = latvia.92.d
+	picture = GFX_goal_generic_radar
+	
+	is_triggered_only = yes
+	option = {
+		custom_effect_tooltip = latvia.92.t	
+	}
+	
+}
+
+#Allied ships
+country_event = {
+	id = latvia.93
+	title = latvia.93.t
+	desc = latvia.93.d
+	picture = GFX_goal_generic_navy_battleship
+	
+	is_triggered_only = yes
+	option = {
+		name = latvia.93.a
+		hidden_effect = {
+			load_oob = "AlliedShips"
+		}
+		custom_effect_tooltip = latvia.93.t
+			
+	}
+	
+}

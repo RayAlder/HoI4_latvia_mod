@@ -161,11 +161,21 @@ latvia.80.t:0 "Baltic State"
 latvia.80.d:0 "New country. New leader. Shared Army. Shared Equipment."
 latvia.80.a:0 "Excellent!"
 
-latvia.90.t:0 "English has agreed"
-latvia.90.d:0 "The world is growing increasingly unsafe. We are one of last bastions of liberty in Europe and Britain need our help as much as we need theirs.\nThey hace accepted our request to join Allies."
+latvia.90.t:0 "The English have agreed"
+latvia.90.d:0 "The world is growing increasingly unsafe. We are one of last bastions of liberty in Europe and Britain needs our help as much as we need theirs.\nThey have accepted our request to join the Allies."
 latvia.90.a:0 "Together To Victory!"
 
+latvia.91.t:0 "Order of Hurricane planes has been fullfilled"
+latvia.91.d:0 "The British government, after a few reminders, has finally provided us with the Hurricanes that we ordered"
+latvia.91.a:0 "Better late than never!"
 
+latvia.92.t:0 "Eižens Āriņš has returned from United Kingdom"
+latvia.92.d:0 "Eižens Āriņš has returned from his trip to Computation center in United Kingdom. He has secured various schematics for practical radar applications in the military."
+latvia.92.a:0 "Set him to work!"
+
+latvia.93.t:0 "Allied destroyer detachment has arrived"
+latvia.93.d:0 "The baltic is an important transport channel. In order to safeguard our convoys the allies have provided us with their best destroyers"
+latvia.93.a:0 "Goodbye submarines!"
 
 
 
