@@ -353,22 +353,56 @@ EST = {
 
 LAT = {
 	male = {
-		names = { Alberts Armands Arnolds Atis
-		 Bruno Eduards  Elmars Emīls  Filips Fricis Gustavs
-		 Hermanis Izaks Janis Jazeps Jekabs  Juris Karlis Krisjanis
-		 Marks Māris Mārtiņš  Miķelis  Oskars Pauls Peteris Rihards
-		Roberts  Sandis  Valdemars  Valters Vilis  Zigfrids
+		names = { 
+		Alberts Armands Arnolds Atis Andris Andrejs Aleksandrs Aigars Ainārs Augusts Arnis
+		Bruno 
+		Dāvis Dmitrijs
+		Eduards Edvards Edgards Elmars Emīls Ēriks Ervīns Einārs Elvis Ernsts 
+		Filips Fricis Felikss Frīdis
+		Gatis Gints Guntis Gustavs Guntars Gvido Ģirts
+		Haralds Hermanis Helmuts Hugo 
+		Igors Ilmārs Ivars Ingmārs Inguss Ingus Indulis Innocentijs
+		Jānis Jazeps Jēkabs Juris Jūlijs Justs Jurģis
+		Kārlis Kaspars Krišjānis Kristaps Klāvs Konrāds Krišs Kristofers Kurts
+		Leonīds Lavrentijs Leons Ludvigs Linards Lāčplēsis
+		Marks Madis Maigonis Mārcis Māris Mārtiņš Miķelis Miks Mikus Mihails Matīss
+		Nauris Niks Nils Normunds Ņikita
+		Oskars Ojārs Olģerts
+		Pauls Peteris Pāvels Paulis
+		Raido Raimonds Rihards Reinis Renārs Roberts Romāns Rūdis Rūdolfs Ritvars Ričs Ričards 
+		Sandis Salvis Sergejs Sigmunds
+		Tālis Teodors Tims Toms
+		Uģis Uldis
+		Valdemārs Valters Vilis  Vairis Valērijs Viesturs Vladislavs Vladimirs Valts Vilis
+		Zemgus Ziedonis Zigis Zigfrīds Zigmunds Zigmārs Žanis
 		  }
 	}
 	female = {
-		names = { Anna Ieva Eva Inese Lilita Lilija}
+		names = { Anna Ieva Eva Inese Lilita Lilija Agnese Vaira}
 	}
 	surnames = { 
-		 Apsenieks Balodis Baumanis Berkis Bērziņš Bētiņš  Čaks Čakste
-		Caps Celmiņš Dalins Dambītis Darzins  Eizenteins  Halsmans
-		Irbītis Kalniņš Kalpaks   Kronvalds Kuks Kviesis Lācis
-		 Matisons Meierovics  Niedra Ozoliņš
-		 Pliekšans Pumpurs Rothko Sīmanis  Suns Tumins Tīmanis Ulmanis Veidenbaums Vilde
+		Apsenieks Apse
+		Balodis Baumanis Berķis Bērziņš Bētiņš 
+		Čaks Čakste	Celmiņš Čiekurs
+		Dāliņš Dambītis Dārziņš Dobelnieks
+		Eizenšteins Eglītis Egle
+		Feldmanis Freimanis
+		Gailis Grīnbergs Grīva
+		Halsmans
+		Jansons Jēkabsons
+		Irbītis Ivanovs
+		Kalniņš Kalpaks Kronvalds Kārkliņš Kviesis Krūmiņš Kalns Krūze Krēsla Ķelle
+		Lācis Liepiņš Lāsmanis
+		Matisons Meierovics Millers Muzikants Menģelis Meļinovskis
+		Niedra Naglis
+		Ozols Ozoliņš
+		Pliekšans Pumpurs Priede Putniņš Pēterons Purmalis
+		Roga Rožkalns
+		Sīmanis Suns Siliņš Skuja Skreija
+		Tumins Tīmanis Timrots Telle
+		Ulmanis 
+		Vanags Vasiļevs Veidenbaums Vilde Vītols
+		Zariņš Zirnis Zanders Zālīte Zāģers
 	}
 	callsigns = {Vanags Piekūns Lāčplēsis Vilks Nazis Komando }
 }
