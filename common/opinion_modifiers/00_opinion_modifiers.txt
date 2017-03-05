@@ -670,16 +670,11 @@ opinion_modifiers = {
 		value = 50
 	}
 	
+	ger_hate_democratic = {
+	value = -50
+	}
 	relations_baltic_cooperation = {
 		value = 25
 	}
-	LAT_go_with_britain_reject = {
-		value = -50
-	}
-	LIT_go_with_britain_reject = {
-		value = -50
-	}
-	EST_go_with_britain_reject = {
-		value = -50
-	}
+	
 }	

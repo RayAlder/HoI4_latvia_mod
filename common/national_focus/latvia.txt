@@ -2138,14 +2138,17 @@ focus = {
 		completion_reward = {
 			LAT = { 
 					add_opinion_modifier = { target = ENG modifier = democratic_leanings_good }
+					add_opinion_modifier = { target = GER modifier = ger_hate_democratic }
 					add_ideas = democratic_influence
 			}
 			EST = { 
 					add_opinion_modifier = { target = ENG modifier = democratic_leanings_good }
+					add_opinion_modifier = { target = GER modifier = ger_hate_democratic }
 					add_ideas = democratic_influence
 			}
 			LIT = { 
 					add_opinion_modifier = { target = ENG modifier = democratic_leanings_good }
+					add_opinion_modifier = { target = GER modifier = ger_hate_democratic }
 					add_ideas = democratic_influence
 			}
 			ENG = {
@@ -2159,17 +2162,24 @@ focus = {
 focus = {
 		id = LAT_join_allies
 		icon = GFX_goal_generic_alliance
-		#prerequisite = { focus = LAT_support_democracy }
+		prerequisite = { focus = LAT_support_democracy }
 		available = {
+				has_offensive_war = no
+				threat > 0.90
 				LAT = {has_government = democratic}
 				ENG = {
 				is_in_faction = yes 
 				is_faction_leader = yes
 				}
-				
 			OR = {
-				LAT = { has_defensive_war_with = GER } 
-				LAT = { has_defensive_war_with = SOV } 
+				OR = {
+				LAT = { has_defensive_war_with = GER }
+				ENG = { has_defensive_war_with = GER }
+				}
+				OR = {
+				ENG = { has_completed_focus = ENG_embargo_ussr }
+				ENG = { has_completed_focus = ENG_war_with_ussr }
+			 	}
 			}
 		}
 		ai_will_do = {
