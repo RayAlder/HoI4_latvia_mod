@@ -1849,17 +1849,14 @@ focus = {
 			LAT = { 
 					add_opinion_modifier = { target = SOV modifier = democratic_leanings_bad}
 					add_ideas = anti_communism
-					country_event = { id = generic.1 }
 			}
 			EST = { 
 					add_opinion_modifier = { target = SOV modifier = democratic_leanings_bad}
 					add_ideas = anti_communism
-					country_event = { id = generic.1 }
 			}
 			LIT = { 
 					add_opinion_modifier = { target = SOV modifier = democratic_leanings_bad }
 					add_ideas = anti_communism
-					country_event = { id = generic.1 }
 			}
 			
 			SOV = { add_opinion_modifier = { target = LAT modifier = democratic_leanings_bad } }
@@ -1888,16 +1885,10 @@ focus = {
 		}	
 		
 		completion_reward = {
-			EST = { 
-					add_opinion_modifier = { target = LAT modifier = democratic_leanings_good }
-					add_ideas = democratic_influence
-					country_event = { id = generic.1 }
-			}
-			LIT = { 
-					add_opinion_modifier = { target = LAT modifier = democratic_leanings_good }
-					add_ideas = democratic_influence
-					country_event = { id = generic.1 }
-			}
+			LIT = { add_opinion_modifier = { target = LAT modifier = relations_baltic_cooperation } }
+			LAT = { add_opinion_modifier = { target = LIT modifier = relations_baltic_cooperation } }
+			EST = { add_opinion_modifier = { target = LAT modifier = relations_baltic_cooperation } }
+			LAT = { add_opinion_modifier = { target = EST modifier = relations_baltic_cooperation } }
 		}
 }
 
@@ -2096,29 +2087,25 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
-			add_state_core = 13
-			add_state_core = 191
-			add_state_core = 11
-			add_state_core = 188
-			add_state_core = 189
-			annex_country = { target = EST transfer_troops = yes}
-			annex_country = { target = LIT transfer_troops = yes }
+			set_country_flag = baltic_flag
+			hidden_effect {
+				add_state_core = 13
+				add_state_core = 191
+				add_state_core = 11
+				add_state_core = 188
+				add_state_core = 189
+				annex_country = { target = EST transfer_troops = yes }
+				annex_country = { target = LIT transfer_troops = yes }
+			}
 		}
 }
 
 focus = {
-		id = LAT_support_finland
-		icon = GFX_goal_generic_alliance
+		id = LAT_expand_the_national_guard
+		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = LAT_baltic_entente }
 		ai_will_do = {
 			factor = 0.25
-		}
-		available = { 
-			OR = {
-				threat > 0.60
-				GER = { has_completed_focus = GER_mol_rib_pact }
-				LAT = { has_defensive_war = yes }
-			}
 		}
 		x = 22
 		y = 3
@@ -2127,7 +2114,70 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
+			add_ideas = national_guard_expansion
+		}
+}
 
+focus = {
+		id = LAT_support_democracy
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = LAT_baltic_entente }
+		ai_will_do = {
+			factor = 0.25
+		}
+		x = 24
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			LAT = { 
+					add_opinion_modifier = { target = ENG modifier = democratic_leanings_good }
+					add_ideas = democratic_influence
+			}
+			EST = { 
+					add_opinion_modifier = { target = ENG modifier = democratic_leanings_good }
+					add_ideas = democratic_influence
+			}
+			LIT = { 
+					add_opinion_modifier = { target = ENG modifier = democratic_leanings_good }
+					add_ideas = democratic_influence
+			}
+			ENG = {
+				add_opinion_modifier = { target = LAT modifier = democratic_leanings_good }
+				add_opinion_modifier = { target = EST modifier = democratic_leanings_good }
+				add_opinion_modifier = { target = LIT modifier = democratic_leanings_good }
+			}
+		}
+}
+
+focus = {
+		id = LAT_join_allies
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = LAT_support_democracy }
+		available = {
+				LAT = {has_government = democratic}
+			OR = {
+				LAT = { has_defensive_war_with = GER } 
+				LAT = { has_defensive_war_with = SOV } 
+			}
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		x = 24
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			LAT { dismantle_faction = yes }
+			ENG { add_to_faction = LAT }
+			ENG { add_to_faction = LIT }
+			ENG { add_to_faction = EST }
+			
 		}
 }
 
@@ -2151,7 +2201,6 @@ focus = {
 		
 		completion_reward = {
 					ROOT = { country_event = { id = latvia.1 } }
-		
 		add_ideas = {LAT_fortification}
 			
 		}
@@ -2213,7 +2262,7 @@ focus = {
 		id = LAT_naval_base
 		icon = GFX_goal_generic_navy_cruiser
 		prerequisite = {focus = LAT_Naval_Inno}
-		x = 26
+		x = 28
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -2294,7 +2343,7 @@ focus = {
 		id = LAT_naval
 		icon = GFX_goal_generic_construct_naval_dockyard
 		prerequisite = {focus = LAT_naval_base}
-		x = 26
+		x = 28
 		y = 2
 		cost = 10
 		ai_will_do = {
@@ -2392,7 +2441,7 @@ focus = {
 		icon = GFX_focus_generic_navy_transport
 		prerequisite = {focus = LAT_naval}
 		mutually_exclusive = { focus = LAT_sea_fortification_focus }
-		x = 25
+		x = 27
 		y = 3
 		cost = 10
 		ai_will_do = {
@@ -2415,7 +2464,7 @@ focus = {
 		id = LAT_NAVAL_TECH2
 		icon = GFX_goal_generic_navy_anti_submarine
 		prerequisite = {focus = LAT_NAVAL_TECH1}
-		x = 25
+		x = 27
 		y = 4
 		cost = 10
 		
@@ -2451,7 +2500,7 @@ focus = {
 		icon = GFX_focus_generic_coastal_fort
 		prerequisite = { focus = LAT_naval }
 		mutually_exclusive = { focus = LAT_NAVAL_TECH1 }
-		x = 27
+		x = 29
 		y = 3
 		cost = 10
 		
@@ -2542,7 +2591,7 @@ focus = {
 		text = LAT_sea_fortification_focus2
 		icon = GFX_focus_generic_coastal_fort
 		prerequisite = { focus = LAT_sea_fortification_focus }
-		x = 27
+		x = 29
 		y = 4
 		cost = 10
 		

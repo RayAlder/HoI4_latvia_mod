@@ -669,4 +669,8 @@ opinion_modifiers = {
 	lat_ger_diplomacy_focus = {
 		value = 50
 	}
+	
+	relations_baltic_cooperation = {
+		value = 25
+	}
 }	
