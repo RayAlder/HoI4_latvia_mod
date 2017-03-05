@@ -577,7 +577,7 @@ focus = {
 		id = LAT_rocketry_focus
 		icon = GFX_focus_rocketry
 		prerequisite = { focus = LAT_extra_tech_slots }
-		prerequisite = { focus = LAT_SS_division }
+		prerequisite = { focus = LAT_motorized_division }
 		prerequisite = { focus = LAT_Air_Antiair }
 		x = 6
 		y = 5
@@ -705,7 +705,7 @@ focus = {
 }
 		
 focus = {
-		id = LAT_SS_division
+		id = LAT_motorized_division
 		icon = GFX_goal_generic_army_motorized
 		prerequisite = {focus = LAT_Antitank}
 		x = 6
@@ -815,14 +815,12 @@ focus = {
 				bonus = 0.5
 				uses = 1
 				technology = fighter1
-				technology = fighter2
 			}
 			add_tech_bonus = {
 				name = air_sup_bonus
 				bonus = 0.5
 				uses = 1
 				technology = CAS1
-				technology = CAS2
 			}
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = LAT_Karlis_Irbitis
@@ -2122,6 +2120,7 @@ focus = {
 		}
 }
 
+#Democracy subtree
 focus = {
 		id = LAT_support_democracy
 		icon = GFX_goal_support_democracy
@@ -2129,8 +2128,8 @@ focus = {
 		ai_will_do = {
 			factor = 0.25
 		}
-		x = 24
-		y = 4
+		x = 25
+		y = 3
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2185,8 +2184,8 @@ focus = {
 		ai_will_do = {
 			factor = 0.25
 		}
-		x = 24
-		y = 5
+		x = 25
+		y = 4
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2196,6 +2195,110 @@ focus = {
 		ROOT = { country_event = { id = latvia.90 } }	
 		}
 }
+
+focus = {
+		id = LAT_land_lease1
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = LAT_join_allies }
+		available = {
+			has_offensive_war = no
+			is_in_faction_with=USA
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		x = 24
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			 	USA {
+					send_equipment = { target = LAT type = infantry_equipment_2 amount = 10000}
+					send_equipment = { target = LAT type = support_equipment_1 amount = 5000}
+					send_equipment = { target = LAT type = artillery_equipment_2 amount = 1000}
+					send_equipment = { target = LAT type = anti_tank_equipment_1 amount = 200}
+					}
+		}
+}
+
+focus = {
+		id = LAT_land_lease2
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = LAT_land_lease1 }
+		available = {
+			has_offensive_war = no
+			is_in_faction_with=USA
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		x = 24
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			 	USA {
+					send_equipment = { target = LAT type = light_tank_equipment_2 amount = 400}
+					send_equipment = { target = LAT type = motorized_equipment_1 amount = 800}
+					}
+		}
+}
+
+focus = {
+		id = LAT_land_lease3
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = LAT_land_lease2}
+		available = {
+			has_offensive_war = no
+			is_in_faction_with=USA
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		x = 24
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			 	USA {
+					send_equipment = { target = LAT type = medium_tank_equipment_2 amount = 400}
+					send_equipment = { target = LAT type = mechanized_equipment_1 amount = 800}
+					}
+		}
+}
+
+focus = {
+		id = LAT_fullfill_the_order
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = LAT_join_allies}
+		available = {
+			has_offensive_war = no
+			is_in_faction_with=USA
+		}
+		ai_will_do = {
+			factor = 0.25
+		}
+		x = 26
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			 	USA {
+					send_equipment = { target = LAT type = medium_tank_equipment_2 amount = 400}
+					send_equipment = { target = LAT type = mechanized_equipment_1 amount = 800}
+					}
+		}
+}
+
+
 
 #Robežas ar Krieviju  fortifikācija		
 focus = {      
