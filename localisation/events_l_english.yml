@@ -43,6 +43,10 @@ latvia.13.t:0 "Lithuania Refuses Our Offer"
 latvia.13.d:0 "Lithuania seems bent on self-destruction, and the fools in their government are denying our forces access to their country. Do they think they would be better off under the Germans? Their selfish leaders are committing a crime against the people by denying their citizens true socialism."
 latvia.13.a:0 "The Lithuanian people have suffered enough."
 
+latvia.14.t:0 "Baltic Entante"
+latvia.14.d:0 "[From.GetName] has agreed to [LAT.GetNameDef]'s proposition to create alliance."
+latvia.14.a:0 "We will.. We must.."
+
 latvia.16.t:0 "Border fortification from evil Soviet"
 latvia.16.d:0 "Estonians also needs to be safe from Soviets!"
 latvia.16.a:0 "Together we stand!"

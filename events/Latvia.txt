@@ -504,7 +504,7 @@ country_event = {
 	id = latvia.14
 	title = latvia.14.t
 	desc = latvia.14.d
-	picture = GFX_report_event_polish_tanks_01
+	picture = GFX_report_event_hitler_handshake
 	
 	is_triggered_only = yes
 

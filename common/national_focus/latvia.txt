@@ -1990,11 +1990,11 @@ focus = {
 			factor = 3
 		}	
 		completion_reward = {
-			set_rule = { can_create_factions = yes }
+			
 			create_faction = BALTIC_entente_faction
-			hidden_effect = {
-				news_event = { hours = 6 id = news.287 }
-			}
+			#hidden_effect = {
+			#	news_event = { hours = 6 id = news.287 }
+			#}
 			
 			#Opinion modifiers
 			add_opinion_modifier = { target = EST modifier = POL_the_baltic_alliance }
@@ -2121,9 +2121,15 @@ focus = {
 
 focus = {
 		id = LAT_northern_alliance
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_goal_generic_major_alliance
 		prerequisite = { focus = LAT_mobilization}
-		
+		available = { 
+			FIN = {
+			has_defensive_war = no
+			
+			}
+			threat > 0.70
+		}
 		
 		x = 21
 		y = 6
@@ -2132,79 +2138,38 @@ focus = {
 			factor = 3
 		}	
 		completion_reward = {
-			set_rule = { can_create_factions = yes }
-			create_faction = BALTIC_entente_faction
-			hidden_effect = {
-				news_event = { hours = 6 id = news.287 }
-			}
-			
+		add_to_faction = FIN
 			#Opinion modifiers
-			add_opinion_modifier = { target = EST modifier = POL_the_baltic_alliance }
-			EST = { 
+			add_opinion_modifier = { target = FIN modifier = POL_the_baltic_alliance }
+			FIN = { 
 				add_opinion_modifier = { target = ROOT modifier = POL_the_baltic_alliance } 
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						EST = {
-							is_in_faction = no
-							is_puppet = no
-							NOT = { has_war_with = LAT }
-						}
-					}
-					EST = {
-						country_event = { id = baltic.8 days = 1 }
-					}
-				}
-			}
-			add_opinion_modifier = { target = LIT modifier = POL_the_baltic_alliance }
 			
-			LIT = { 
-				add_opinion_modifier = { target = ROOT modifier = POL_the_baltic_alliance }
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						LIT = {
-							is_in_faction = no
-							is_puppet = no
-							NOT = { has_war_with = LAT }
-						}
-					}
-					LIT = {
-						country_event = { id = baltic.8 days = 1 }
-					}
-				}
-			}
 			
-			#Invites
-			if = {
-				limit = {
-					EST = {
-						is_in_faction = no
-						is_puppet = no
-						NOT = { has_war_with = LAT }
-					}
-				}
-				EST = {
+				FIN = {
 					custom_effect_tooltip = POL_invite_to_faction_tooltip
 				}
 			}
-			if = {
-				limit = {
-					LIT = {
-						is_in_faction = no
-						is_puppet = no
-						NOT = { has_war_with = LAT }
-					}
-				}
-				LIT = {
-					custom_effect_tooltip = POL_invite_to_faction_tooltip
-				}
-			}
+			
+		}
+
+
+focus = {
+		id = LAT_state_extra_tech_slots
+	
+		icon = GFX_focus_research
+		
+		prerequisite = { focus = LAT_northern_alliance }
+		x = 21
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}	
+		completion_reward = {
+			add_research_slot = 1
 		}
 }
-
 
 #Democracy subtree
 focus = {
@@ -2266,7 +2231,7 @@ focus = {
 focus = {
 		id = LAT_join_allies
 		icon = GFX_goal_generic_alliance
-#		prerequisite = { focus = LAT_support_democracy }
+		prerequisite = { focus = LAT_support_democracy }
 		available = {
 				has_offensive_war = no
 				threat > 0.90

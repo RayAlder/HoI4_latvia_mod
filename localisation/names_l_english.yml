@@ -154,8 +154,12 @@ LAT_allied_navy_support_desc:0 "The baltic sea must be secured as a dependable c
 #Baltic State Tree
 LAT_baltic_state:0"Baltic State"
 LAT_baltic_state_desc:0"Emergency war council must be formed if we are to survive the oncoming war"
-LAT_mobilization:0"War mobilization"
-LAT_baltic_state_desc:0"War mobilization "
-
+LAT_mobilization:0"Emergency mobilization"
+LAT_mobilization_desc:0"Emergency mobilization"
+LAT_northern_alliance:0"Northern Alliance"
+LAT_northern_alliance_desc:0"Baltic state proposes to create a powerfull Northern Alliance with Finland"
+Northern_Alliance:0"Northern Alliance"
+LAT_state_extra_tech_slots:0 "Baltic Science"
+LAT_state_extra_tech_slots_desc:0 "The Baltic State not only is sharing army and land but also it's research capacity."
 
 

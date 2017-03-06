@@ -434,7 +434,7 @@ country_event = {
 	id = baltic.8
 	title = baltic.8.t
 	desc = baltic.8.d
-	picture = GFX_report_event_strelnieki
+	picture = report_event_hitler_handshake
 
 	is_triggered_only = yes
 
@@ -456,21 +456,5 @@ country_event = {
 		}
 	}
 
-	option = {
-		name = baltic.8.b
-		ai_chance = {
-			factor = 10
-		}
-		effect_tooltip = {
-			LAT = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = ROOT
-				}
-			}
-		}
-		LAT = {
-			country_event = { id = latvia.15 days = 1 }
-		}
-	}
+	
 }
