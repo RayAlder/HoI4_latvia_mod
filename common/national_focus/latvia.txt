@@ -2266,7 +2266,7 @@ focus = {
 focus = {
 		id = LAT_join_allies
 		icon = GFX_goal_generic_alliance
-		prerequisite = { focus = LAT_support_democracy }
+#		prerequisite = { focus = LAT_support_democracy }
 		available = {
 				has_offensive_war = no
 				threat > 0.90
@@ -2308,6 +2308,10 @@ focus = {
 		available = {
 			has_offensive_war = no
 			is_in_faction_with=USA
+			has_tech = infantry_weapons2
+			has_tech = artillery2
+			has_tech = interwar_antitank
+			has_tech = support_weapons
 		}
 		ai_will_do = {
 			factor = 0.25
@@ -2319,11 +2323,17 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
-			 	USA {
+			 	USA = {
 					send_equipment = { target = LAT type = infantry_equipment_2 amount = 10000}
 					send_equipment = { target = LAT type = support_equipment_1 amount = 5000}
 					send_equipment = { target = LAT type = artillery_equipment_2 amount = 1000}
 					send_equipment = { target = LAT type = anti_tank_equipment_1 amount = 200}
+					}
+					hidden_effect = {
+					add_equipment_to_stockpile = { producer = LAT type = infantry_equipment_2 amount = 10000}
+					add_equipment_to_stockpile = { producer = LAT type = support_equipment_1 amount = 5000}
+					add_equipment_to_stockpile = { producer = LAT type = artillery_equipment_2 amount = 1000}
+					add_equipment_to_stockpile = { producer = LAT type = anti_tank_equipment_1 amount = 200}
 					}
 		}
 }
@@ -2335,6 +2345,8 @@ focus = {
 		available = {
 			has_offensive_war = no
 			is_in_faction_with=USA
+			has_tech = improved_light_tank
+			has_tech = motorised_infantry
 		}
 		ai_will_do = {
 			factor = 0.25
@@ -2346,9 +2358,13 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
-			 	USA {
+			 	USA = {
 					send_equipment = { target = LAT type = light_tank_equipment_2 amount = 400}
 					send_equipment = { target = LAT type = motorized_equipment_1 amount = 800}
+					}
+				hidden_effect = {
+					add_equipment_to_stockpile = { producer = LAT type = light_tank_equipment_2 amount = 400}
+					add_equipment_to_stockpile = { producer = LAT type = motorized_equipment_1 amount = 800}
 					}
 		}
 }
@@ -2361,6 +2377,7 @@ focus = {
 			has_offensive_war = no
 			is_in_faction_with=USA
 			date > 1941.1.1
+			has_tech = advanced_medium_tank
 		}
 		ai_will_do = {
 			factor = 0.25
@@ -2372,9 +2389,13 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
-			 	USA {
+				USA = {
 					send_equipment = { target = LAT type = medium_tank_equipment_2 amount = 400}
 					send_equipment = { target = LAT type = mechanized_equipment_1 amount = 800}
+					}
+			 	hidden_effect = {
+					add_equipment_to_stockpile = { producer = LAT type = medium_tank_equipment_2 amount = 400}
+					add_equipment_to_stockpile = { producer = LAT type = mechanized_equipment_1 amount = 800}
 					}
 		}
 }
@@ -2385,8 +2406,10 @@ focus = {
 		prerequisite = { focus = LAT_join_allies}
 		available = {
 			has_offensive_war = no
-			is_in_faction_with=ENG
+			is_in_faction_with = ENG
+			has_tech = fighter2
 		}
+		
 		ai_will_do = {
 			factor = 0.25
 		}
@@ -2397,9 +2420,14 @@ focus = {
 			factor = 1
 		}	
 		completion_reward = {
-			 ENG {
-					send_equipment = { target = LAT type = fighter_equipment_1 amount = 100}
+			ENG = {
+			send_equipment = { target = LAT type = fighter_equipment_2 amount = 100}
 			}
+			 hidden_effect = {
+					add_equipment_to_stockpile = { type = fighter_equipment_2 amount = 100 producer = LAT }
+					
+			}
+			
 			add_tech_bonus = {
 				name = air_sup_bonus
 				bonus = 0.5
