@@ -142,14 +142,14 @@ LAT_land_lease2:0 "Land lease II"
 LAT_land_lease2_desc:0 "Modern equipment for a modern war!"
 LAT_land_lease3:0 "Land lease III"
 LAT_land_lease3_desc:0 "Allied war machine keeps on rolling"
-<<<<<<< HEAD
+
 LAT_fullfill_the_order:0 "Fullfill the order"
 LAT_fullfill_the_order_desc:0 "Finalize the aquisition of Hawker Hurricane fighter planes that governments of the Baltic states had ordered from United Kingdom"
 LAT_computation_tech_sharing:0 "Computation tech sharing"
 LAT_computation_tech_sharing_desc:0 "Cooperate with the brightest minds in the United Kindgom to improve our edge in computation and radar"
 LAT_allied_navy_support:0 "Allied navy support"
 LAT_allied_navy_support_desc:0 "The baltic sea must be secured as a dependable corridor for cargo"
-=======
+
 
 #Baltic State Tree
 LAT_baltic_state:0"Baltic State"
@@ -158,4 +158,4 @@ LAT_mobilization:0"War mobilization"
 LAT_baltic_state_desc:0"War mobilization "
 
 
->>>>>>> origin/master
+

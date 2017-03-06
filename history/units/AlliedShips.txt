@@ -5,11 +5,11 @@ navy = {
 		base = 9262
 		location =  9262 # Liepaja
 		
-		ship = { name = "J-100" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = LAT version_name = "J class" } } }
-		ship = { name = "J-101" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = LAT version_name = "J class" } } }
-		ship = { name = "J-102" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = LAT version_name = "J class" } } }
-		ship = { name = "J-103" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = LAT version_name = "J class" } } }
-		ship = { name = "J-104" definition = destroyer equipment = { destroyer_3 = { amount = 1 owner = LAT version_name = "J class" } } }
+		ship = { name = "J-100" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "J class" } } }
+		ship = { name = "J-101" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "J class" } } }
+		ship = { name = "J-102" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "J class" } } }
+		ship = { name = "J-103" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "J class" } } }
+		ship = { name = "J-104" definition = destroyer equipment = { destroyer_2 = { amount = 1 owner = LAT version_name = "J class" } } }
 	
 	}
 }

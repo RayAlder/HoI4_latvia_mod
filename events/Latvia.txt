@@ -1299,10 +1299,11 @@ country_event = {
 	id = latvia.91
 	title = latvia.91.t
 	desc = latvia.91.d
-	picture = GFX_goal_generic_navy_battleship
+	picture = GFX_report_event_ger_planes
 	
 	is_triggered_only = yes
 	option = {
+	name = latvia.91.a
 		custom_effect_tooltip = latvia.91.t	
 	}
 	
@@ -1313,10 +1314,11 @@ country_event = {
 	id = latvia.92
 	title = latvia.92.t
 	desc = latvia.92.d
-	picture = GFX_goal_generic_radar
+	picture = GFX_report_event_radar_01
 	
 	is_triggered_only = yes
 	option = {
+	name = latvia.92.a
 		custom_effect_tooltip = latvia.92.t	
 	}
 	
@@ -1327,7 +1329,7 @@ country_event = {
 	id = latvia.93
 	title = latvia.93.t
 	desc = latvia.93.d
-	picture = GFX_goal_generic_navy_battleship
+	picture = GFX_report_event_destroyer
 	
 	is_triggered_only = yes
 	option = {
