@@ -91,7 +91,7 @@ country {
 		LAT_rocketry_idea
 		{
 			
-			
+			picture = GFX_idea_generic_rocket
 			allowed = {
 				always = no
 				original_tag = LAT

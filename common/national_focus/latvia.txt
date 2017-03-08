@@ -715,10 +715,11 @@ focus = {
 			factor = 4
 		}
 		completion_reward = {
-		ROOT = { country_event = { id = latvia.3 } }
+		
 		set_technology = { motorised_infantry = 1}
-			army_experience = 20
-			add_tech_bonus = {
+		ROOT = { country_event = { id = latvia.3 } }
+		army_experience = 20
+		add_tech_bonus = {
 				name = land_doc_bonus
 				bonus = 0.5
 				uses = 1
@@ -1647,7 +1648,7 @@ focus = {
 		will_lead_to_war_with = POL
 		available = {
 			is_puppet = no
-			has_army_manpower = { size > 30000 } #6 div			
+			has_army_manpower = { size > 100000 } #20 div			
 			#Make custom trigger tooltip here
 			96 = {
 				owner = {
@@ -2109,7 +2110,7 @@ focus = {
 			factor = 0.25
 		}
 		x = 21
-		y = 5
+		y = 4
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -2131,8 +2132,8 @@ focus = {
 			threat > 0.70
 		}
 		
-		x = 21
-		y = 6
+		x = 20
+		y = 5
 		cost = 10
 		ai_will_do = {
 			factor = 3
@@ -2159,9 +2160,9 @@ focus = {
 	
 		icon = GFX_focus_research
 		
-		prerequisite = { focus = LAT_northern_alliance }
-		x = 21
-		y = 7
+		prerequisite = { focus = LAT_mobilization }
+		x = 22
+		y = 5
 		cost = 10
 		ai_will_do = {
 			factor = 12
@@ -2490,6 +2491,7 @@ focus = {
 		}
 		
 		completion_reward = {
+		custom_effect_tooltip = latvia_border
 		ROOT = { country_event = { id = latvia.1 } }
 		add_ideas = {LAT_fortification}
 			
@@ -2514,7 +2516,8 @@ focus = {
 		}
 		
 		completion_reward = {
-					ROOT = { country_event = { id = latvia.6 } }
+		custom_effect_tooltip = latvia_border_2
+		ROOT = { country_event = { id = latvia.6 } }
 		
 		remove_ideas = {LAT_fortification}
 		add_ideas = {LAT_fortification2}

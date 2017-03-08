@@ -3092,5 +3092,9 @@ spriteTypes = {
 		name = "GFX_idea_military_youth"
 		texturefile = "gfx/interface/ideas/youth.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_LAT_rocketry_idea"
+		texturefile = "gfx/interface/ideas/generic_rocket.dds"
+	}
 	
 }

@@ -17,7 +17,7 @@
 }
 units = {
 division= {	
-		name = "1. SS Panzer-Division"
+		name = "1. LAT Panzer-Division"
 		location = 9340
 		division_template = "Panzer-Division"
 		start_experience_factor = 0.75
@@ -26,7 +26,7 @@ division= {
 	}
 
 division= {	
-		name = "2. SS Panzer-Division"
+		name = "2. LAT Panzer-Division"
 		location = 9340
 		division_template = "Panzer-Division"
 		start_experience_factor = 0.75
@@ -35,7 +35,7 @@ division= {
 	}
 
 division= {	
-		name = "3. SS Panzer-Division"
+		name = "3. LAT Panzer-Division"
 		location = 9340
 		division_template = "Panzer-Division"
 		start_experience_factor = 0.75
@@ -44,7 +44,7 @@ division= {
 	}
 
 division= {	
-		name = "4. SS Panzer-Division"
+		name = "4. LAT Panzer-Division"
 		location = 9340
 		division_template = "Panzer-Division"
 		start_experience_factor = 0.75

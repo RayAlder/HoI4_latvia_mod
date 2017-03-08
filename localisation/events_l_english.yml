@@ -64,8 +64,8 @@ latvia.19.d:0 "German friends promised us five 2. generation submarines and blue
 latvia.19.a:0 "You are true friends!"
 
 latvia.20.t:0 "Germans friends are sharing with their superior tanks"
-latvia.20.d:0 "Hitler himself promised 2 divisions of Panzer IV's tanks alongside with their motorised divisions!"
-latvia.20.a:0 "Heil Hitler!"
+latvia.20.d:0 "Hitler himself ordered his army to send 2 divisions of Panzer IV's tanks to their great neigbour!"
+latvia.20.a:0 "Hail Hitler!"
 
 latvia.21.t:0 "Operation Thunder Cross"
 latvia.21.d:0 "Fascist's will not stand while such incompetent leader like Karlis Ulmanis is leading our great nation. Soon we will take over this country and make it a great Empire!"
@@ -81,8 +81,8 @@ latvia.23.a:0 "For the Axis!"
 
 
 latvia.24.t:0 "Latvian Computing Center"
-latvia.24.d:0 "We are proud to introduce our new state of the art Computing. I will help in our research and decription! "
-latvia.24.a:0 "For the future!"
+latvia.24.d:0 "We are proud to introduce our new state of the art Computing. I will help in our research and decryption methods! "
+latvia.24.a:0 "Future science"
 
 latvia.25.t:0 "Latvian Infrastructure Upgrade"
 latvia.25.d:0 "Ensuring effective infrastructure management and logistics services and promptly resolving issues is only possible in coordinated operatio."
@@ -142,7 +142,7 @@ latvia.60.d:0 "It is obvious that at some point Soviet Union or Germany will try
 latvia.60.a:0 "Boom! Next!"
 
 latvia.70.t:0 "Oil in Baltics"
-latvia.70.d:0 "We have our own oilrig. How about that! ."
+latvia.70.d:0 "We have our own oilrig. How about that!"
 latvia.70.a:0 "Drill'er Deep, Pump'er hard!"
 
 latvia.71.t:0 "Jelgava's Rubber factory"
